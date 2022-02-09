@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.dependency 'OpenTok', '2.21.3'
   s.dependency 'ShipBookSDK', '1.1.18'
 
-  # Needed only to pass local pod lib lint
-  #s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  #s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # Needed to pass lint validation
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
