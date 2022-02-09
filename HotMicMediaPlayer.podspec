@@ -1,42 +1,29 @@
-#
-# Be sure to run `pod lib lint HotMicMediaPlayer.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'HotMicMediaPlayer'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of HotMicMediaPlayer.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'Integrate the HotMic player experience in your app.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+'HotMicMediaPlayer allows you to integrate the HotMic player experience into your app.'
                        DESC
+  s.homepage         = 'https://hotmic.io'
+  s.license          = { :type => 'Copyright', :file => 'LICENSE' }
+  s.author           = { 'HotMic' => 'info@hotmic.io' }
 
-  s.homepage         = 'https://github.com/jordanhbuiltbyhq/HotMicMediaPlayer'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jordanhbuiltbyhq' => 'dont@me' }
-  s.source           = { :git => 'https://github.com/jordanhbuiltbyhq/HotMicMediaPlayer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.ios.deployment_target = '12.0'
 
-  s.ios.deployment_target = '9.0'
+  s.source = { :git => 'https://github.com/hotmic-wp/hotmic-media-player-ios.git', :tag => s.version.to_s }
+  s.vendored_frameworks = 'HotMicMediaPlayer.xcframework'
+  s.swift_version = '5.5.2'
 
-  s.source_files = 'HotMicMediaPlayer/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'HotMicMediaPlayer' => ['HotMicMediaPlayer/Assets/*.png']
-  # }
+  s.dependency 'PubNubSwift', '5.1.0'
+  s.dependency 'FittedSheets', '2.4.2'
+  s.dependency 'Kingfisher', '7.1.2'
+  s.dependency 'BitmovinPlayer', '3.13.0'
+  s.dependency 'TrueTime', '5.0.3'
+  s.dependency 'OpenTok', '2.21.3'
+  s.dependency 'ShipBookSDK', '1.1.18'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # Needed only to pass local pod lib lint
+  #s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  #s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end

@@ -1,0 +1,48 @@
+PODS:
+  - BitmovinPlayer (3.13.0)
+  - FittedSheets (2.4.2)
+  - HotMicMediaPlayer (1.0.0):
+    - BitmovinPlayer (= 3.13.0)
+    - FittedSheets (= 2.4.2)
+    - Kingfisher (= 7.1.2)
+    - OpenTok (= 2.21.3)
+    - PubNubSwift (= 5.1.0)
+    - ShipBookSDK (= 1.1.18)
+    - TrueTime (= 5.0.3)
+  - Kingfisher (7.1.2)
+  - OpenTok (2.21.3)
+  - PubNubSwift (5.1.0)
+  - ShipBookSDK (1.1.18)
+  - TrueTime (5.0.3)
+
+DEPENDENCIES:
+  - HotMicMediaPlayer (from `../`)
+
+SPEC REPOS:
+  https://github.com/bitmovin/cocoapod-specs.git:
+    - BitmovinPlayer
+  trunk:
+    - FittedSheets
+    - Kingfisher
+    - OpenTok
+    - PubNubSwift
+    - ShipBookSDK
+    - TrueTime
+
+EXTERNAL SOURCES:
+  HotMicMediaPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BitmovinPlayer: 6a196385dacc4a604a66ce0f04ffb9344d23c88c
+  FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
+  HotMicMediaPlayer: a457cde254430b4ae259f001343bd123a2857041
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  OpenTok: 6c553d092fa8d28cf3457a2b3c1e8f7904ee6063
+  PubNubSwift: bb23d12e1fa1b1142e08d5fa8b8559a923e84e08
+  ShipBookSDK: 5204f45a484ff6511973ff4ed41bb36e1562ba70
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+
+PODFILE CHECKSUM: f96ac72abbd661af0cb94ebe1172023752256984
+
+COCOAPODS: 1.11.2

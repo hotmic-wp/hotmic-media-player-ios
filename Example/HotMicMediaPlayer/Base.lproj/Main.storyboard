@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pGG-K4-Fg4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="09N-Vs-2Fx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pGG-K4-Fg4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QTg-Di-2ZJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ve9-k3-Ww9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8q-13-rxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="92.410714285714278"/>
+        </scene>
+        <!--HotMicMediaPlayer Example-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HotMicMediaPlayer_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +34,20 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="HotMicMediaPlayer Example" id="2uB-Mu-IAP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="92.410714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

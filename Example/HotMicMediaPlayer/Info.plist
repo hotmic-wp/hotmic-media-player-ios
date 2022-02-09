@@ -22,6 +22,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>This is required to join the room with video.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This is required to join the room with audio and sync the stream with a TV.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -34,6 +42,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

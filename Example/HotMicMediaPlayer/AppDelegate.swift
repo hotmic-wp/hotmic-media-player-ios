@@ -2,11 +2,13 @@
 //  AppDelegate.swift
 //  HotMicMediaPlayer
 //
-//  Created by jordanhbuiltbyhq on 02/07/2022.
-//  Copyright (c) 2022 jordanhbuiltbyhq. All rights reserved.
+//  Created by Jordan Hipwell on 02/07/2022.
+//  Copyright (c) 2022 HotMic. All rights reserved.
 //
 
 import UIKit
+import StoreKit
+import HotMicMediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        #warning("Add your API key and access token below")
+        
+        HMMediaPlayer.initialize(
+            apiKey: "YOUR_API_KEY",
+            accessToken: "YOUR_ACCESS_TOKEN"
+        )
+        HMMediaPlayer.userProfileDelegate = self
+        HMMediaPlayer.inAppPurchaseDelegate = self
+        HMMediaPlayer.analyticsObserver = self
+        
         return true
     }
 
@@ -44,3 +57,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: HMMediaPlayerUserProfileDelegate {
+    
+    func getIsFollowingUser(userID: String, completion: @escaping (Result<Bool?, Error>) -> Void) {
+        //Determine if the logged in user is following this user
+        //Call completion with success true or false or nil if following this user is not supported
+        //Call completion with failure and an Error if an error occurs
+    }
+    
+    func followOrUnfollowUser(userID: String, follow: Bool, completion: @escaping (Error?) -> Void) {
+        //Follow or unfollow this user
+        //Call completion with nil or an Error
+    }
+    
+}
+
+extension AppDelegate: HMMediaPlayerInAppPurchaseDelegate {
+    
+    func getTipProducts(hostID: String, completion: @escaping (Result<[SKProduct], Error>) -> Void) {
+        //Fetch the products and call completion
+    }
+    
+    func getJoinStreamProduct(hostID: String, userID: String, completion: @escaping (Result<SKProduct?, Error>) -> Void) {
+        //Fetch the product and call completion
+    }
+    
+    func purchaseTip(product: SKProduct, userID: String, hostID: String, streamID: String, message: String?, anonymous: Bool, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
+        //Purchase the product then call HMMediaPlayer.submitTipPurchase to record it, or provide an error
+    }
+    
+    func purchaseJoinStream(product: SKProduct, userID: String, streamID: String, streamType: String, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
+        //Purchase the product then call HMMediaPlayer.submitJoinStreamPurchase to record it, or provide an error
+    }
+    
+    func retrySubmittingPurchaseInfo(productID: String, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
+        //Call HMMediaPlayer.submitTipPurchase to try recording it again
+    }
+    
+}
+
+extension AppDelegate: HMMediaPlayerAnalyticsEventObserving {
+    
+    func eventStarted(name: String) {
+        print("HotMic event \(name) started")
+    }
+    
+    func eventOccurred(name: String, info: [String : Any]) {
+        print("HotMic event \(name) occurred: \(info)")
+    }
+    
+}
