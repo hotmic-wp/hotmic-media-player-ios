@@ -68,6 +68,7 @@ platform :ios, '12.0'
 use_frameworks!
 
 source 'https://cdn.cocoapods.org/' # Default global repository
+source 'https://github.com/hotmic-wp/hotmic-media-player-cocoapod-specs.git'
 source 'https://github.com/bitmovin/cocoapod-specs.git'
 
 target 'YourAppTarget' do
