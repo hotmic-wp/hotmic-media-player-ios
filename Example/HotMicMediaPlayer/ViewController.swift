@@ -175,7 +175,9 @@ class ViewController: UIViewController {
                     }
                 }
             } else {
-                completion(image)
+                DispatchQueue.main.async {
+                    completion(image)
+                }
             }
         }.resume()
     }
