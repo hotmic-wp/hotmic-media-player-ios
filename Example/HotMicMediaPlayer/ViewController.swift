@@ -107,7 +107,11 @@ class ViewController: UIViewController {
         
         config.date = {
             if let date = stream.state == .scheduled ? stream.scheduledDate : stream.liveDate {
-                return date.formatted(date: .numeric, time: .shortened)
+                if #available(iOS 15.0, *) {
+                    return date.formatted(date: .numeric, time: .shortened)
+                } else {
+                    return date.description
+                }
             }
             return nil
         }()
@@ -164,10 +168,14 @@ class ViewController: UIViewController {
                 return
             }
             
-            image.prepareThumbnail(of: size) { image in
-                DispatchQueue.main.async {
-                    completion(image)
+            if #available(iOS 15.0, *) {
+                image.prepareThumbnail(of: size) { image in
+                    DispatchQueue.main.async {
+                        completion(image)
+                    }
                 }
+            } else {
+                completion(image)
             }
         }.resume()
     }
