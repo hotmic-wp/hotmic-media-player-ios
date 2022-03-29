@@ -1,19 +1,21 @@
 PODS:
-  - BitmovinPlayer (3.13.0)
+  - BitmovinPlayer (3.17.0)
   - FittedSheets (2.4.2)
-  - HotMicMediaPlayer (1.0.0):
-    - BitmovinPlayer (= 3.13.0)
+  - HotMicMediaPlayer (2.0.0):
+    - BitmovinPlayer (= 3.17.0)
     - FittedSheets (= 2.4.2)
-    - Kingfisher (= 7.1.2)
-    - OpenTok (= 2.21.3)
+    - Kingfisher (= 7.2.0)
+    - OpenTok (= 2.22.1)
     - PubNubSwift (= 5.1.0)
-    - ShipBookSDK (= 1.1.18)
+    - ShipBookSDK (= 1.1.19)
     - TrueTime (= 5.0.3)
-  - Kingfisher (7.1.2)
-  - OpenTok (2.21.3)
+  - Kingfisher (7.2.0)
+  - OpenTok (2.22.1):
+    - VonageWebRTC (= 84.0.20)
   - PubNubSwift (5.1.0)
-  - ShipBookSDK (1.1.18)
+  - ShipBookSDK (1.1.19)
   - TrueTime (5.0.3)
+  - VonageWebRTC (84.0.20)
 
 DEPENDENCIES:
   - HotMicMediaPlayer (from `../`)
@@ -28,21 +30,23 @@ SPEC REPOS:
     - PubNubSwift
     - ShipBookSDK
     - TrueTime
+    - VonageWebRTC
 
 EXTERNAL SOURCES:
   HotMicMediaPlayer:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BitmovinPlayer: 6a196385dacc4a604a66ce0f04ffb9344d23c88c
+  BitmovinPlayer: c2f44b2d2f822c510c5f761ff0870b322cc3b9bd
   FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
-  HotMicMediaPlayer: a457cde254430b4ae259f001343bd123a2857041
-  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
-  OpenTok: 6c553d092fa8d28cf3457a2b3c1e8f7904ee6063
+  HotMicMediaPlayer: 38a85990cbcce13ee02519b1ed5245303903b7f5
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  OpenTok: 9e64e4ff047ffa01177751d94f42cbb546bd0cf1
   PubNubSwift: bb23d12e1fa1b1142e08d5fa8b8559a923e84e08
-  ShipBookSDK: 5204f45a484ff6511973ff4ed41bb36e1562ba70
+  ShipBookSDK: 2086b80c9beef01f44a28390012223ee863410eb
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+  VonageWebRTC: 20e0e56f656ddbf49287cacbd33e69dbbe5736f8
 
-PODFILE CHECKSUM: f96ac72abbd661af0cb94ebe1172023752256984
+PODFILE CHECKSUM: 843619e89493671f555d2f4a8ffbd0444be7dc8d
 
 COCOAPODS: 1.11.2

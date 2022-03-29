@@ -1,10 +1,5 @@
 # HotMicMediaPlayer
 
-[![CI Status](https://img.shields.io/travis/HotMic/HotMicMediaPlayer.svg?style=flat)](https://travis-ci.org/HotMic/HotMicMediaPlayer)
-[![Version](https://img.shields.io/cocoapods/v/HotMicMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/HotMicMediaPlayer)
-[![License](https://img.shields.io/cocoapods/l/HotMicMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/HotMicMediaPlayer)
-[![Platform](https://img.shields.io/cocoapods/p/HotMicMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/HotMicMediaPlayer)
-
 HotMicMediaPlayer allows you to integrate the HotMic player experience into your app.
 
 Use this framework to get streams, create a HMPlayerViewController for a specific stream, and present it full screen.
@@ -208,6 +203,68 @@ func playerViewController(_ viewController: HMPlayerViewController, userDidTapAd
 }
 ```
 
+### Appearance Delegate
+
+To customize the appearance of the HotMic experience, you can implement the HMMediaPlayerAppearanceDelegate protocol.
+
+```swift
+HMMediaPlayer.appearanceDelegate = self
+```
+
+Each time a font will be used, the following function is called allowing you to return a custom font for the specified style. Return nil if you'd like to use the default font.
+
+```swift
+func customFont(for textStyle: HMTextStyle) -> UIFont? {
+    switch textStyle {
+    case .body:
+        let font = UIFont(name: "CustomFont", size: 16)!
+        return UIFontMetrics(forTextStyle: .body).scaledFont(for: font) // Support dynamic type
+    //...
+    @unknown default: 
+        return nil
+    }
+}
+```
+
+Each time a color will be used, the following function is called allowing you to return a custom color for the specified style. Return nil if you'd like to use the default color.
+
+```swift
+func customColor(for colorStyle: HMColorStyle) -> UIFont? {
+    switch colorStyle {
+    case .primaryTint:
+        return UIColor(named: "AccentColor")!
+    case .primaryBackground:
+        // Background colors support elevation variants
+        return UIColor { traitCollection in
+            if traitCollection.userInterfaceLevel == .elevated {
+                return UIColor(named: "PrimaryBackgroundColorElevated")!
+            } else {
+                return UIColor(named: "PrimaryBackgroundColor")!
+            }
+        }
+    //...
+    @unknown default: 
+        return nil
+    }
+}
+```
+
+### Share Delegate
+
+To support sharing text from inside the HotMic experience if the stream does not already have share text, you can implement the HMMediaPlayerShareDelegate protocol. If you do not implement this delegate, no text will be shared when the stream does not have share text.
+
+```swift
+HMMediaPlayer.shareDelegate = self
+```
+
+When the stream is loaded, the following function is called to get the share text for the stream if it does not already have share text. Provide a success result with a String or nil if there’s no text available to share. Provide a failure result with an Error if one occurred.
+
+```swift
+func getStreamShareText(streamID: String, completion: @escaping (Result<String?, Error>) -> Void) {
+    // Fetch the text and call completion
+}
+```
+
 ### User Profile Delegate
 
 To support following and unfollowing users from inside the HotMic experience, you can implement the HMMediaPlayerUserProfileDelegate protocol. If you do not implement this delegate, the follow/unfollow buttons will not be shown.
@@ -216,7 +273,7 @@ To support following and unfollowing users from inside the HotMic experience, yo
 HMMediaPlayer.userProfileDelegate = self
 ```
 
-When a user profile is shown, the following function is called to get the “is following” state for the currently logged in user. Provide a success result with true if the logged in user is following the provided user, false if they are not following, or nil if follow/unfollow is not available for the provided user. Provide a failure result with an Error if one occurred.
+When a follow/unfollow button is to be shown shown, the following function is called to get the “is following” state for the currently logged in user. Provide a success result with true if the logged in user is following the provided user, false if they are not following, or nil if follow/unfollow is not available for the provided user. Provide a failure result with an Error if one occurred.
 
 ```swift
 func getIsFollowingUser(userID: String, completion: @escaping (Result<Bool?, Error>) -> Void) {
@@ -252,7 +309,8 @@ When the user wishes to purchase a tip, the following function will be called. Y
 
 ```swift
 func purchaseTip(product: SKProduct, userID: String, hostID: String, streamID: String, message: String?, anonymous: Bool, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
-    // Purchase the product then call HMMediaPlayer.submitTipPurchase to record it, or provide an error
+    // Purchase the product then call HMMediaPlayer.submitTipPurchase to record it
+    // Call completion with an error or nil
 }
 ```
 
@@ -261,12 +319,25 @@ When the user wishes to retry submitting their purchase information, the followi
 ```swift
 func retrySubmittingPurchaseInfo(productID: String, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
     // Call HMMediaPlayer.submitTipPurchase to try recording it again
+    // Call completion with an error or nil
 }
 ```
 
 To support join stream in-app purchases, very similar functions as those for tips are available and should be used in the same way.
 
 In the HotMic app, we found this to be difficult to implement ensuring edge cases are handled. If you reach out to us we would be happy to provide you with more information and example code from our in-app purchase manager that will allow you to implement this the same way we did.
+
+### Authentication Observing
+
+To be notified when a request failed due to improper authentication, you can implement the HMMediaPlayerAuthenticationObserving protocol. It’s recommended to dismiss the player and request re-authentication when this occurs.
+
+```swift
+HMMediaPlayer.authenticationObserver = self
+
+func authenticationStatusChangedToUnauthenticated() {
+    // Dismiss the player and re-authenticate
+}
+```
 
 ### Analytics Event Observing
 

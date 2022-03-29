@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
 import AVFoundation
 import AudioToolbox
@@ -47,6 +47,7 @@ public protocol HMPlayerViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
   @_Concurrency.MainActor(unsafe) final public func restorePiPView(_ pipView: UIKit.UIView)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -110,6 +111,48 @@ extension Swift.KeyedDecodingContainer {
 extension Swift.KeyedEncodingContainer {
   public mutating func encode<T>(_ lenient: HotMicMediaPlayer.Lenient<T>, forKey key: Swift.KeyedEncodingContainer<K>.Key) throws where T : Swift.Decodable, T : Swift.Encodable
 }
+public enum HMTextStyle {
+  case title1
+  case headline
+  case body
+  case callout
+  case caption1
+  case caption2
+  public static func == (a: HotMicMediaPlayer.HMTextStyle, b: HotMicMediaPlayer.HMTextStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum HMColorStyle {
+  case primary
+  case secondary
+  case tertiary
+  case primaryTint
+  case secondaryTint
+  case tertiaryTint
+  case warningTint
+  case errorTint
+  case successTint
+  case liveTint
+  case separator
+  case highlight
+  case primaryBackground
+  case secondaryBackground
+  case tertiaryBackground
+  public static func == (a: HotMicMediaPlayer.HMColorStyle, b: HotMicMediaPlayer.HMColorStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol HMMediaPlayerAppearanceDelegate : AnyObject {
+  func customFont(for textStyle: HotMicMediaPlayer.HMTextStyle) -> UIKit.UIFont?
+  func customColor(for colorStyle: HotMicMediaPlayer.HMColorStyle) -> UIKit.UIColor?
+}
+public protocol HMMediaPlayerShareDelegate : AnyObject {
+  func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, Swift.Error>) -> Swift.Void)
+}
 public protocol HMMediaPlayerUserProfileDelegate : AnyObject {
   func getIsFollowingUser(userID: Swift.String, completion: @escaping (Swift.Result<Swift.Bool?, Swift.Error>) -> Swift.Void)
   func followOrUnfollowUser(userID: Swift.String, follow: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
@@ -121,13 +164,19 @@ public protocol HMMediaPlayerInAppPurchaseDelegate : AnyObject {
   func purchaseJoinStream(product: StoreKit.SKProduct, userID: Swift.String, streamID: Swift.String, streamType: Swift.String, completion: @escaping ((error: Swift.Error?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
   func retrySubmittingPurchaseInfo(productID: Swift.String, completion: @escaping ((error: Swift.Error?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
 }
+public protocol HMMediaPlayerAuthenticationObserving : AnyObject {
+  func authenticationStatusChangedToUnauthenticated()
+}
 public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   func eventStarted(name: Swift.String)
   func eventOccurred(name: Swift.String, info: [Swift.String : Any])
 }
 @_hasMissingDesignatedInitializers public class HMMediaPlayer {
+  weak public static var appearanceDelegate: HotMicMediaPlayer.HMMediaPlayerAppearanceDelegate?
+  weak public static var shareDelegate: HotMicMediaPlayer.HMMediaPlayerShareDelegate?
   weak public static var userProfileDelegate: HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate?
   weak public static var inAppPurchaseDelegate: HotMicMediaPlayer.HMMediaPlayerInAppPurchaseDelegate?
+  weak public static var authenticationObserver: HotMicMediaPlayer.HMMediaPlayerAuthenticationObserving?
   weak public static var analyticsObserver: HotMicMediaPlayer.HMMediaPlayerAnalyticsEventObserving?
   public static var debugKey: Swift.String
   public static func initialize(apiKey: Swift.String, accessToken: Swift.String)
@@ -197,6 +246,10 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
   public static func == (lhs: HotMicMediaPlayer.HMStream, rhs: HotMicMediaPlayer.HMStream) -> Swift.Bool
   public init(from decoder: Swift.Decoder) throws
 }
+extension HotMicMediaPlayer.HMTextStyle : Swift.Equatable {}
+extension HotMicMediaPlayer.HMTextStyle : Swift.Hashable {}
+extension HotMicMediaPlayer.HMColorStyle : Swift.Equatable {}
+extension HotMicMediaPlayer.HMColorStyle : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Equatable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.RawRepresentable {}
