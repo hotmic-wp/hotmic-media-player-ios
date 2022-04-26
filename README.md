@@ -23,7 +23,7 @@ Use this framework to get streams, create a HMPlayerViewController for a specifi
 - Swift UIKit app
     - Integration in Objective-C or SwiftUI apps is not officially supported.
 - App is live on the App Store
-    - HotMicMediaPlayer uses the UIWebView framework for YouTube playback. Apple does not allow new apps to use UIWebView. This component can also be removed if YouTube playback is not required for the use-case.  
+    - HotMicMediaPlayer uses the UIWebView framework for YouTube playback. Apple does not allow new apps to use UIWebView.  
 - App uses view controller based status bar appearance
 - App supports portrait and landscape orientations
 - App disables Bitcode
@@ -273,7 +273,7 @@ To support following and unfollowing users from inside the HotMic experience, yo
 HMMediaPlayer.userProfileDelegate = self
 ```
 
-When a follow/unfollow button is to be shown shown, the following function is called to get the “is following” state for the currently logged in user. Provide a success result with true if the logged in user is following the provided user, false if they are not following, or nil if follow/unfollow is not available for the provided user. Provide a failure result with an Error if one occurred.
+When a follow/unfollow button is to be shown, the following function is called to get the “is following” state for the currently logged in user. Provide a success result with true if the logged in user is following the provided user, false if they are not following, or nil if follow/unfollow is not available for the provided user. Provide a failure result with an Error if one occurred.
 
 ```swift
 func getIsFollowingUser(userID: String, completion: @escaping (Result<Bool?, Error>) -> Void) {

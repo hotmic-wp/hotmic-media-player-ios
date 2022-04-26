@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		zqd/4pwmoTkwTbW1ieLnm9W4azs=
+		SpbtzbmUS31GkThu4qbKi+7hWP4=
 		</data>
 		<key>Chat.storyboardc/Info.plist</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5iRjXVcz1ErH6yJvR5F1ObSuBdI=
+		M31dTljpQhr/USH+ENekrTAXD8s=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FgQsPuNPG4yxafK75pRXSRMI+6w=
+		6eDxm1sLDcBU+gFwgAqpbD1/9mU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Player.storyboardc/ZtJ-r9-RLp-view-Ers-0p-CHZ.nib/objects-12.3+.nib</key>
 		<data>
-		10eUJm4aqfduHkw3iovw3/buCm8=
+		ZC2dVTn3/K9IZ6JyeFeYw4bFbOM=
 		</data>
 		<key>Player.storyboardc/ZtJ-r9-RLp-view-Ers-0p-CHZ.nib/runtime.nib</key>
 		<data>
-		dV0VLBDf/43zhba70bjhZjLFnvU=
+		gDjBBQEecZ+cXSfWZwQLMoqyz7Y=
 		</data>
 		<key>PlayerVolume.storyboardc/Info.plist</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Polls.storyboardc/NH0-Cq-JSa-view-5XQ-5p-DjX.nib</key>
 		<data>
-		b3HTliRXlPGg8rW8eq12HZCgR1M=
+		EF6fMOPErd92mFGK7T93osGDNeA=
 		</data>
 		<key>Polls.storyboardc/PollContestViewController.nib</key>
 		<data>
@@ -194,7 +194,7 @@
 		</data>
 		<key>Polls.storyboardc/aJr-57-0Tn-view-0HO-ii-4Et.nib</key>
 		<data>
-		onKFakPtSJSJ2BOfzzF2uY1Xn5g=
+		EdOhhCko+L6ZfIZeBt7ygluRPbs=
 		</data>
 		<key>Polls.storyboardc/dh2-OP-R3Q-view-RHJ-ee-DJV.nib</key>
 		<data>
@@ -310,7 +310,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Iu8pqhhie6/HaXUsn5sWnp5dyW4St2Z5oK14BqF6Mc=
+			RCvrHUtuPp9Em12e4rp8bYt13TPtb7ZhNdlNzqPBYAc=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/Info.plist</key>
@@ -422,7 +422,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4AuxY1pbNalgxP+unAhGTTSj6puPlzuyf4ZTqklrVEI=
+			ygU4Dt77X3ZEihUw4MUPJzDShCRBWxgRU8/+QVKVPak=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -527,14 +527,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVJyGRDZ0Hyj8LOQvpNNbZl+cg8AOeahMwovCNcn6PY=
+			r6ndIZ26U9vuqy199CUF/7tTAupfWkWib8GpseMf3LY=
 			</data>
 		</dict>
 		<key>Player.storyboardc/ZtJ-r9-RLp-view-Ers-0p-CHZ.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cXsSXeXGMg8orvjUJ2Bkj984jHN0MjN+/Xki2bvGHpg=
+			v1mAonBiEuPGspXaCRkg+pCoJoGAoalj4pzas624NbE=
 			</data>
 		</dict>
 		<key>PlayerVolume.storyboardc/Info.plist</key>
@@ -576,7 +576,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iqvwhw0uYp0lFoaekbDTpcMTwn5Ej1GSr3W29YSzLxk=
+			jnzB7tVffkzr6XUE0LVWcyyCZKYHvLYYNK/+s7GyD7M=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/PollContestViewController.nib</key>
@@ -625,7 +625,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e4fVzZYCj3c/ElU+2sI4KB5hDS6q/qjwcaBJJOO/g0Q=
+			ChHwINj1fTKOe/vAcyB/mMOiIRxS5MofFMUH993KGO4=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/dh2-OP-R3Q-view-RHJ-ee-DJV.nib</key>
