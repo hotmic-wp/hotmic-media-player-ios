@@ -146,7 +146,7 @@ HMMediaPlayer.getStreams(live: true, scheduled: true, vod: true, userID: nil, li
 This will return all the stream information available, which includes the:
 - title: string
 - state: a string of either SCHEDULED, VOD, LIVE, or ENDED
-- tags: an array of tags set by the creator on the stream (e.g. ["tag 1","tag 2"]
+- tags: an array of tags set by the creator on the stream, for example: ["tag 1","tag 2"]
 - thumbnail: a string with the url for the image
 
 ### Player View Controller
