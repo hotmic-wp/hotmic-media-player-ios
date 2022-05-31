@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UIKit
 import HotMicMediaPlayer
 
 class ViewController: UIViewController {
@@ -203,10 +202,6 @@ extension ViewController: HMPlayerViewControllerDelegate {
         dismiss(animated: true, completion: nil)
         
         // If you set supportsMinimizingToPiP true, display the pipView in a Picture-in-Picture window if it's non-nil
-    }
-    
-    func playerViewController(_ viewController: HMPlayerViewController, userDidTapAd id: String, streamID: String) {
-        print("User tapped ad with id \(id) in stream id \(streamID)")
     }
     
 }

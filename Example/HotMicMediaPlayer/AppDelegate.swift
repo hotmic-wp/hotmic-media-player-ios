@@ -103,14 +103,15 @@ extension AppDelegate: HMMediaPlayerShareDelegate {
 
 extension AppDelegate: HMMediaPlayerUserProfileDelegate {
     
-    func getIsFollowingUser(userID: String, completion: @escaping (Result<Bool?, Error>) -> Void) {
-        // Determine if the logged in user is following this user
-        // Call completion with success true or false or nil if following this user is not supported
+    func getUserFollowState(id: String, completion: @escaping (Result<HMUserFollowState, Error>) -> Void) {
+        // Get the user's follow state: followers count, following count, if they're following the current user, and if they're followed by the current user
+        // Call completion with an HMUserFollowState specifying nil for any unsupported values
         // Call completion with failure and an Error if an error occurs
-        completion(.success(nil))
+        let followState = HMUserFollowState(followersCount: nil, followingCount: nil, followingMe: nil, followedByMe: nil)
+        completion(.success(followState))
     }
     
-    func followOrUnfollowUser(userID: String, follow: Bool, completion: @escaping (Error?) -> Void) {
+    func setFollowingUser(id: String, following: Bool, completion: @escaping (Error?) -> Void) {
         // Follow or unfollow this user
         // Call completion with nil or an Error
         completion(nil)

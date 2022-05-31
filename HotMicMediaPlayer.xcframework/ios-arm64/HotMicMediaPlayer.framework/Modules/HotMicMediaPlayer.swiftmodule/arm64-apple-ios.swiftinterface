@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
 import AVFoundation
 import AudioToolbox
@@ -21,7 +21,6 @@ import WebKit
 import _Concurrency
 public protocol HMPlayerViewControllerDelegate : AnyObject {
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
-  func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, userDidTapAd id: Swift.String, streamID: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class HMPlayerViewController : UIKit.UIViewController, UIKit.UIViewControllerTransitioningDelegate {
   @_Concurrency.MainActor(unsafe) @objc override final public var prefersStatusBarHidden: Swift.Bool {
@@ -50,6 +49,8 @@ public protocol HMPlayerViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
   @_Concurrency.MainActor(unsafe) final public func restorePiPView(_ pipView: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) final public func displayBannerAd(withView view: UIKit.UIView, duration: Foundation.TimeInterval? = nil, delay: Foundation.TimeInterval = 0)
+  @_Concurrency.MainActor(unsafe) final public func hideBannerAd()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
@@ -112,11 +113,18 @@ extension Swift.KeyedEncodingContainer {
   public mutating func encode<T>(_ lenient: HotMicMediaPlayer.Lenient<T>, forKey key: Swift.KeyedEncodingContainer<K>.Key) throws where T : Swift.Decodable, T : Swift.Encodable
 }
 public enum HMTextStyle {
+  case largeTitle
   case title1
+  case title2
+  case title3
   case headline
   case body
+  case highlightedBody
   case callout
+  case subheadline
+  case footnote
   case caption1
+  case highlightedCaption1
   case caption2
   public static func == (a: HotMicMediaPlayer.HMTextStyle, b: HotMicMediaPlayer.HMTextStyle) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -154,8 +162,8 @@ public protocol HMMediaPlayerShareDelegate : AnyObject {
   func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, Swift.Error>) -> Swift.Void)
 }
 public protocol HMMediaPlayerUserProfileDelegate : AnyObject {
-  func getIsFollowingUser(userID: Swift.String, completion: @escaping (Swift.Result<Swift.Bool?, Swift.Error>) -> Swift.Void)
-  func followOrUnfollowUser(userID: Swift.String, follow: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
+  func getUserFollowState(id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMUserFollowState, Swift.Error>) -> Swift.Void)
+  func setFollowingUser(id: Swift.String, following: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
 }
 public protocol HMMediaPlayerInAppPurchaseDelegate : AnyObject {
   func getTipProducts(hostID: Swift.String, completion: @escaping (Swift.Result<[StoreKit.SKProduct], Swift.Error>) -> Swift.Void)
@@ -185,6 +193,13 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   public static func submitTipPurchase(userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: Swift.Error?)) -> Swift.Void)
   public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: Swift.Error?)) -> Swift.Void)
   @objc deinit
+}
+public struct HMUserFollowState {
+  public let followersCount: Swift.Int?
+  public let followingCount: Swift.Int?
+  public let followingMe: Swift.Bool?
+  public let followedByMe: Swift.Bool?
+  public init(followersCount: Swift.Int?, followingCount: Swift.Int?, followingMe: Swift.Bool?, followedByMe: Swift.Bool?)
 }
 public struct HMStream : Swift.Decodable, Swift.Equatable {
   public let id: Swift.String
@@ -239,7 +254,6 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
       set
       _modify
     }
-    public let followers: Swift.Int?
     public static func == (lhs: HotMicMediaPlayer.HMStream.User, rhs: HotMicMediaPlayer.HMStream.User) -> Swift.Bool
     public init(from decoder: Swift.Decoder) throws
   }
