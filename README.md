@@ -8,7 +8,8 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 
 - Watch live broadcast commentator streams in your app
 - Rewatch previous streams on demand
-- Participate in chat
+- Participate in watch parties
+- Chat with others
 - Answer polls
 - Tip the host
 - Join the host with audio/video
