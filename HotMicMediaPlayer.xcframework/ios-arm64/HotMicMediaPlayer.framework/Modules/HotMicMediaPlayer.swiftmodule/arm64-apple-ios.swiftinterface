@@ -211,6 +211,8 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
     _modify
   }
   public let title: Swift.String
+  public let description: Swift.String?
+  public let tags: [Swift.String]?
   public let channel: Swift.String?
   public let user: HotMicMediaPlayer.HMStream.User
   public let canParticipate: Swift.Bool?
