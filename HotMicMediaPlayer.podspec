@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HotMicMediaPlayer'
-  s.version          = '3.1.0'
+  s.version          = '4.0.0'
   s.summary          = 'Integrate the HotMic player experience in your app.'
   s.description      = <<-DESC
 'HotMicMediaPlayer allows you to integrate the HotMic player experience into your app.'
@@ -15,12 +15,13 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'HotMicMediaPlayer.xcframework'
   s.swift_version = '5.6.1'
 
-  s.dependency 'PubNubSwift', '5.1.0'
+  s.dependency 'PubNubSwift', '6.0.0'
   s.dependency 'FittedSheets', '2.4.2'
-  s.dependency 'Kingfisher', '7.2.0'
-  s.dependency 'BitmovinPlayer', '2.67.3'
+  s.dependency 'Kingfisher', '7.3.1'
+  s.dependency 'BitmovinPlayer', '3.22.0'
+  s.dependency 'youtube-ios-player-helper', '1.0.4'
   s.dependency 'TrueTime', '5.0.3'
-  s.dependency 'OpenTok', '2.22.1'
+  s.dependency 'OpenTok', '2.23.0'
   s.dependency 'ShipBookSDK', '1.1.19'
 
   # Needed to pass lint validation

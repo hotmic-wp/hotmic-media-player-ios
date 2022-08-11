@@ -24,8 +24,6 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
     - Integration in iPadOS or macOS apps is not supported.
 - Swift UIKit app
     - Integration in Objective-C or SwiftUI apps is not officially supported.
-- App is live on the App Store
-    - HotMicMediaPlayer uses the `UIWebView` framework for YouTube playback. Apple does not allow new apps to use `UIWebView`.
 - App uses view controller based status bar appearance
 - App supports portrait and landscape orientations
 - App disables Bitcode
@@ -357,7 +355,7 @@ func authenticationStatusChangedToUnauthenticated() {
 
 ### Analytics Event Observing
 
-To be notified of analytics events as they occur, you can implement the `HMMediaPlayerAnalyticsEventObserving` protocol. Documentation for event names and info keys and values is not yet available..
+To be notified of analytics events as they occur, you can implement the `HMMediaPlayerAnalyticsEventObserving` protocol. [SDK Analytics Documentation](https://docs.hotmic.io/sdk-analytics)
 
 ```swift
 HMMediaPlayer.analyticsObserver = self

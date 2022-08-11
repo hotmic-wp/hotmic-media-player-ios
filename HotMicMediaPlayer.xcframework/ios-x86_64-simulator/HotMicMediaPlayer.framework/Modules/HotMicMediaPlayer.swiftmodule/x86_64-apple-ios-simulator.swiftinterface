@@ -19,6 +19,7 @@ import TrueTime
 import UIKit
 import WebKit
 import _Concurrency
+import youtube_ios_player_helper
 public protocol HMPlayerViewControllerDelegate : AnyObject {
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
 }
@@ -49,8 +50,8 @@ public protocol HMPlayerViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
   @_Concurrency.MainActor(unsafe) final public func restorePiPView(_ pipView: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) final public func displayBannerAd(withView view: UIKit.UIView, duration: Foundation.TimeInterval? = nil, delay: Foundation.TimeInterval = 0)
-  @_Concurrency.MainActor(unsafe) final public func hideBannerAd()
+  @_Concurrency.MainActor(unsafe) final public func displayBannerAd(withView view: UIKit.UIView, duration: Foundation.TimeInterval? = nil, delay: Foundation.TimeInterval = 0, animationDuration: Foundation.TimeInterval = 0.333)
+  @_Concurrency.MainActor(unsafe) final public func hideBannerAd(animationDuration: Foundation.TimeInterval = 0.333)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
@@ -139,12 +140,17 @@ public enum HMColorStyle {
   case primaryTint
   case secondaryTint
   case tertiaryTint
+  case primaryTintContent
+  case secondaryTintContent
+  case tertiaryTintContent
   case warningTint
   case errorTint
   case successTint
   case liveTint
   case separator
-  case highlight
+  case highlightedFill
+  case selectedFill
+  case selectedPollAnswerFill
   case primaryBackground
   case secondaryBackground
   case tertiaryBackground

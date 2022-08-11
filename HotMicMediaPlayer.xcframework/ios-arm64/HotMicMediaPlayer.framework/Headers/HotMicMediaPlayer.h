@@ -18,6 +18,3 @@ FOUNDATION_EXPORT const unsigned char HotMicMediaPlayerVersionString[];
 //version 0.6.2.1 of acrcloud_sdk_ios
 #import "ACRCloudConfig.h"
 #import "ACRCloudRecognition.h"
-
-//version 0.1.6 of youtube-ios-player-helper
-#import "YTPlayerView.h"
