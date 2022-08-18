@@ -18,16 +18,11 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 
 ## Requirements
 
-- API key and access token
-    - Will be provided by HotMic.
-- iOS 12+
-    - Integration in iPadOS or macOS apps is not supported.
-- Swift UIKit app
-    - Integration in Objective-C or SwiftUI apps is not officially supported.
+- iOS 12+ 
+- Swift and UIKit-based app
 - App uses view controller based status bar appearance
 - App supports portrait and landscape orientations
-- App disables Bitcode
-    - Because HotMicMediaPlayer uses ACRCloud which was built without full Bitcode support, HotMicMediaPlayer must disable Bitcode, and your app must as well.
+- App disables Bitcode - because HotMicMediaPlayer uses ACRCloud which was built without full Bitcode support, HotMicMediaPlayer must disable Bitcode, and your app must as well.
     
 ## App Privacy
 When integrating HotMicMediaPlayer into your app, you must disclose the data it and its dependencies collect on the App Store:
@@ -51,7 +46,7 @@ HotMicMediaPlayer has the following dependencies:
 
 ## Example
 
-To run the example app, clone the repo and execute `pod install` from the Example directory. In the `AppDelegate`, add your `apiKey` and `accessToken` in the call to initialize `HMMediaPlayer`. Run the app and a list of streams will be loaded. Select a stream to open the media player experience.
+To run the example app, clone the repo and execute `pod install` from the Example directory. In the `AppDelegate`, add your `apiKey` provided by HotMic and generated `accessToken` in the call to initialize `HMMediaPlayer`. Run the app and a list of streams will be loaded. Select a stream to open the media player experience.
 
 ## Installation
 
