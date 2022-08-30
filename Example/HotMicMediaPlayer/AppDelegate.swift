@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 import StoreKit
 import HotMicMediaPlayer
 
@@ -31,6 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HMMediaPlayer.inAppPurchaseDelegate = self
         HMMediaPlayer.authenticationObserver = self
         HMMediaPlayer.analyticsObserver = self
+        
+        // Set the desired category and mode of the app's audio session to ensure audio is audible while in Silent Mode (Ring/Silent switch is set to Silent). This also ensures the app can play background audio with the Audio, AirPlay, and Picture in Picture capability enabled.
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback)
+        } catch {
+            print("Setting AVAudioSession category failed with error: \(error)")
+        }
         
         return true
     }
