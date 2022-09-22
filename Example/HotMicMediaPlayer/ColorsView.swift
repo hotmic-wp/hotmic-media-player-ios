@@ -63,8 +63,10 @@ struct ColorsView: View {
         .navigationTitle("Colors")
         .toolbar {
             ToolbarItem {
-                Button("Reset", action: viewModel.resetColors)
-                    .tint(Color(.systemRed))
+                Button("Reset") {
+                    viewModel.resetColors()
+                }
+                .tint(Color(.systemRed))
             }
         }
     }

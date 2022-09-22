@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-class SettingsViewModel: ObservableObject {
+@MainActor final class SettingsViewModel: ObservableObject {
+    @Published var apiKey = ""
+    @Published var accessToken = ""
+    
     @Published var largeTitleFontDescriptor: UIFontDescriptor?
     @Published var title1FontDescriptor: UIFontDescriptor?
     @Published var title2FontDescriptor: UIFontDescriptor?
@@ -48,6 +51,9 @@ class SettingsViewModel: ObservableObject {
     @Published var tertiaryBackgroundElevatedColor: Color?
     
     func resetAll() {
+        apiKey = ""
+        accessToken = ""
+        
         resetFonts()
         resetColors()
     }

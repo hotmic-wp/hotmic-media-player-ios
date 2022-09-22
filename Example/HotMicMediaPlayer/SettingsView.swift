@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import HotMicMediaPlayer
 
 struct SettingsView: View {
     @ObservedObject var viewModel: SettingsViewModel
@@ -16,6 +17,31 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
+                Section("Authentication") {
+                    HStack {
+                        TextField("API Key", text: $viewModel.apiKey, prompt: Text("API Key"))
+                        
+                        PasteButton(payloadType: String.self) { strings in
+                            Task {
+                                viewModel.apiKey = strings.first ?? ""
+                            }
+                        }
+                        .labelStyle(.iconOnly)
+                        .buttonBorderShape(.capsule)
+                    }
+                    
+                    HStack {
+                        TextField("Access Token", text: $viewModel.accessToken, prompt: Text("Access Token"))
+                        
+                        PasteButton(payloadType: String.self) { strings in
+                            Task {
+                                viewModel.accessToken = strings.first ?? ""
+                            }
+                        }
+                        .labelStyle(.iconOnly)
+                        .buttonBorderShape(.capsule)
+                    }
+                }
                 Section("Appearance") {
                     NavigationLink {
                         FontsView(viewModel: viewModel)
@@ -30,8 +56,10 @@ struct SettingsView: View {
                     }
                 }
                 Section {
-                    Button("Reset", action: viewModel.resetAll)
-                        .tint(Color(.systemRed))
+                    Button("Reset") {
+                        viewModel.resetAll()
+                    }
+                    .tint(Color(.systemRed))
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -46,6 +74,19 @@ struct SettingsView: View {
             }
             .scrollDismissesKeyboard(.interactively)
         }
+        .onChange(of: viewModel.apiKey) { _ in
+            reinitializeHMMediaPlayer()
+        }
+        .onChange(of: viewModel.accessToken) { _ in
+            reinitializeHMMediaPlayer()
+        }
+    }
+    
+    private func reinitializeHMMediaPlayer() {
+        HMMediaPlayer.initialize(
+            apiKey: viewModel.apiKey,
+            accessToken: viewModel.apiKey
+        )
     }
 }
 
