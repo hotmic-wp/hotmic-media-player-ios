@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 import HotMicMediaPlayer
 
 class ViewController: UIViewController {
@@ -28,6 +29,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", image: UIImage(systemName: "gear"), primaryAction: UIAction() { [weak self] _ in
+            let viewController = UIHostingController(rootView: SettingsView(viewModel: (UIApplication.shared.delegate as! AppDelegate).settingsViewModel))
+            self?.present(viewController, animated: true)
+        })
         
         collectionView.backgroundColor = .systemGroupedBackground
         collectionView.refreshControl = UIRefreshControl()
@@ -96,7 +102,7 @@ class ViewController: UIViewController {
             limit: limitToFiveStreams ? 5 : nil,
             skip: skipFirstFiveStreams ? 5 : nil)
         { [weak self] result in
-            guard let self = self else { return }
+            guard let self else { return }
             
             self.collectionView.refreshControl?.perform(#selector(UIRefreshControl.endRefreshing), with: nil, afterDelay: 0)
             
@@ -174,7 +180,7 @@ class ViewController: UIViewController {
         if let thumbnailURL = stream.thumbnail {
             let displaySize = CGSize(width: StreamContentView.thumbnailSize.width * traitCollection.displayScale, height: StreamContentView.thumbnailSize.width * traitCollection.displayScale)
             downloadThumbnailImage(of: displaySize, url: thumbnailURL) { [weak cell] image in
-                guard let cell = cell,
+                guard let cell,
                       var updatedConfiguration = cell.contentConfiguration as? StreamContentConfiguration,
                       updatedConfiguration.id == stream.id
                 else { return }
@@ -187,7 +193,7 @@ class ViewController: UIViewController {
         if let hostThumbnailURL = stream.user.profilePic {
             let displaySize = CGSize(width: StreamContentView.hostThumbnailSize.width * traitCollection.displayScale, height: StreamContentView.hostThumbnailSize.width * traitCollection.displayScale)
             downloadThumbnailImage(of: displaySize, url: hostThumbnailURL) { [weak cell] image in
-                guard let cell = cell,
+                guard let cell,
                       var updatedConfiguration = cell.contentConfiguration as? StreamContentConfiguration,
                       updatedConfiguration.id == stream.id
                 else { return }
@@ -202,7 +208,7 @@ class ViewController: UIViewController {
     
     private func downloadThumbnailImage(of size: CGSize, url: URL, completion: @escaping (UIImage?) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data,
+            guard let data,
                   let image = UIImage(data: data)
             else {
                 DispatchQueue.main.async {

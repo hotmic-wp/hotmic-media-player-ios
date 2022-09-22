@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 import AVFoundation
 import StoreKit
 import HotMicMediaPlayer
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let settingsViewModel = SettingsViewModel()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -72,27 +74,109 @@ extension AppDelegate: HMMediaPlayerAppearanceDelegate {
     
     func customFont(for textStyle: HMTextStyle) -> UIFont? {
         // Return a custom font for this style or nil to use the default
+        
+        func scaledFont(descriptor: UIFontDescriptor?, textStyle: UIFont.TextStyle, defaultSize: CGFloat) -> UIFont? {
+            guard let descriptor else { return nil }
+            
+            let font = UIFont(descriptor: descriptor, size: defaultSize)
+            return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font) // Support dynamic type
+        }
+        
         switch textStyle {
+        case .largeTitle:
+            return scaledFont(descriptor: settingsViewModel.largeTitleFontDescriptor, textStyle: .largeTitle, defaultSize: 34)
+        case .title1:
+            return scaledFont(descriptor: settingsViewModel.title1FontDescriptor, textStyle: .title1, defaultSize: 28)
+        case .title2:
+            return scaledFont(descriptor: settingsViewModel.title2FontDescriptor, textStyle: .title2, defaultSize: 22)
+        case .title3:
+            return scaledFont(descriptor: settingsViewModel.title3FontDescriptor, textStyle: .title3, defaultSize: 20)
+        case .headline:
+            return scaledFont(descriptor: settingsViewModel.headlineFontDescriptor, textStyle: .headline, defaultSize: 17)
         case .body:
-            let font = UIFont.systemFont(ofSize: 17)
-            return UIFontMetrics(forTextStyle: .body).scaledFont(for: font) // Support dynamic type
-        default:
+            return scaledFont(descriptor: settingsViewModel.bodyFontDescriptor, textStyle: .body, defaultSize: 17)
+        case .highlightedBody:
+            return scaledFont(descriptor: settingsViewModel.highlightedBodyFontDescriptor, textStyle: .body, defaultSize: 17)
+        case .callout:
+            return scaledFont(descriptor: settingsViewModel.calloutFontDescriptor, textStyle: .callout, defaultSize: 16)
+        case .subheadline:
+            return scaledFont(descriptor: settingsViewModel.subheadlineFontDescriptor, textStyle: .subheadline, defaultSize: 15)
+        case .footnote:
+            return scaledFont(descriptor: settingsViewModel.footnoteFontDescriptor, textStyle: .footnote, defaultSize: 13)
+        case .caption1:
+            return scaledFont(descriptor: settingsViewModel.caption1FontDescriptor, textStyle: .caption1, defaultSize: 12)
+        case .highlightedCaption1:
+            return scaledFont(descriptor: settingsViewModel.highlightedCaption1FontDescriptor, textStyle: .caption1, defaultSize: 12)
+        case .caption2:
+            return scaledFont(descriptor: settingsViewModel.caption2FontDescriptor, textStyle: .caption2, defaultSize: 11)
+        @unknown default:
             return nil
         }
     }
     
     func customColor(for colorStyle: HMColorStyle) -> UIColor? {
         // Return a custom color for this style or nil to use the default
-        switch colorStyle {
-        case .primaryBackground:
-            return UIColor { traitCollection in
-                if traitCollection.userInterfaceLevel == .elevated {
-                    return UIColor.systemBackground // Return your elevated color
-                } else {
-                    return UIColor.systemBackground // Return your non-elevated color
-                }
+        
+        func uiColor(for color: Color?) -> UIColor? {
+            if let color {
+                return UIColor(color)
             }
-        default:
+            return nil
+        }
+        
+        func traitCollectionOptimizedUIColor(for color: Color?, elevatedColor: Color?) -> UIColor? {
+            if let color, let elevatedColor {
+                return UIColor { traitCollection in
+                    return traitCollection.userInterfaceLevel == .elevated ? UIColor(elevatedColor) : UIColor(color)
+                }
+            } else if let color {
+                return UIColor(color)
+            }
+            return nil
+        }
+        
+        switch colorStyle {
+        case .primary:
+            return uiColor(for: settingsViewModel.primaryColor)
+        case .secondary:
+            return uiColor(for: settingsViewModel.secondaryColor)
+        case .tertiary:
+            return uiColor(for: settingsViewModel.tertiaryColor)
+        case .primaryTint:
+            return uiColor(for: settingsViewModel.primaryTintColor)
+        case .secondaryTint:
+            return uiColor(for: settingsViewModel.secondaryTintColor)
+        case .tertiaryTint:
+            return uiColor(for: settingsViewModel.tertiaryTintColor)
+        case .primaryTintContent:
+            return uiColor(for: settingsViewModel.primaryTintContentColor)
+        case .secondaryTintContent:
+            return uiColor(for: settingsViewModel.secondaryTintContentColor)
+        case .tertiaryTintContent:
+            return uiColor(for: settingsViewModel.tertiaryTintContentColor)
+        case .warningTint:
+            return uiColor(for: settingsViewModel.warningTintColor)
+        case .errorTint:
+            return uiColor(for: settingsViewModel.errorTintColor)
+        case .successTint:
+            return uiColor(for: settingsViewModel.successTintColor)
+        case .liveTint:
+            return uiColor(for: settingsViewModel.liveTintColor)
+        case .separator:
+            return uiColor(for: settingsViewModel.separatorColor)
+        case .highlightedFill:
+            return uiColor(for: settingsViewModel.highlightedFillColor)
+        case .selectedFill:
+            return uiColor(for: settingsViewModel.selectedFillColor)
+        case .selectedPollAnswerFill:
+            return uiColor(for: settingsViewModel.selectedPollAnswerFillColor)
+        case .primaryBackground:
+            return traitCollectionOptimizedUIColor(for: settingsViewModel.primaryBackgroundColor, elevatedColor: settingsViewModel.primaryBackgroundElevatedColor)
+        case .secondaryBackground:
+            return traitCollectionOptimizedUIColor(for: settingsViewModel.secondaryBackgroundColor, elevatedColor: settingsViewModel.secondaryBackgroundElevatedColor)
+        case .tertiaryBackground:
+            return traitCollectionOptimizedUIColor(for: settingsViewModel.tertiaryBackgroundColor, elevatedColor: settingsViewModel.tertiaryBackgroundElevatedColor)
+        @unknown default:
             return nil
         }
     }

@@ -157,7 +157,7 @@ Implement the `HMPlayerViewControllerDelegate` protocol to dismiss the player wh
 func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {
     dismiss(animated: true, completion: nil)
     
-    if let pipView = pipView {
+    if let pipView {
         let pipViewController = PIPViewController()
         pipViewController.addContentView(pipView)
         PIPKit.show(with: pipViewController)
@@ -179,7 +179,7 @@ To support returning to the full-screen player experience from PiP, call `HMPlay
  
  ```swift
 func pipViewControllerDidTapFullScreen(_ viewController: PIPViewController) {
-    guard let playerViewController = playerViewController else { return }
+    guard let playerViewController else { return }
     
     playerViewController.restorePiPView(viewController.contentView)
     
