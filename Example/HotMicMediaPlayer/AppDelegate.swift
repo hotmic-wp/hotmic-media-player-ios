@@ -188,7 +188,11 @@ extension AppDelegate: HMMediaPlayerShareDelegate {
     func getStreamShareText(streamID: String, completion: @escaping (Result<String?, Error>) -> Void) {
         // Call completion with a String or nil if there is no share text
         // Call completion with failure and an Error if an error occurs
-        completion(.success(nil))
+        if !settingsViewModel.streamShareText.isEmpty {
+            completion(.success(settingsViewModel.streamShareText))
+        } else {
+            completion(.success(nil))
+        }
     }
     
 }

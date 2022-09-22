@@ -50,12 +50,16 @@ import SwiftUI
     @Published var secondaryBackgroundElevatedColor: Color?
     @Published var tertiaryBackgroundElevatedColor: Color?
     
+    @Published var streamShareText = ""
+    
     func resetAll() {
         apiKey = ""
         accessToken = ""
         
         resetFonts()
         resetColors()
+        
+        streamShareText = ""
     }
     
     func resetFonts() {

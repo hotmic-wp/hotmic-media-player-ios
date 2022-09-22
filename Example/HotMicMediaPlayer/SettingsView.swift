@@ -55,6 +55,9 @@ struct SettingsView: View {
                         Label("Colors", systemImage: "paintpalette")
                     }
                 }
+                Section("Share") {
+                    TextField("Stream Share Text", text: $viewModel.streamShareText, prompt: Text("Stream Share Text"))
+                }
                 Section {
                     Button("Reset") {
                         viewModel.resetAll()
