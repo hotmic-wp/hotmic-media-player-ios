@@ -16,6 +16,12 @@ class ViewController: UIViewController {
     
     private var streams: [HMStream]?
     
+    private var includeLiveStreams = true
+    private var includeVODStreams = true
+    private var includeScheduledStreams = true
+    private var limitToFiveStreams = false
+    private var skipFirstFiveStreams = false
+    
     private enum Section: Int {
         case main
     }
@@ -39,7 +45,42 @@ class ViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
+        updateMoreMenu()
         loadStreams(isRefreshing: false)
+    }
+    
+    private func updateMoreMenu() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "More", image: UIImage(systemName: "ellipsis.circle"), menu: UIMenu(children: [
+            UIMenu(options: .displayInline, children: [
+                UIAction(title: "Live", state: includeLiveStreams ? .on : .off) { [weak self] _ in
+                    self?.includeLiveStreams.toggle()
+                    self?.updateMoreMenu()
+                    self?.loadStreams(isRefreshing: false)
+                },
+                UIAction(title: "VOD", state: includeVODStreams ? .on : .off) { [weak self] _ in
+                    self?.includeVODStreams.toggle()
+                    self?.updateMoreMenu()
+                    self?.loadStreams(isRefreshing: false)
+                },
+                UIAction(title: "Scheduled", state: includeScheduledStreams ? .on : .off) { [weak self] _ in
+                    self?.includeScheduledStreams.toggle()
+                    self?.updateMoreMenu()
+                    self?.loadStreams(isRefreshing: false)
+                }
+            ]),
+            UIMenu(options: .displayInline, children: [
+                UIAction(title: "Limit to 5", state: limitToFiveStreams ? .on : .off) { [weak self] _ in
+                    self?.limitToFiveStreams.toggle()
+                    self?.updateMoreMenu()
+                    self?.loadStreams(isRefreshing: false)
+                },
+                UIAction(title: "Skip First 5", state: skipFirstFiveStreams ? .on : .off) { [weak self] _ in
+                    self?.skipFirstFiveStreams.toggle()
+                    self?.updateMoreMenu()
+                    self?.loadStreams(isRefreshing: false)
+                }
+            ])
+        ]))
     }
     
     private func loadStreams(isRefreshing: Bool) {
@@ -47,7 +88,14 @@ class ViewController: UIViewController {
             collectionView.refreshControl?.beginRefreshing()
         }
         
-        HMMediaPlayer.getStreams(live: true, scheduled: true, vod: true, userID: nil, limit: nil, skip: nil) { [weak self] result in
+        HMMediaPlayer.getStreams(
+            live: includeLiveStreams,
+            scheduled: includeScheduledStreams,
+            vod: includeVODStreams,
+            userID: nil,
+            limit: limitToFiveStreams ? 5 : nil,
+            skip: skipFirstFiveStreams ? 5 : nil)
+        { [weak self] result in
             guard let self = self else { return }
             
             self.collectionView.refreshControl?.perform(#selector(UIRefreshControl.endRefreshing), with: nil, afterDelay: 0)
@@ -69,7 +117,7 @@ class ViewController: UIViewController {
         
         let item = NSCollectionLayoutItem(layoutSize: cellSize)
         
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: cellSize, subitem: item, count: 1)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: cellSize, subitems: [item])
         group.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: nil, top: .fixed(4), trailing: nil, bottom: .fixed(4))
         
         let section = NSCollectionLayoutSection(group: group)
@@ -106,11 +154,7 @@ class ViewController: UIViewController {
         
         config.date = {
             if let date = stream.state == .scheduled ? stream.scheduledDate : stream.liveDate {
-                if #available(iOS 15.0, *) {
-                    return date.formatted(date: .numeric, time: .shortened)
-                } else {
-                    return date.description
-                }
+                return date.formatted(date: .numeric, time: .shortened)
             }
             return nil
         }()
@@ -167,13 +211,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            if #available(iOS 15.0, *) {
-                image.prepareThumbnail(of: size) { image in
-                    DispatchQueue.main.async {
-                        completion(image)
-                    }
-                }
-            } else {
+            image.prepareThumbnail(of: size) { image in
                 DispatchQueue.main.async {
                     completion(image)
                 }
