@@ -88,7 +88,7 @@ struct SettingsView: View {
     private func reinitializeHMMediaPlayer() {
         HMMediaPlayer.initialize(
             apiKey: viewModel.apiKey,
-            accessToken: viewModel.apiKey
+            accessToken: viewModel.accessToken
         )
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DidReinitializeHMMediaPlayer"), object: nil)
