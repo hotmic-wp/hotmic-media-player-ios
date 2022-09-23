@@ -53,6 +53,10 @@ class ViewController: UIViewController {
         
         updateMoreMenu()
         loadStreams(isRefreshing: false)
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "DidReinitializeHMMediaPlayer"), object: nil, queue: nil) { [weak self] _ in
+            self?.loadStreams(isRefreshing: false)
+        }
     }
     
     private func updateMoreMenu() {
