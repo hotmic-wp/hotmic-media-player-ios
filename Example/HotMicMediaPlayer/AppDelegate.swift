@@ -22,12 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        #warning("Add your API key and access token below")
-        
-        HMMediaPlayer.initialize(
-            apiKey: "YOUR_API_KEY",
-            accessToken: "YOUR_ACCESS_TOKEN"
-        )
+        HMMediaPlayer.initialize(apiKey: settingsViewModel.apiKey, accessToken: settingsViewModel.accessToken)
         HMMediaPlayer.appearanceDelegate = self
         HMMediaPlayer.shareDelegate = self
         HMMediaPlayer.userProfileDelegate = self

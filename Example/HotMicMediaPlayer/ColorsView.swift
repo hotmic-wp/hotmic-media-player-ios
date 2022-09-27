@@ -44,7 +44,7 @@ struct ColorsView: View {
                 ColorPicker("Live", selection: $viewModel.liveTintColor.defaultValue(.white))
             }
             Section {
-                ColorPicker("Separator", selection: $viewModel.secondaryColor.defaultValue(.white))
+                ColorPicker("Separator", selection: $viewModel.separatorColor.defaultValue(.white))
                 ColorPicker("Highlighted Fill", selection: $viewModel.highlightedFillColor.defaultValue(.white))
                 ColorPicker("Selected Fill", selection: $viewModel.selectedFillColor.defaultValue(.white))
                 ColorPicker("Selected Poll Answer Fill", selection: $viewModel.selectedPollAnswerFillColor.defaultValue(.white))

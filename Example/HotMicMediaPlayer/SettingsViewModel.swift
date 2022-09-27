@@ -9,6 +9,8 @@
 import SwiftUI
 
 @MainActor final class SettingsViewModel: ObservableObject {
+    
+    #warning("Add your API key and access token")
     @Published var apiKey = ""
     @Published var accessToken = ""
     
@@ -103,4 +105,5 @@ import SwiftUI
         secondaryBackgroundElevatedColor = nil
         tertiaryBackgroundElevatedColor = nil
     }
+    
 }
