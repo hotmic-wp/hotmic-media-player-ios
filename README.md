@@ -46,7 +46,7 @@ HotMicMediaPlayer has the following dependencies:
 
 ## Example
 
-To run the example app, clone the repo and execute `pod install` from the Example directory. In the `AppDelegate`, add your `apiKey` provided by HotMic and generated `accessToken` in the call to initialize `HMMediaPlayer`. Run the app and a list of streams will be loaded. Select a stream to open the media player experience.
+To run the example app, clone the repo and execute `pod install` from the Example directory. In the `SettingsViewModel`, add your `apiKey` provided by HotMic and generated `accessToken`. Run the app and a list of streams will be loaded. Select a stream to open the media player experience.
 
 ## Installation
 
