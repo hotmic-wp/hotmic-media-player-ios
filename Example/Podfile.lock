@@ -1,20 +1,18 @@
 PODS:
   - BitmovinPlayer (3.22.0)
   - FittedSheets (2.4.2)
-  - HotMicMediaPlayer (4.0.0):
+  - HotMicMediaPlayer (4.0.5):
     - BitmovinPlayer (= 3.22.0)
     - FittedSheets (= 2.4.2)
     - Kingfisher (= 7.3.1)
     - OpenTok (= 2.23.0)
     - PubNubSwift (= 6.0.0)
-    - ShipBookSDK (= 1.1.19)
     - TrueTime (= 5.0.3)
     - youtube-ios-player-helper (= 1.0.4)
   - Kingfisher (7.3.1)
   - OpenTok (2.23.0):
     - VonageWebRTC (= 84.0.21)
   - PubNubSwift (6.0.0)
-  - ShipBookSDK (1.1.19)
   - TrueTime (5.0.3)
   - VonageWebRTC (84.0.21)
   - youtube-ios-player-helper (1.0.4)
@@ -30,7 +28,6 @@ SPEC REPOS:
     - Kingfisher
     - OpenTok
     - PubNubSwift
-    - ShipBookSDK
     - TrueTime
     - VonageWebRTC
     - youtube-ios-player-helper
@@ -42,11 +39,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BitmovinPlayer: ecf00f7c29c7a6452483e0432fd994049dcec4da
   FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
-  HotMicMediaPlayer: a3075414dc4008cd45fc0bfb0e72e924d4e763c1
+  HotMicMediaPlayer: 3ec2b72c2afdd43f3e061ee6e422e1b73a8cc6a3
   Kingfisher: f411ab4902e733fc0c40522920fb5a236d7a7334
   OpenTok: 1e999b12d4694a2effc5106414695283c6162968
   PubNubSwift: 5654828929b4aa00bcfd611aac0a31b6b1086eee
-  ShipBookSDK: 2086b80c9beef01f44a28390012223ee863410eb
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
   VonageWebRTC: cfa7aefc3fe6e95bcbd778e8973af90fe9bfd497
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689

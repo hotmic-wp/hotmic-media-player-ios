@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HotMicMediaPlayer'
-  s.version          = '4.0.4'
+  s.version          = '4.0.5'
   s.summary          = 'Integrate the HotMic player experience in your app.'
   s.description      = <<-DESC
 'HotMicMediaPlayer allows you to integrate the HotMic player experience into your app.'
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.dependency 'youtube-ios-player-helper', '1.0.4'
   s.dependency 'TrueTime', '5.0.3'
   s.dependency 'OpenTok', '2.23.0'
-  s.dependency 'ShipBookSDK', '1.1.19'
 
   # Needed to pass lint validation
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
