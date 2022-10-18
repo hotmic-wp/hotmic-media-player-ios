@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HotMicMediaPlayer'
-  s.version          = '4.0.5'
+  s.version          = '4.0.6'
   s.summary          = 'Integrate the HotMic player experience in your app.'
   s.description      = <<-DESC
 'HotMicMediaPlayer allows you to integrate the HotMic player experience into your app.'
