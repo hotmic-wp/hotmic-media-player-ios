@@ -38,7 +38,6 @@ HotMicMediaPlayer has the following dependencies:
 - BitmovinPlayer
 - TrueTime
 - OpenTok
-- Shipbook
 - PubNub
 - FittedSheets
 - Kingfisher
