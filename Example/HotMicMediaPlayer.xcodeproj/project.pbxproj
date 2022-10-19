@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17276B5929004DA4005A9B8B /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 17276B5829004DA4005A9B8B /* LocalConsole */; };
+		171106D929007AED00480795 /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 171106D829007AED00480795 /* LocalConsole */; };
 		1769ED7027B3250100AD00CF /* StreamContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769ED6F27B3250100AD00CF /* StreamContentConfiguration.swift */; };
 		1769ED7227B325B500AD00CF /* StreamContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769ED7127B325B500AD00CF /* StreamContentView.swift */; };
 		17F5EDDB28DBC427009C57AE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5EDDA28DBC427009C57AE /* SettingsView.swift */; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17276B5929004DA4005A9B8B /* LocalConsole in Frameworks */,
+				171106D929007AED00480795 /* LocalConsole in Frameworks */,
 				2A6070802D3E9A24C9753275 /* Pods_HotMicMediaPlayer_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +201,7 @@
 			);
 			name = HotMicMediaPlayer_Example;
 			packageProductDependencies = (
-				17276B5829004DA4005A9B8B /* LocalConsole */,
+				171106D829007AED00480795 /* LocalConsole */,
 			);
 			productName = HotMicMediaPlayer;
 			productReference = 607FACD01AFB9204008FA782 /* HotMicMediaPlayer_Example.app */;
@@ -257,7 +257,7 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				17276B5729004DA4005A9B8B /* XCRemoteSwiftPackageReference "LocalConsole" */,
+				171106D729007AED00480795 /* XCRemoteSwiftPackageReference "LocalConsole" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -646,20 +646,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		17276B5729004DA4005A9B8B /* XCRemoteSwiftPackageReference "LocalConsole" */ = {
+		171106D729007AED00480795 /* XCRemoteSwiftPackageReference "LocalConsole" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/duraidabdul/LocalConsole/";
 			requirement = {
-				kind = exactVersion;
-				version = 1.10.4;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		17276B5829004DA4005A9B8B /* LocalConsole */ = {
+		171106D829007AED00480795 /* LocalConsole */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 17276B5729004DA4005A9B8B /* XCRemoteSwiftPackageReference "LocalConsole" */;
+			package = 171106D729007AED00480795 /* XCRemoteSwiftPackageReference "LocalConsole" */;
 			productName = LocalConsole;
 		};
 /* End XCSwiftPackageProductDependency section */

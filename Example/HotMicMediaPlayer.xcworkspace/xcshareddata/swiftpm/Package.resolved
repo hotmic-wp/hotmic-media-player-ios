@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/duraidabdul/LocalConsole/",
       "state" : {
-        "revision" : "74556927bef798a80a81994d2aefce23dde99951",
-        "version" : "1.10.4"
+        "revision" : "80e0aa6168d55407c87e403931957d4eaea41f8a",
+        "version" : "1.11.2"
       }
     }
   ],
