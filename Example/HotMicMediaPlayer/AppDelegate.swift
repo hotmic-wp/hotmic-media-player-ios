@@ -11,6 +11,7 @@ import SwiftUI
 import AVFoundation
 import StoreKit
 import HotMicMediaPlayer
+import LocalConsole
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HMMediaPlayer.inAppPurchaseDelegate = self
         HMMediaPlayer.authenticationObserver = self
         HMMediaPlayer.analyticsObserver = self
+        
+        LCManager.shared.print("Listening for analytics events…")
         
         // Set the desired category and mode of the app's audio session to ensure audio is audible while in Silent Mode (Ring/Silent switch is set to Silent). This also ensures the app can play background audio with the Audio, AirPlay, and Picture in Picture capability enabled.
         do {
@@ -253,11 +256,13 @@ extension AppDelegate: HMMediaPlayerAuthenticationObserving {
 extension AppDelegate: HMMediaPlayerAnalyticsEventObserving {
     
     func eventStarted(name: String) {
-        print("HotMic event \(name) started")
+        print("Analytics event \(name) started")
+        LCManager.shared.print("\(name) started")
     }
     
     func eventOccurred(name: String, info: [String : Any]) {
-        print("HotMic event \(name) occurred: \(info)")
+        print("Analytics event \(name) occurred: \(info)")
+        LCManager.shared.print("\(name) occurred: \(info)")
     }
     
 }

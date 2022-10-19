@@ -1,7 +1,7 @@
 PODS:
   - BitmovinPlayer (3.22.0)
   - FittedSheets (2.4.2)
-  - HotMicMediaPlayer (4.0.5):
+  - HotMicMediaPlayer (4.0.6):
     - BitmovinPlayer (= 3.22.0)
     - FittedSheets (= 2.4.2)
     - Kingfisher (= 7.3.1)
@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BitmovinPlayer: ecf00f7c29c7a6452483e0432fd994049dcec4da
   FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
-  HotMicMediaPlayer: 3ec2b72c2afdd43f3e061ee6e422e1b73a8cc6a3
+  HotMicMediaPlayer: 6dffdf658b4fc63c2e1adc92499701ad56c491f1
   Kingfisher: f411ab4902e733fc0c40522920fb5a236d7a7334
   OpenTok: 1e999b12d4694a2effc5106414695283c6162968
   PubNubSwift: 5654828929b4aa00bcfd611aac0a31b6b1086eee
@@ -47,6 +47,6 @@ SPEC CHECKSUMS:
   VonageWebRTC: cfa7aefc3fe6e95bcbd778e8973af90fe9bfd497
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 843619e89493671f555d2f4a8ffbd0444be7dc8d
+PODFILE CHECKSUM: 4ac56122a8031ea39e361710a755830b7b7cc716
 
 COCOAPODS: 1.11.3

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import HotMicMediaPlayer
+import LocalConsole
 
 struct SettingsView: View {
     @ObservedObject var viewModel: SettingsViewModel
@@ -58,6 +59,9 @@ struct SettingsView: View {
                 Section("Share") {
                     TextField("Stream Share Text", text: $viewModel.streamShareText, prompt: Text("Stream Share Text"))
                 }
+                Section("Analytics") {
+                    Toggle("Analytics Overlay", isOn: $viewModel.isAnalyticsOverlayEnabled)
+                }
                 Section {
                     Button("Reset") {
                         viewModel.resetAll()
@@ -82,6 +86,9 @@ struct SettingsView: View {
         }
         .onChange(of: viewModel.accessToken) { _ in
             reinitializeHMMediaPlayer()
+        }
+        .onChange(of: viewModel.isAnalyticsOverlayEnabled) { newValue in
+            LCManager.shared.isVisible = newValue
         }
     }
     

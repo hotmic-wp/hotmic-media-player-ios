@@ -54,6 +54,8 @@ import SwiftUI
     
     @Published var streamShareText = ""
     
+    @Published var isAnalyticsOverlayEnabled = false
+    
     func resetAll() {
         apiKey = ""
         accessToken = ""
@@ -62,6 +64,8 @@ import SwiftUI
         resetColors()
         
         streamShareText = ""
+        
+        isAnalyticsOverlayEnabled = false
     }
     
     func resetFonts() {
