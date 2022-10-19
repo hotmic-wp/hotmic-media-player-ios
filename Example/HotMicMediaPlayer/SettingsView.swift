@@ -63,10 +63,9 @@ struct SettingsView: View {
                     Toggle("Analytics Overlay", isOn: $viewModel.isAnalyticsOverlayEnabled)
                 }
                 Section {
-                    Button("Reset") {
+                    Button("Reset", role: .destructive) {
                         viewModel.resetAll()
                     }
-                    .tint(Color(.systemRed))
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

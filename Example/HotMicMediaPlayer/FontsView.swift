@@ -38,10 +38,9 @@ struct FontsView: View {
         .navigationTitle("Fonts")
         .toolbar {
             ToolbarItem {
-                Button("Reset") {
+                Button("Reset", role: .destructive) {
                     viewModel.resetFonts()
                 }
-                .tint(Color(.systemRed))
             }
         }
         .sheet(isPresented: $isShowingFontPicker) {
