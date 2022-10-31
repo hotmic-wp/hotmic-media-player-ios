@@ -18,7 +18,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section("Authentication") {
+                Section("API Key & Access Token") {
                     HStack {
                         TextField("API Key", text: $viewModel.apiKey, prompt: Text("API Key"))
                         
