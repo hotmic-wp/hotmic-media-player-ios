@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		171106D929007AED00480795 /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 171106D829007AED00480795 /* LocalConsole */; };
-		1769ED7027B3250100AD00CF /* StreamContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769ED6F27B3250100AD00CF /* StreamContentConfiguration.swift */; };
-		1769ED7227B325B500AD00CF /* StreamContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769ED7127B325B500AD00CF /* StreamContentView.swift */; };
+		17EFB20D291029E3000DF684 /* StreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EFB20C291029E3000DF684 /* StreamView.swift */; };
 		17F5EDDB28DBC427009C57AE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5EDDA28DBC427009C57AE /* SettingsView.swift */; };
 		17F5EDE028DCB68F009C57AE /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5EDDF28DCB68F009C57AE /* ColorsView.swift */; };
 		17F5EDE228DCB7BE009C57AE /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5EDE128DCB7BE009C57AE /* FontsView.swift */; };
@@ -37,8 +36,7 @@
 
 /* Begin PBXFileReference section */
 		11B7B198D9A32E139DFFC0F3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		1769ED6F27B3250100AD00CF /* StreamContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamContentConfiguration.swift; sourceTree = "<group>"; };
-		1769ED7127B325B500AD00CF /* StreamContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamContentView.swift; sourceTree = "<group>"; };
+		17EFB20C291029E3000DF684 /* StreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamView.swift; sourceTree = "<group>"; };
 		17F5EDDA28DBC427009C57AE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		17F5EDDF28DCB68F009C57AE /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 		17F5EDE128DCB7BE009C57AE /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
@@ -112,8 +110,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				17F5EDE528DCC34B009C57AE /* SettingsViewModel.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				1769ED6F27B3250100AD00CF /* StreamContentConfiguration.swift */,
-				1769ED7127B325B500AD00CF /* StreamContentView.swift */,
+				17EFB20C291029E3000DF684 /* StreamView.swift */,
 				17F5EDDA28DBC427009C57AE /* SettingsView.swift */,
 				17F5EDE128DCB7BE009C57AE /* FontsView.swift */,
 				17F5EDE328DCB8B6009C57AE /* FontPicker.swift */,
@@ -374,11 +371,10 @@
 				17F5EDE428DCB8B6009C57AE /* FontPicker.swift in Sources */,
 				17F5EDE028DCB68F009C57AE /* ColorsView.swift in Sources */,
 				17F5EDDB28DBC427009C57AE /* SettingsView.swift in Sources */,
-				1769ED7227B325B500AD00CF /* StreamContentView.swift in Sources */,
 				17F5EDE228DCB7BE009C57AE /* FontsView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				1769ED7027B3250100AD00CF /* StreamContentConfiguration.swift in Sources */,
+				17EFB20D291029E3000DF684 /* StreamView.swift in Sources */,
 				17F5EDE628DCC34B009C57AE /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

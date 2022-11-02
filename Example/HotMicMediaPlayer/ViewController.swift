@@ -136,8 +136,25 @@ class ViewController: UIViewController {
     }
     
     private func createDataSource() -> UICollectionViewDiffableDataSource<Section, String> {
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewCell, HMStream> { [weak self] (cell, indexPath, stream) in
-            cell.contentConfiguration = self?.createStreamContentConfiguration(cell: cell, stream: stream)
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewCell, HMStream> { (cell, indexPath, stream) in
+            cell.configurationUpdateHandler = { cell, state in
+                cell.contentConfiguration = UIHostingConfiguration {
+                    StreamView(
+                        thumbnailURL: stream.thumbnail,
+                        title: stream.title,
+                        date: stream.state == .scheduled ? stream.scheduledDate : stream.liveDate,
+                        state: stream.state.rawValue,
+                        hostImageURL: stream.user.profilePic,
+                        hostName: stream.user.displayName ?? "User"
+                    )
+                }
+                .background {
+                    RoundedRectangle(cornerRadius: 6, style: .continuous)
+                        .foregroundColor(Color(state.isHighlighted || state.isSelected ? .systemGray4 : .secondarySystemGroupedBackground))
+                }
+                .margins(.horizontal, 0)
+                .margins(.vertical, 0)
+            }
         }
         
         return UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) { [weak self] (collectionView, indexPath, identifier) -> UICollectionViewCell? in
@@ -153,80 +170,6 @@ class ViewController: UIViewController {
         snapshot.appendItems((streams ?? []).map { $0.id })
         
         dataSource.apply(snapshot, animatingDifferences: false)
-    }
-    
-    private func createStreamContentConfiguration(cell: UICollectionViewCell, stream: HMStream) -> UIContentConfiguration {
-        var config = StreamContentConfiguration()
-        
-        config.id = stream.id
-        
-        config.title = stream.title
-        
-        config.date = {
-            if let date = stream.state == .scheduled ? stream.scheduledDate : stream.liveDate {
-                return date.formatted(date: .numeric, time: .shortened)
-            }
-            return nil
-        }()
-        
-        config.state = {
-            switch stream.state {
-            case .scheduled: return "SCHEDULED"
-            case .live: return "LIVE"
-            case .vod: return "VOD"
-            case .ended: return "ENDED"
-            @unknown default: return nil
-            }
-        }()
-        
-        config.host = stream.user.displayName
-        
-        if let thumbnailURL = stream.thumbnail {
-            let displaySize = CGSize(width: StreamContentView.thumbnailSize.width * traitCollection.displayScale, height: StreamContentView.thumbnailSize.width * traitCollection.displayScale)
-            downloadThumbnailImage(of: displaySize, url: thumbnailURL) { [weak cell] image in
-                guard let cell,
-                      var updatedConfiguration = cell.contentConfiguration as? StreamContentConfiguration,
-                      updatedConfiguration.id == stream.id
-                else { return }
-                
-                updatedConfiguration.thumbnailImage = image
-                cell.contentConfiguration = updatedConfiguration
-            }
-        }
-        
-        if let hostThumbnailURL = stream.user.profilePic {
-            let displaySize = CGSize(width: StreamContentView.hostThumbnailSize.width * traitCollection.displayScale, height: StreamContentView.hostThumbnailSize.width * traitCollection.displayScale)
-            downloadThumbnailImage(of: displaySize, url: hostThumbnailURL) { [weak cell] image in
-                guard let cell,
-                      var updatedConfiguration = cell.contentConfiguration as? StreamContentConfiguration,
-                      updatedConfiguration.id == stream.id
-                else { return }
-                
-                updatedConfiguration.hostThumbnailImage = image
-                cell.contentConfiguration = updatedConfiguration
-            }
-        }
-        
-        return config
-    }
-    
-    private func downloadThumbnailImage(of size: CGSize, url: URL, completion: @escaping (UIImage?) -> Void) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data,
-                  let image = UIImage(data: data)
-            else {
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
-                return
-            }
-            
-            image.prepareThumbnail(of: size) { image in
-                DispatchQueue.main.async {
-                    completion(image)
-                }
-            }
-        }.resume()
     }
 
 }
