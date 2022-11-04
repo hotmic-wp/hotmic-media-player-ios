@@ -201,7 +201,7 @@ extension AppDelegate: HMMediaPlayerUserProfileDelegate {
         // Get the user's follow state: followers count, following count, if they're following the current user, and if they're followed by the current user
         // Call completion with an HMUserFollowState specifying nil for any unsupported values
         // Call completion with failure and an Error if an error occurs
-        let followState = HMUserFollowState(followersCount: nil, followingCount: nil, followingMe: nil, followedByMe: nil)
+        let followState = HMUserFollowState(followersCount: 100, followingCount: 100, followingMe: false, followedByMe: false)
         completion(.success(followState))
     }
     
