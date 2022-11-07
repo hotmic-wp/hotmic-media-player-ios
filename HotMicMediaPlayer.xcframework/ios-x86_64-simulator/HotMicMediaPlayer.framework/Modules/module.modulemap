@@ -6,6 +6,6 @@ framework module HotMicMediaPlayer {
 }
 
 module HotMicMediaPlayer.Swift {
-    header "HotMicMediaPlayer-Swift.h"
-    requires objc
+  header "HotMicMediaPlayer-Swift.h"
+  requires objc
 }

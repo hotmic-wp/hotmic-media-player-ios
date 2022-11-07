@@ -1,21 +1,19 @@
 PODS:
   - BitmovinPlayer (3.22.0)
-  - FittedSheets (2.4.2)
-  - HotMicMediaPlayer (4.0.6):
+  - FittedSheets (2.5.3)
+  - HotMicMediaPlayer (4.1):
     - BitmovinPlayer (= 3.22.0)
-    - FittedSheets (= 2.4.2)
-    - Kingfisher (= 7.3.1)
-    - OpenTok (= 2.23.0)
-    - PubNubSwift (= 6.0.0)
+    - FittedSheets (= 2.5.3)
+    - Kingfisher (= 7.4.1)
+    - OpenTok (= 2.24.0)
+    - PubNubSwift (= 6.0.1)
     - TrueTime (= 5.0.3)
-    - youtube-ios-player-helper (= 1.0.4)
-  - Kingfisher (7.3.1)
-  - OpenTok (2.23.0):
-    - VonageWebRTC (= 84.0.21)
-  - PubNubSwift (6.0.0)
+  - Kingfisher (7.4.1)
+  - OpenTok (2.24.0):
+    - VonageWebRTC (= 99.2.39)
+  - PubNubSwift (6.0.1)
   - TrueTime (5.0.3)
-  - VonageWebRTC (84.0.21)
-  - youtube-ios-player-helper (1.0.4)
+  - VonageWebRTC (99.2.39)
 
 DEPENDENCIES:
   - HotMicMediaPlayer (from `../`)
@@ -30,7 +28,6 @@ SPEC REPOS:
     - PubNubSwift
     - TrueTime
     - VonageWebRTC
-    - youtube-ios-player-helper
 
 EXTERNAL SOURCES:
   HotMicMediaPlayer:
@@ -38,15 +35,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BitmovinPlayer: ecf00f7c29c7a6452483e0432fd994049dcec4da
-  FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
-  HotMicMediaPlayer: 6dffdf658b4fc63c2e1adc92499701ad56c491f1
-  Kingfisher: f411ab4902e733fc0c40522920fb5a236d7a7334
-  OpenTok: 1e999b12d4694a2effc5106414695283c6162968
-  PubNubSwift: 5654828929b4aa00bcfd611aac0a31b6b1086eee
+  FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
+  HotMicMediaPlayer: 8383f4e05f5f4e35948bf4e8df7addeadbf1f378
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  OpenTok: 6995850a6a7a37464ffece03ae0b8563b0f5445d
+  PubNubSwift: 3ae3bcd62d41b8c6ff02b2064f10e98b74102807
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
-  VonageWebRTC: cfa7aefc3fe6e95bcbd778e8973af90fe9bfd497
-  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
+  VonageWebRTC: 4b57187170ef4ea435006e932600646a0521d6b0
 
-PODFILE CHECKSUM: 4ac56122a8031ea39e361710a755830b7b7cc716
+PODFILE CHECKSUM: 3d37216af0fb9a021b68fcc5808c879bf42254e3
 
 COCOAPODS: 1.11.3

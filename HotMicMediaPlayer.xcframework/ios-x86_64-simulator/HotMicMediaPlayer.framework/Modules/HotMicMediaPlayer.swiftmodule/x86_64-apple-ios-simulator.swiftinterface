@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 import AudioToolbox
@@ -19,34 +20,34 @@ import TrueTime
 import UIKit
 import WebKit
 import _Concurrency
-import youtube_ios_player_helper
+import _StringProcessing
 public protocol HMPlayerViewControllerDelegate : AnyObject {
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class HMPlayerViewController : UIKit.UIViewController, UIKit.UIViewControllerTransitioningDelegate {
   @_Concurrency.MainActor(unsafe) @objc override final public var prefersStatusBarHidden: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override final public var preferredStatusBarUpdateAnimation: UIKit.UIStatusBarAnimation {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override final public var prefersHomeIndicatorAutoHidden: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override final public var shouldAutorotate: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override final public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override final public var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var shouldAutorotate: Swift.Bool {
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
   @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
   @_Concurrency.MainActor(unsafe) final public func restorePiPView(_ pipView: UIKit.UIView)
@@ -196,6 +197,7 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   public static func initialize(apiKey: Swift.String, accessToken: Swift.String)
   public static func initializePlayerViewController(streamID: Swift.String, delegate: HotMicMediaPlayer.HMPlayerViewControllerDelegate?, supportsMinimizingToPiP: Swift.Bool = false) -> HotMicMediaPlayer.HMPlayerViewController
   public static func getStreams(live: Swift.Bool, scheduled: Swift.Bool, vod: Swift.Bool, userID: Swift.String? = nil, limit: Swift.Int? = nil, skip: Swift.Int? = nil, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMStream], Swift.Error>) -> Swift.Void)
+  public static func getStream(id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMStream, Swift.Error>) -> Swift.Void)
   public static func submitTipPurchase(userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: Swift.Error?)) -> Swift.Void)
   public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: Swift.Error?)) -> Swift.Void)
   @objc deinit
@@ -228,6 +230,11 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
   public let scheduledDate: Foundation.Date?
   public var liveDate: Foundation.Date?
   public var featuredAttendees: [Swift.String]?
+  @HotMicMediaPlayer.Lenient public var videoURL: Foundation.URL? {
+    get
+    set
+    _modify
+  }
   public enum StreamState : Swift.String, Swift.Decodable {
     case scheduled
     case live
@@ -241,7 +248,6 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
   }
   public enum StreamType : Swift.String, Swift.Decodable {
     case broadcast
-    case watchParty
     case audioRoom
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String

@@ -18,12 +18,11 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 
 ## Requirements
 
-- iOS 12+ 
-- Swift and UIKit-based app
-- App uses view controller based status bar appearance
+- iOS 14+
+- Swift app
 - App supports portrait and landscape orientations
-- App disables Bitcode - because HotMicMediaPlayer uses ACRCloud which was built without full Bitcode support, HotMicMediaPlayer must disable Bitcode, and your app must as well.
-    
+- App uses view controller based status bar appearance
+
 ## App Privacy
 When integrating HotMicMediaPlayer into your app, you must disclose the data it and its dependencies collect on the App Store:
 - Name - used for product personalization
@@ -34,14 +33,12 @@ When integrating HotMicMediaPlayer into your app, you must disclose the data it 
 
 HotMicMediaPlayer has the following dependencies:
 - ACRCloudSDK
-- youtube-ios-player-helper
 - BitmovinPlayer
-- TrueTime
-- OpenTok
-- PubNub
 - FittedSheets
 - Kingfisher
-
+- OpenTok
+- PubNub
+- TrueTime
 
 ## Example
 
@@ -53,7 +50,7 @@ HotMicMediaPlayer is available through [CocoaPods](https://cocoapods.org). To in
 it, add the following to your Podfile, execute `pod repo update`, then `pod install`:
 
 ```ruby
-platform :ios, '12.0'
+platform :ios, '14.0'
 use_frameworks!
 
 source 'https://cdn.cocoapods.org/' # Default global repository
@@ -129,11 +126,24 @@ HMMediaPlayer.getStreams(live: true, scheduled: true, vod: true, userID: nil, li
 }
 ```
 
-This will provide an array of `HMStream` containing available stream information, such as:
-- `title`: `String`
+You can also fetch a single stream by ID.
+
+```Swift
+HMMediaPlayer.getStream(id: id) { result in
+    switch result {
+    case .success(let stream):
+        // Display the stream
+    case .failure(let error):
+        // Handle error
+    }
+}
+```
+
+`HMStream` contains available stream information, such as:
+- `title`: a `String` for the stream's title
 - `state`: an `Enum` of either scheduled, vod, live, or ended
-- `tags`: an array of `String` set by the creator on the stream, for example: `["tag 1", "tag 2"]`
-- `thumbnail`: a `URL` for the image
+- `tags`: an array of `String` set by the creator, for example: `["tag 1", "tag 2"]`
+- `thumbnail`: a `URL` for the thumbnail image
 
 ### Player View Controller
 
@@ -145,8 +155,6 @@ present(playerViewController, animated: true, completion: nil)
 ```
 
 Setting the `modalPresentationStyle` to a value other than `fullScreen` is not allowed.
-
-The player view controller is presented in portrait mode, then after presentation it will support rotating to landscape. Note that the player may force rotate to portrait in the experience, for example, if a tall sheet needs to be presented.
 
 ### Player View Controller Delegate
 
