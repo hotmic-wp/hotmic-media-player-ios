@@ -251,6 +251,11 @@ extension AppDelegate: HMMediaPlayerAuthenticationObserving {
         print("Unauthenticated")
     }
     
+    func userDidAttemptRestrictedAction(_ action: HMRestrictedAction, in viewController: UIViewController) -> Bool {
+        // Return true to handle this action with custom behavior or false to use the default behavior
+        return false
+    }
+    
 }
 
 extension AppDelegate: HMMediaPlayerAnalyticsEventObserving {

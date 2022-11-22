@@ -161,6 +161,17 @@ public enum HMColorStyle {
     get
   }
 }
+public enum HMRestrictedAction {
+  case sendTip
+  case sendChat
+  case sendChatReaction
+  case followUser
+  public static func == (a: HotMicMediaPlayer.HMRestrictedAction, b: HotMicMediaPlayer.HMRestrictedAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol HMMediaPlayerAppearanceDelegate : AnyObject {
   func customFont(for textStyle: HotMicMediaPlayer.HMTextStyle) -> UIKit.UIFont?
   func customColor(for colorStyle: HotMicMediaPlayer.HMColorStyle) -> UIKit.UIColor?
@@ -181,6 +192,7 @@ public protocol HMMediaPlayerInAppPurchaseDelegate : AnyObject {
 }
 public protocol HMMediaPlayerAuthenticationObserving : AnyObject {
   func authenticationStatusChangedToUnauthenticated()
+  func userDidAttemptRestrictedAction(_ action: HotMicMediaPlayer.HMRestrictedAction, in viewController: UIKit.UIViewController) -> Swift.Bool
 }
 public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   func eventStarted(name: Swift.String)
@@ -278,6 +290,8 @@ extension HotMicMediaPlayer.HMTextStyle : Swift.Equatable {}
 extension HotMicMediaPlayer.HMTextStyle : Swift.Hashable {}
 extension HotMicMediaPlayer.HMColorStyle : Swift.Equatable {}
 extension HotMicMediaPlayer.HMColorStyle : Swift.Hashable {}
+extension HotMicMediaPlayer.HMRestrictedAction : Swift.Equatable {}
+extension HotMicMediaPlayer.HMRestrictedAction : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Equatable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.RawRepresentable {}

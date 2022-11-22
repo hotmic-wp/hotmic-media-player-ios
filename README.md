@@ -42,12 +42,12 @@ HotMicMediaPlayer has the following dependencies:
 
 ## Example
 
-To run the example app, clone the repo and execute `pod install` from the Example directory. Run the app and a list of streams will be loaded. Select a stream to open the media player experience.
+To try out the example app, run the [CocoaPods](https://cocoapods.org) command `pod try HotMicMediaPlayer`. Alternatively, clone the repo and run `pod install` from the Example directory. The example app loads a list of streams and selecting one will open the media player experience.
 
 ## Installation
 
 HotMicMediaPlayer is available through [CocoaPods](https://cocoapods.org). To install
-it, add the following to your Podfile, execute `pod repo update`, then `pod install`:
+it, add the following to your Podfile, run `pod repo update`, then `pod install`:
 
 ```ruby
 platform :ios, '14.0'
@@ -158,7 +158,7 @@ Setting the `modalPresentationStyle` to a value other than `fullScreen` is not a
 
 ### Player View Controller Delegate
 
-Implement the `HMPlayerViewControllerDelegate` protocol to dismiss the player when needed, such as when the user taps a button to dismiss. A PiP view is provided which allows you to place it into a custom Picture-in-Picture like the HotMic app does -- we utilize the `PIPKit` library. If you’d like to support this, initialize a player view controller with `supportsMinimizingToPiP` true, then store this view controller in a strongly held property to prevent it from deallocating. When you wish to restore the player full-screen, provide the player view to move back into the player view controller and present the player view controller again. Be sure to set the view controller property to `nil` when the user wishes to close the player or PiP.
+Implement the `HMPlayerViewControllerDelegate` protocol to dismiss the player when needed, such as when the user taps a button to dismiss. A PiP view is provided which allows you to place it into a custom Picture-in-Picture like the HotMic app does - we utilize the `PIPKit` library. If you’d like to support this, initialize a player view controller with `supportsMinimizingToPiP` true, then store this view controller in a strongly held property to prevent it from deallocating. When you wish to restore the player full-screen, provide the player view to move back into the player view controller and present the player view controller again. Be sure to set the view controller property to `nil` when the user wishes to close the player or PiP.
 
 ```swift
 func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {
@@ -345,13 +345,25 @@ In the HotMic app, we found this to be difficult to implement ensuring edge case
 
 ### Authentication Observing
 
-To be notified when a request failed due to improper authentication, you can implement the `HMMediaPlayerAuthenticationObserving` protocol. It’s recommended to dismiss the player and request re-authentication when this occurs.
+To be notified of authentication events as they occur, you can implement the `HMMediaPlayerAuthenticationObserving` protocol. 
 
 ```swift
 HMMediaPlayer.authenticationObserver = self
+```
 
+When a request fails due to improper authentication, the following function will be called. It’s recommended to dismiss the player and request re-authentication.
+
+```swift
 func authenticationStatusChangedToUnauthenticated() {
     // Dismiss the player and re-authenticate
+}
+```
+
+When the user attempts to perform a restricted action, the following function will be called allowing you to handle this event, for example by presenting a view controller. Return `true` if you handle it or `false` if you'd like HotMic to handle it by informing the user this action is restricted.
+
+```swift
+func userDidAttemptRestrictedAction(_ action: HMRestrictedAction, in viewController: UIViewController) -> Bool {
+    // Return true or false
 }
 ```
 
