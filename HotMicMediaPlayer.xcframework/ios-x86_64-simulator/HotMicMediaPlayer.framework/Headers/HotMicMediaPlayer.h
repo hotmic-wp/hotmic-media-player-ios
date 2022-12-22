@@ -2,7 +2,8 @@
 //  HotMicMediaPlayer.h
 //  HotMicMediaPlayer
 //
-//  Created by Jordan Hipwell on 8/3/21.
+//  Created by Jordan on 8/3/21.
+//  Copyright © 2021 HotMic. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

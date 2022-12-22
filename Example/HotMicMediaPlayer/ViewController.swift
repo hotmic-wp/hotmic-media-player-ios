@@ -195,4 +195,9 @@ extension ViewController: HMPlayerViewControllerDelegate {
         // If you set supportsMinimizingToPiP true, display the pipView in a Picture-in-Picture window if it's non-nil
     }
     
+    func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
+        // Return a custom player or nil to use the default
+        return nil
+    }
+    
 }

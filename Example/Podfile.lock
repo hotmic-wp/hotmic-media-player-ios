@@ -1,17 +1,17 @@
 PODS:
   - BitmovinPlayer (3.22.0)
   - FittedSheets (2.5.3)
-  - HotMicMediaPlayer (4.1):
+  - HotMicMediaPlayer (4.3):
     - BitmovinPlayer (= 3.22.0)
     - FittedSheets (= 2.5.3)
     - Kingfisher (= 7.4.1)
-    - OpenTok (= 2.24.0)
-    - PubNubSwift (= 6.0.1)
+    - OpenTok (= 2.24.1)
+    - PubNubSwift (= 6.0.2)
     - TrueTime (= 5.0.3)
   - Kingfisher (7.4.1)
-  - OpenTok (2.24.0):
+  - OpenTok (2.24.1):
     - VonageWebRTC (= 99.2.39)
-  - PubNubSwift (6.0.1)
+  - PubNubSwift (6.0.2)
   - TrueTime (5.0.3)
   - VonageWebRTC (99.2.39)
 
@@ -36,10 +36,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BitmovinPlayer: ecf00f7c29c7a6452483e0432fd994049dcec4da
   FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
-  HotMicMediaPlayer: 8383f4e05f5f4e35948bf4e8df7addeadbf1f378
+  HotMicMediaPlayer: 20dd2d736f0690147e0e152652ec244ec5226fa5
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
-  OpenTok: 6995850a6a7a37464ffece03ae0b8563b0f5445d
-  PubNubSwift: 3ae3bcd62d41b8c6ff02b2064f10e98b74102807
+  OpenTok: 0c23a8a8c1f2b5ef6118c57224888cd1d1d20bc2
+  PubNubSwift: 0ee6948ebed3a5d6d115c904195e292df7a236f3
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
   VonageWebRTC: 4b57187170ef4ea435006e932600646a0521d6b0
 

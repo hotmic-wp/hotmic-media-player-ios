@@ -42,12 +42,12 @@ HotMicMediaPlayer has the following dependencies:
 
 ## Example
 
-To try out the example app, run the [CocoaPods](https://cocoapods.org) command `pod try HotMicMediaPlayer`. Alternatively, clone the repo and run `pod install` from the Example directory. The example app loads a list of streams and selecting one will open the media player experience.
+To try out the example app, run the [CocoaPods](https://cocoapods.org) command `pod try HotMicMediaPlayer`. Alternatively, download or clone the repo and run `pod install` from the Example directory. The example app loads a list of streams and selecting one will open the media player experience.
 
 ## Installation
 
 HotMicMediaPlayer is available through [CocoaPods](https://cocoapods.org). To install
-it, add the following to your Podfile, run `pod repo update`, then `pod install`:
+it, add the following to your Podfile, run `pod repo update`, then `pod install`.
 
 ```ruby
 platform :ios, '14.0'
@@ -147,7 +147,7 @@ HMMediaPlayer.getStream(id: id) { result in
 
 ### Player View Controller
 
-Initialize a `HMPlayerViewController` and present it:
+Initialize a `HMPlayerViewController` and present it.
 
 ```swift
 let playerViewController = HMMediaPlayer.initializePlayerViewController(streamID: streamID, delegate: self, supportsMinimizingToPiP: true)
@@ -158,7 +158,9 @@ Setting the `modalPresentationStyle` to a value other than `fullScreen` is not a
 
 ### Player View Controller Delegate
 
-Implement the `HMPlayerViewControllerDelegate` protocol to dismiss the player when needed, such as when the user taps a button to dismiss. A PiP view is provided which allows you to place it into a custom Picture-in-Picture like the HotMic app does - we utilize the `PIPKit` library. If you’d like to support this, initialize a player view controller with `supportsMinimizingToPiP` true, then store this view controller in a strongly held property to prevent it from deallocating. When you wish to restore the player full-screen, provide the player view to move back into the player view controller and present the player view controller again. Be sure to set the view controller property to `nil` when the user wishes to close the player or PiP.
+Implement the `HMPlayerViewControllerDelegate` protocol to support functionality of the player screen.
+
+When the user is finished with the player experience, for example when they tap a button to close the screen, the following function is called allowing you to dismiss it. A PiP view may be provided which allows you to place it into a custom Picture-in-Picture window, such as one provided by the `PIPKit` library. If you’d like to support PiP, initialize a player view controller with `supportsMinimizingToPiP: true`, then store this view controller in a strongly held property to prevent it from deinitializing. When you wish to restore the player full-screen, provide the player view to move back into the player view controller then present it again. Be sure to set the view controller property to `nil` when the user wishes to close the player or PiP.
 
 ```swift
 func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {
@@ -180,9 +182,17 @@ func playerViewController(_ viewController: HMPlayerViewController, didFinishWit
 }
 ```
 
+Each time a player is needed, the following function is called allowing you to provide a custom player that implements the `HMPlayer` protocol. Return `nil` if you'd like to use the default player.
+
+```swift
+func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
+    return nil
+}
+```
+
 ### Player View Controller Functions
 
-To support returning to the full-screen player experience from PiP, call `HMPlayerViewController`’s `restorePiPView(_:)` function and then present the player view controller full screen:
+To support returning to the full-screen player experience from Picture-in-Picture, call `HMPlayerViewController`’s `restorePiPView(_:)` function and then present the player view controller full screen.
  
  ```swift
 func pipViewControllerDidTapFullScreen(_ viewController: PIPViewController) {
@@ -196,7 +206,7 @@ func pipViewControllerDidTapFullScreen(_ viewController: PIPViewController) {
 }
 ```
 
-To show a banner ad in the player screen, call `HMPlayerViewController`’s `displayBannerAd(withView:duration:delay:)` function. Provide any `UIView` to display. The view fills the screen width and needs to have a known height such as an intrinsic content size or an Auto Layout constraint that defines a constant height or aspect ratio. If you do not specify a duration of time to display the ad, it will be displayed until you hide it. If you do not specify a delay, it will be displayed immediately.
+To show a banner ad in the player screen, call `HMPlayerViewController`’s `displayBannerAd(withView:duration:delay:)` function. Provide any `UIView` to display. The view fills the screen width and needs to have a known height such as an intrinsic content size or an Auto Layout constraint that defines a constant height or aspect ratio. If you do not specify a `duration` of time to display the ad, it will be displayed until you hide it. If you do not specify a `delay`, it will be displayed immediately. If you do not specify an `animationDuration`, a default value will be used. If you specify `animationDuration: 0`, it will not animate.
 
  ```swift
 func displayAd() {
@@ -207,16 +217,238 @@ func displayAd() {
     imageView.image = UIImage(named: "ad")
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 3.0/8.0).isActive = true
-    playerViewController.displayBannerAd(withView: imageView, duration: nil, delay: nil)
+    playerViewController.displayBannerAd(withView: imageView)
 }
 ```
 
-To remove the banner ad from the player screen, call `HMPlayerViewController`’s `hideBannerAd()` function.
+To remove the banner ad from the player screen, call `HMPlayerViewController`’s `hideBannerAd()` function. If you do not specify an `animationDuration`, a default value will be used. If you specify `animationDuration: 0`, it will not animate.
 
  ```swift
  func removeAd() {
     playerViewController.hideBannerAd()
 }
+```
+
+### Player
+
+The `HMPlayer` protocol defines variables and functions you must implement in order to provide a custom player. Your implementation must also store a reference to an `HMPlayerDelegate` and call its functions to inform the delegate when various events occur.
+
+Provide a view to display on-screen.
+
+```swift
+var view: UIView { playerView }
+```
+
+Provide the playing status.
+
+```swift
+var isPlaying: Bool { player.isPlaying }
+```
+
+Provide the paused status.
+
+```swift
+var isPaused: Bool { player.isPaused }
+```
+   
+Provide the seeking status.
+
+```swift
+var isSeeking: Bool { activelySeeking }
+```
+
+Provide the mute status.
+
+```swift    
+var isMuted: Bool { player.isMuted }
+```
+
+Provide the current audio level as a value between 0 and 100.
+
+```swift
+var volume: Int { player.volume }
+```
+
+Provide the total duration in seconds of the VoD stream or infinity if it’s a live stream.
+
+```swift
+var duration: TimeInterval { player.duration }
+```
+
+Provide the current playback position in seconds. For a VoD stream, the time ranges between 0 and the duration of the asset. For a live stream, the time is a Unix timestamp denoting the current playback position.
+
+```swift
+var time: TimeInterval { player.currentTime }
+```
+    
+Provide the current playback rate as a value between 0 and 2.
+```swift
+var playbackSpeed: Float { player.playbackSpeed }
+```
+    
+Store the delegate in a weak optional variable to call its functions in the future.
+
+```swift
+func setDelegate(_ delegate: HMPlayerDelegate) { self.delegate = delegate }
+```
+
+Invoke play.
+
+```swift
+func play() { player.play() }
+```
+
+Invoke pause.
+
+```swift
+func pause() { player.pause() }
+```
+
+Turn on volume muted.
+
+```swift
+func mute() { player.mute() }
+```
+
+Turn off volume muted.
+
+```swift
+func unmute() { player.unmute() }
+```
+
+Change the audio level.
+
+```swift
+func updateVolume(_ volume: Int) { player.volume = volume }
+```
+
+Seek to the given playback position for the VoD stream.
+
+```swift
+func seek(to time: TimeInterval) {
+    guard !player.isLive else { return }
+    
+    player.seek(time: time)
+}
+```
+
+Seek by the given time shift offset in seconds from the live edge for the live stream, or seek to the current time plus the given time shift offset for the VoD stream. Return an `HMPlayerLiveTimeShiftError` if the new time shift is too far behind or ahead of the live position. 
+
+```swift
+@discardableResult func seek(by timeShiftOffset: TimeInterval) -> HMPlayerLiveTimeShiftError? {
+    guard player.isLive else {
+        seek(to: time + timeShiftOffset)
+        return nil
+    }
+    
+    let newTimeShift = player.timeShift + timeShiftOffset
+    
+    guard newTimeShift >= player.maxTimeShift else {
+        player.timeShift = 0
+        return .tooFarBehind
+    }
+    guard newTimeShift <= 0 else {
+        player.timeShift = 0
+        return .tooFarAhead
+    }
+    
+    player.timeShift = newTimeShift
+    return nil
+}
+```
+
+Seek the live stream to its 'now' playback time.
+
+```swift
+func seekToLive() { player.timeShift = 0 }
+```
+    
+Change the playback rate. A value between 0 and 1 enables slow motion and a value between 1 and 2 enables fast forward.
+
+```swift
+func updatePlaybackSpeed(_ playbackSpeed: Float) { player.playbackSpeed = playbackSpeed }
+```
+    
+Prepare for device rotation to begin.
+
+```swift
+func beginRotation() { playerView.willRotate() }
+```
+    
+Handle device rotation ended.
+
+```swift
+func endRotation() { playerView.didRotate() }
+```
+    
+Prepare to enter fullscreen mode.
+
+```swift
+func enterFullscreen() { playerView.enterFullscreen() }
+```
+
+Prepare to exit fullscreen mode.
+
+```swift
+func exitFullscreen() { playerView.exitFullscreen() }
+```
+
+### Player Delegate
+
+The `HMPlayerDelegate` protocol defines functions your `HMPlayer` implementation calls to inform HotMic when various events occur.
+
+Inform the delegate the player invoked play with intention to start/resume playback.
+
+```swift
+delegate?.playerDidInvokePlay(self)
+```
+
+Inform the delegate the player state changed to playing.
+
+```swift
+delegate?.playerPlaying(self)
+```
+
+Inform the delegate the player state changed to paused.
+
+```swift
+delegate?.playerPaused(self)
+```
+
+Inform the delegate the player state changed to buffering.
+
+```swift
+delegate?.playerBuffering(self)
+```
+
+Inform the delegate the player finished seeking in a live stream by adjusting the time shift.
+
+```swift
+delegate?.playerDidFinishSeekByTimeShift(self)
+```
+
+Inform the delegate the player recovered from a stall due to sufficient buffer.
+
+```swift
+delegate?.playerDidRecoverFromStall(self)
+```
+
+Inform the delegate the player's playback position changed.
+
+```swift
+delegate?.player(self, timeChanged time: player.currentTime)
+```
+
+Inform the delegate the player's duration changed.
+
+```swift
+delegate?.player(self, durationChanged duration: player.duration)
+```
+
+Inform the delegate the player encountered an error.
+
+```swift
+delegate?.player(self, errorOccurredWithCode code: error.code, message: error.localizedDescription)
 ```
 
 ### Appearance Delegate

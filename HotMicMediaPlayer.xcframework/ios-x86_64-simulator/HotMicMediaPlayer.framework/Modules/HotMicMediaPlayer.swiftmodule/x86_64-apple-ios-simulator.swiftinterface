@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -22,6 +22,7 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 public protocol HMPlayerViewControllerDelegate : AnyObject {
+  func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, playerForAssetAt url: Foundation.URL) -> HotMicMediaPlayer.HMPlayer?
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class HMPlayerViewController : UIKit.UIViewController, UIKit.UIViewControllerTransitioningDelegate {
@@ -67,6 +68,17 @@ extension HotMicMediaPlayer.HMPlayerViewController : UIKit.UIPageViewControllerD
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}
+extension HotMicMediaPlayer.HMPlayerViewController : HotMicMediaPlayer.HMPlayerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func playerDidInvokePlay(_ player: HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerPlaying(_ player: HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerPaused(_ player: HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerBuffering(_ player: HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerDidFinishSeekByTimeShift(_ player: HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerDidRecoverFromStall(_ player: HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func player(_ player: HotMicMediaPlayer.HMPlayer, timeChanged time: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) final public func player(_ player: HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) final public func player(_ player: HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
 }
 extension HotMicMediaPlayer.HMPlayerViewController : OpenTok.OTSessionDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func sessionDidConnect(_ session: OpenTok.OTSession)
@@ -172,9 +184,55 @@ public enum HMRestrictedAction {
     get
   }
 }
+public enum HMPlayerLiveTimeShiftError {
+  case tooFarBehind
+  case tooFarAhead
+  public static func == (a: HotMicMediaPlayer.HMPlayerLiveTimeShiftError, b: HotMicMediaPlayer.HMPlayerLiveTimeShiftError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol HMMediaPlayerAppearanceDelegate : AnyObject {
   func customFont(for textStyle: HotMicMediaPlayer.HMTextStyle) -> UIKit.UIFont?
   func customColor(for colorStyle: HotMicMediaPlayer.HMColorStyle) -> UIKit.UIColor?
+}
+public protocol HMPlayer : AnyObject {
+  var view: UIKit.UIView { get }
+  var isPlaying: Swift.Bool { get }
+  var isPaused: Swift.Bool { get }
+  var isSeeking: Swift.Bool { get }
+  var isMuted: Swift.Bool { get }
+  var volume: Swift.Int { get }
+  var duration: Foundation.TimeInterval { get }
+  var time: Foundation.TimeInterval { get }
+  var playbackSpeed: Swift.Float { get }
+  func setDelegate(_ delegate: HotMicMediaPlayer.HMPlayerDelegate)
+  func play()
+  func pause()
+  func mute()
+  func unmute()
+  func updateVolume(_ volume: Swift.Int)
+  func seek(to time: Foundation.TimeInterval)
+  @discardableResult
+  func seek(by timeShiftOffset: Foundation.TimeInterval) -> HotMicMediaPlayer.HMPlayerLiveTimeShiftError?
+  func seekToLive()
+  func updatePlaybackSpeed(_ playbackSpeed: Swift.Float)
+  func beginRotation()
+  func endRotation()
+  func enterFullscreen()
+  func exitFullscreen()
+}
+public protocol HMPlayerDelegate : AnyObject {
+  func playerDidInvokePlay(_ player: HotMicMediaPlayer.HMPlayer)
+  func playerPlaying(_ player: HotMicMediaPlayer.HMPlayer)
+  func playerPaused(_ player: HotMicMediaPlayer.HMPlayer)
+  func playerBuffering(_ player: HotMicMediaPlayer.HMPlayer)
+  func playerDidFinishSeekByTimeShift(_ player: HotMicMediaPlayer.HMPlayer)
+  func playerDidRecoverFromStall(_ player: HotMicMediaPlayer.HMPlayer)
+  func player(_ player: HotMicMediaPlayer.HMPlayer, timeChanged time: Foundation.TimeInterval)
+  func player(_ player: HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
+  func player(_ player: HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
 }
 public protocol HMMediaPlayerShareDelegate : AnyObject {
   func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, Swift.Error>) -> Swift.Void)
@@ -292,6 +350,8 @@ extension HotMicMediaPlayer.HMColorStyle : Swift.Equatable {}
 extension HotMicMediaPlayer.HMColorStyle : Swift.Hashable {}
 extension HotMicMediaPlayer.HMRestrictedAction : Swift.Equatable {}
 extension HotMicMediaPlayer.HMRestrictedAction : Swift.Hashable {}
+extension HotMicMediaPlayer.HMPlayerLiveTimeShiftError : Swift.Equatable {}
+extension HotMicMediaPlayer.HMPlayerLiveTimeShiftError : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Equatable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.RawRepresentable {}
