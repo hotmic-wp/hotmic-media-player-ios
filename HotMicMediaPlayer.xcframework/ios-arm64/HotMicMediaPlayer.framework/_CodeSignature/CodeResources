@@ -58,11 +58,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hsMQmaHalqYIfoTtMq2FnULRUqo=
+		DMU0/Tmn5Up7BkLqN6gF0RfFN5w=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		TU/IfwhVEhinnJlNHQbzm9I8GD8=
+		2ieQPy3Bqd7qc4QHCKIlR+sjiHA=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		X0GYyipJUsM01lkC9ydIOWWk9Fw=
+		ytQ9a7xmSCeESlG/SzwqrqAlsNY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -294,7 +294,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m8fvEYznBbuxSKVvJkq3wTJzxdCDTEL5Lo57WQczIJY=
+			/yP0SFtiiBzJ0m0VkXcYOCRps6HwRLAzMDZL4Ky6MV8=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -322,7 +322,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D30EPop8kaJkAujsWFqImrA1YLV5HwezFwVg3nCvGpA=
+			ivvLauFGrbuwrR050rsC6vCblegc/QAF2wDelL3eF0k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
