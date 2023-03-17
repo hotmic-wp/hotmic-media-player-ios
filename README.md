@@ -14,7 +14,14 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 - Tip the host
 - Join the host with audio/video
 - Light and dark mode support
-- Accessibility support including Dynamic Type, VoiceOver, etc
+- Accessibility support including Dynamic Type, VoiceOver, Switch Control, etc
+  - Default system colors provide high contrast variants
+  - Dynamic Type support respects the device text size settings
+  - Large content viewer is supported for small icon buttons
+  - Views are marked as accessibility elements appropriately
+  - Accessibility traits are set to identity headings, buttons, selection state, etc 
+  - Accessibility labels are added to ensure controls are titled
+  - Accessibility hints are added where additional instruction is helpful
 
 ## Requirements
 
@@ -36,8 +43,8 @@ HotMicMediaPlayer has the following dependencies:
 - BitmovinPlayer
 - FittedSheets
 - Kingfisher
-- OpenTok
-- PubNub
+- OTXCFramework
+- PubNubSwift
 - TrueTime
 
 ## Example

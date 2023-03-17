@@ -1,0 +1,11 @@
+framework module HotMicMediaPlayer {
+  umbrella header "HotMicMediaPlayer.h"
+
+  export *
+  module * { export * }
+}
+
+module HotMicMediaPlayer.Swift {
+  header "HotMicMediaPlayer-Swift.h"
+  requires objc
+}

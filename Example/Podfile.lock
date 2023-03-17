@@ -1,17 +1,17 @@
 PODS:
   - BitmovinPlayer (3.22.0)
   - FittedSheets (2.5.3)
-  - HotMicMediaPlayer (4.3):
+  - HotMicMediaPlayer (4.3.2):
     - BitmovinPlayer (= 3.22.0)
     - FittedSheets (= 2.5.3)
-    - Kingfisher (= 7.4.1)
-    - OpenTok (= 2.24.1)
-    - PubNubSwift (= 6.0.2)
+    - Kingfisher (= 7.6.2)
+    - OTXCFramework (= 2.24.2)
+    - PubNubSwift (= 6.0.3)
     - TrueTime (= 5.0.3)
-  - Kingfisher (7.4.1)
-  - OpenTok (2.24.1):
+  - Kingfisher (7.6.2)
+  - OTXCFramework (2.24.2):
     - VonageWebRTC (= 99.2.39)
-  - PubNubSwift (6.0.2)
+  - PubNubSwift (6.0.3)
   - TrueTime (5.0.3)
   - VonageWebRTC (99.2.39)
 
@@ -24,7 +24,7 @@ SPEC REPOS:
   trunk:
     - FittedSheets
     - Kingfisher
-    - OpenTok
+    - OTXCFramework
     - PubNubSwift
     - TrueTime
     - VonageWebRTC
@@ -36,13 +36,13 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BitmovinPlayer: ecf00f7c29c7a6452483e0432fd994049dcec4da
   FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
-  HotMicMediaPlayer: 20dd2d736f0690147e0e152652ec244ec5226fa5
-  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
-  OpenTok: 0c23a8a8c1f2b5ef6118c57224888cd1d1d20bc2
-  PubNubSwift: 0ee6948ebed3a5d6d115c904195e292df7a236f3
+  HotMicMediaPlayer: d5560062a389d4e122c934141990a8a59a60ece1
+  Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  OTXCFramework: d3418d47e37cada40637712a847767348ed2ce6a
+  PubNubSwift: c22025ea55e4251410e640e5e86923a643159383
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
   VonageWebRTC: 4b57187170ef4ea435006e932600646a0521d6b0
 
 PODFILE CHECKSUM: 3d37216af0fb9a021b68fcc5808c879bf42254e3
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

@@ -58,11 +58,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DMU0/Tmn5Up7BkLqN6gF0RfFN5w=
+		nqbZsddV6rL1Mq/JQ77CwHxaBjY=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		2ieQPy3Bqd7qc4QHCKIlR+sjiHA=
+		IpeceI6ZDL1u7BUWRbG1Od5JoPY=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ytQ9a7xmSCeESlG/SzwqrqAlsNY=
+		huLZqtmPwqAUwlNTj5qzhzcIOfI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Player.storyboardc/ZtJ-r9-RLp-view-Ers-0p-CHZ.nib</key>
 		<data>
-		oewV4O0fJ2uOJf0w9GoSM4Tez8Y=
+		iszyErYFzCI4PKHqzfyV9aqfRCQ=
 		</data>
 		<key>Polls.storyboardc/Info.plist</key>
 		<data>
@@ -294,7 +294,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/yP0SFtiiBzJ0m0VkXcYOCRps6HwRLAzMDZL4Ky6MV8=
+			VfUHjLmInW06f0F+EynH7ODW+F+WW7jWrZY7LOI/7/8=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -322,7 +322,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ivvLauFGrbuwrR050rsC6vCblegc/QAF2wDelL3eF0k=
+			3a6jl9Ns5AU4Z6uhItb23hzoEtc/rDmwWr050aS98Us=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -371,7 +371,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vYhB9bvdjRSxkaNX5Toy38koa1ufF8U6jOwaJJAIHFo=
+			AeIK+CmzarDvzn4xFLYrhDSBWCA9XGvjGwjM9yReMtI=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/Info.plist</key>
