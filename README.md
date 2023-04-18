@@ -484,20 +484,35 @@ func customFont(for textStyle: HMTextStyle) -> UIFont? {
 Each time a color will be used, the following function is called allowing you to return a custom color for the specified style. Return `nil` if you'd like to use the default color.
 
 ```swift
-func customColor(for colorStyle: HMColorStyle) -> UIFont? {
+func customColor(for colorStyle: HMColorStyle) -> UIColor? {
     switch colorStyle {
     case .primaryTint:
-        return UIColor(named: "AccentColor")!
+        return UIColor(named: "AccentColor")
     case .primaryBackground:
         // Background colors support elevation variants
         return UIColor { traitCollection in
             if traitCollection.userInterfaceLevel == .elevated {
-                return UIColor(named: "PrimaryBackgroundColorElevated")!
+                return UIColor(named: "PrimaryBackgroundColorElevated")
             } else {
-                return UIColor(named: "PrimaryBackgroundColor")!
+                return UIColor(named: "PrimaryBackgroundColor")
             }
         }
     //...
+    @unknown default: 
+        return nil
+    }
+}
+```
+
+Each time a customizable image will be used, the following function is called allowing you to return a custom image for the specified type. Return `nil` if you'd like to use the default image.
+
+```swift
+func customImage(for imageType: HMImageType) -> UIImage? {
+    switch image {
+    case .joinButton: 
+        return UIImage(named: "join-button-image")
+    case .syncButton: 
+        return UIImage(named: "sync-button-image")
     @unknown default: 
         return nil
     }
@@ -522,17 +537,17 @@ func getStreamShareText(streamID: String, completion: @escaping (Result<String?,
 
 ### User Profile Delegate
 
-To support functionality in user profiles, you can implement the `HMMediaPlayerUserProfileDelegate` protocol. If you do not implement this delegate, functionality such as buttons to follow users will not be available.
+To support user profile functionality, you can implement the `HMMediaPlayerUserProfileDelegate` protocol. If you do not implement this delegate, profile info will be obtained by HotMic rather than your app, and buttons such as follow/unfollow will not be available.
 
 ```swift
 HMMediaPlayer.userProfileDelegate = self
 ```
 
-When a user's follow state is to be shown or the ability to follow a user is to be available, the following function is called to get the follow state of that user relative to the currently logged in user. Provide a success result with an `HMUserFollowState` consisting of their followers count, following count, if they're following the current user, and if they're followed by the current user. Provide `nil` for any values that are unavailable. For example, if `followingCount` is `nil` the number of people this user follows will not be shown, and if `followedByMe` is `nil` the follow/unfollow button will not be shown. Provide a failure result with an `Error` if one occurred.
+When a user's profile info is to be shown, the following function is called allowing you to provide that user's information. Provide a success result with an `HMUserProfile` containing information such as their name, profile pic, followers count, following count, if they're following the current user, and if they're followed by the current user. Provide `nil` for any values that are unavailable. For example, if `followingCount` is `nil` the number of people this user follows will not be shown, and if `followedByMe` is `nil` the follow/unfollow button will not be shown. Or provide a success result with `nil` if you would like the profile info to be obtained by HotMic rather than your app. Provide a failure result with an `Error` if one occurred.
 
 ```swift
-func getUserFollowState(id: String, completion: @escaping (Result<HMUserFollowState, Error>) -> Void) {
-    // Fetch the state and call completion
+func getUserProfile(for id: String, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
+    // Fetch the profile info and call completion
 }
 ```
  
@@ -544,6 +559,22 @@ func setFollowingUser(id: String, following: Bool, completion: @escaping (Error?
 }
 ```
 
+When the user profile is shown, the following function is called allowing you to specify whether the See Full Profile button should be shown.
+
+```swift
+func shouldShowSeeFullProfileButton(for id: String) -> Bool {
+    return true
+}
+```
+
+When the user taps the See Full Profile button, the following function is called allowing you to handle this action, for example by presenting a view controller.
+
+```swift
+func seeFullProfileButtonTapped(for id: String, in viewController: UIViewController) {
+    // Show the full profile
+}
+```
+
 ### In App Purchase Delegate
 
 To support tipping hosts and joining their streams for a price, you can implement the `HMMediaPlayerInAppPurchaseDelegate` protocol and integrate it with your `StoreKit` in-app purchase code. If you do not implement this delegate, users cannot tip hosts, but can still join the host for free.
@@ -552,7 +583,7 @@ To support tipping hosts and joining their streams for a price, you can implemen
 HMMediaPlayer.inAppPurchaseDelegate = self
 ```
 
-When the user opens the tip sheet, the following function will be called to get the `SKProduct`s available to purchase for a host ID. Your app should fetch the products that are applicable to this host from the App Store.
+When the user opens the tip sheet, the following function is called to get the `SKProduct`s available to purchase for a host ID. Your app should fetch the products that are applicable to this host from the App Store.
 
 ```swift
 func getTipProducts(hostID: String, completion: @escaping (Result<[SKProduct], Error>) -> Void) {
@@ -560,7 +591,7 @@ func getTipProducts(hostID: String, completion: @escaping (Result<[SKProduct], E
 }
 ```
 
-When the user wishes to purchase a tip, the following function will be called. Your app should initiate the in-app purchase process. If the purchase is successful, your app should then submit the tip purchase information including the App Store receipt via `HMMediaPlayer`’s `submitTipPurchase()` function. HotMic will verify this purchase is legitimate and record the tip if validated. Be sure to provide an error if one occurs in this process, such as if the device cannot make payments, a purchase is already in progress, the transaction was canceled, the transaction failed, failed to get transaction info, no purchase info was found, failed to verify, or failed to process. The completion handler allows you to specify if you want this error’s `localizedDescription` to be shown to the user and if a button should be provided to retry submitting their purchase information if that request fails. We strongly recommend persisting the purchase information on the device and avoid marking the `SKPaymentTransaction` finished until the purchase has been successfully submitted, as this allows you to retry submitting the information when `StoreKit` informs you there is a not-yet-finished purchased transaction.
+When the user wishes to purchase a tip, the following function is called. Your app should initiate the in-app purchase process. If the purchase is successful, your app should then submit the tip purchase information including the App Store receipt via `HMMediaPlayer`’s `submitTipPurchase()` function. HotMic will verify this purchase is legitimate and record the tip if validated. Be sure to provide an error if one occurs in this process, such as if the device cannot make payments, a purchase is already in progress, the transaction was canceled, the transaction failed, failed to get transaction info, no purchase info was found, failed to verify, or failed to process. The completion handler allows you to specify if you want this error’s `localizedDescription` to be shown to the user and if a button should be provided to retry submitting their purchase information if that request fails. We strongly recommend persisting the purchase information on the device and avoid marking the `SKPaymentTransaction` finished until the purchase has been successfully submitted, as this allows you to retry submitting the information when `StoreKit` informs you there is a not-yet-finished purchased transaction.
 
 ```swift
 func purchaseTip(product: SKProduct, userID: String, hostID: String, streamID: String, message: String?, anonymous: Bool, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
@@ -569,7 +600,7 @@ func purchaseTip(product: SKProduct, userID: String, hostID: String, streamID: S
 }
 ```
 
-When the user wishes to retry submitting their purchase information, the following function will be called. Your app should look up the purchase information with the provided product identifier and submit it via `HMMediaPlayer`’s `submitTipPurchase()` function.
+When the user wishes to retry submitting their purchase information, the following function is called. Your app should look up the purchase information with the provided product identifier and submit it via `HMMediaPlayer`’s `submitTipPurchase()` function.
 
 ```swift
 func retrySubmittingPurchaseInfo(productID: String, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
@@ -590,7 +621,7 @@ To be notified of authentication events as they occur, you can implement the `HM
 HMMediaPlayer.authenticationObserver = self
 ```
 
-When a request fails due to improper authentication, the following function will be called. It’s recommended to dismiss the player and request re-authentication.
+When a request fails due to improper authentication, the following function is called. It’s recommended to dismiss the player and request re-authentication.
 
 ```swift
 func authenticationStatusChangedToUnauthenticated() {
@@ -598,7 +629,7 @@ func authenticationStatusChangedToUnauthenticated() {
 }
 ```
 
-When the user attempts to perform a restricted action, the following function will be called allowing you to handle this event, for example by presenting a view controller. Return `true` if you handle it or `false` if you'd like HotMic to handle it by informing the user this action is restricted.
+When the user attempts to perform a restricted action, the following function is called allowing you to handle this event, for example by presenting a view controller. Return `true` if you handle it or `false` if you'd like HotMic to handle it by informing the user this action is restricted.
 
 ```swift
 func userDidAttemptRestrictedAction(_ action: HMRestrictedAction, in viewController: UIViewController) -> Bool {

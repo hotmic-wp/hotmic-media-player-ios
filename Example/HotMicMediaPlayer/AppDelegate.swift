@@ -179,12 +179,17 @@ extension AppDelegate: HMMediaPlayerAppearanceDelegate {
         }
     }
     
+    func customImage(for imageType: HMImageType) -> UIImage? {
+        // Return a custom image for this type or nil to use the default
+        return nil
+    }
+    
 }
 
 extension AppDelegate: HMMediaPlayerShareDelegate {
     
     func getStreamShareText(streamID: String, completion: @escaping (Result<String?, Error>) -> Void) {
-        // Call completion with a String or nil if there is no share text
+        // Call completion with a String or nil if there is no share text OR
         // Call completion with failure and an Error if an error occurs
         if !settingsViewModel.streamShareText.isEmpty {
             completion(.success(settingsViewModel.streamShareText))
@@ -197,18 +202,26 @@ extension AppDelegate: HMMediaPlayerShareDelegate {
 
 extension AppDelegate: HMMediaPlayerUserProfileDelegate {
     
-    func getUserFollowState(id: String, completion: @escaping (Result<HMUserFollowState, Error>) -> Void) {
-        // Get the user's follow state: followers count, following count, if they're following the current user, and if they're followed by the current user
-        // Call completion with an HMUserFollowState specifying nil for any unsupported values
+    func getUserProfile(for id: String, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
+        // Call completion with a non-nil HMUserProfile specifying nil for any unsupported values OR
+        // Call completion with a nil HMUserProfile to have HotMic fetch the user profile info OR
         // Call completion with failure and an Error if an error occurs
-        let followState = HMUserFollowState(followersCount: 100, followingCount: 100, followingMe: false, followedByMe: false)
-        completion(.success(followState))
+        completion(.success(nil))
     }
     
     func setFollowingUser(id: String, following: Bool, completion: @escaping (Error?) -> Void) {
         // Follow or unfollow this user
         // Call completion with nil or an Error
         completion(nil)
+    }
+    
+    func shouldShowSeeFullProfileButton(for id: String) -> Bool {
+        // Return true to show the button or false to hide it
+        return true
+    }
+    
+    func seeFullProfileButtonTapped(for id: String, in viewController: UIViewController) {
+        // Show the full profile
     }
     
 }
