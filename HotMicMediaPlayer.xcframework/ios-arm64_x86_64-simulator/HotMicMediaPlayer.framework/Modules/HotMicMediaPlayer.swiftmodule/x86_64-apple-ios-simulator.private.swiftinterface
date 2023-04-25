@@ -187,6 +187,7 @@ public enum HMRestrictedAction {
   case sendChat
   case sendChatReaction
   case followUser
+  case viewUserProfile
   public static func == (a: HotMicMediaPlayer.HMRestrictedAction, b: HotMicMediaPlayer.HMRestrictedAction) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -248,7 +249,7 @@ public protocol HMMediaPlayerShareDelegate : AnyObject {
   func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, Swift.Error>) -> Swift.Void)
 }
 public protocol HMMediaPlayerUserProfileDelegate : AnyObject {
-  func getUserProfile(for id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMUserProfile?, Swift.Error>) -> Swift.Void)
+  func getUserProfile(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMUserProfile?, Swift.Error>) -> Swift.Void)
   func setFollowingUser(id: Swift.String, following: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
   func shouldShowSeeFullProfileButton(for id: Swift.String) -> Swift.Bool
   func seeFullProfileButtonTapped(for id: Swift.String, in viewController: UIKit.UIViewController)

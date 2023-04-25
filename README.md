@@ -543,10 +543,10 @@ To support user profile functionality, you can implement the `HMMediaPlayerUserP
 HMMediaPlayer.userProfileDelegate = self
 ```
 
-When a user's profile info is to be shown, the following function is called allowing you to provide that user's information. Provide a success result with an `HMUserProfile` containing information such as their name, profile pic, followers count, following count, if they're following the current user, and if they're followed by the current user. Provide `nil` for any values that are unavailable. For example, if `followingCount` is `nil` the number of people this user follows will not be shown, and if `followedByMe` is `nil` the follow/unfollow button will not be shown. Or provide a success result with `nil` if you would like the profile info to be obtained by HotMic rather than your app. Provide a failure result with an `Error` if one occurred.
+When a user's profile info is to be shown, the following function is called allowing you to provide that user's information. Provide a success result with an `HMUserProfile` containing information such as their name, profile pic, followers count, following count, if they're following the current user, and if they're followed by the current user. Provide `nil` for any values that are unavailable. For example, if `followingCount` is `nil` the number of people this user follows will not be shown, and if `followedByMe` is `nil` the follow/unfollow button will not be shown. Or provide a success result with `nil` if you would like the profile info to be provided by HotMic rather than your app. Provide a failure result with an `Error` if one occurred.
 
 ```swift
-func getUserProfile(for id: String, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
+func getUserProfile(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
     // Fetch the profile info and call completion
 }
 ```

@@ -1,7 +1,7 @@
 PODS:
   - BitmovinPlayer (3.22.0)
   - FittedSheets (2.5.3)
-  - HotMicMediaPlayer (4.3.2):
+  - HotMicMediaPlayer (5.0.1):
     - BitmovinPlayer (= 3.22.0)
     - FittedSheets (= 2.5.3)
     - Kingfisher (= 7.6.2)
@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BitmovinPlayer: ecf00f7c29c7a6452483e0432fd994049dcec4da
   FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
-  HotMicMediaPlayer: d5560062a389d4e122c934141990a8a59a60ece1
+  HotMicMediaPlayer: 33708d17f0d8f8e58b802b831a694b3d7fda64de
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
   OTXCFramework: d3418d47e37cada40637712a847767348ed2ce6a
   PubNubSwift: c22025ea55e4251410e640e5e86923a643159383
@@ -45,4 +45,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3d37216af0fb9a021b68fcc5808c879bf42254e3
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

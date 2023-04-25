@@ -202,9 +202,9 @@ extension AppDelegate: HMMediaPlayerShareDelegate {
 
 extension AppDelegate: HMMediaPlayerUserProfileDelegate {
     
-    func getUserProfile(for id: String, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
+    func getUserProfile(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
         // Call completion with a non-nil HMUserProfile specifying nil for any unsupported values OR
-        // Call completion with a nil HMUserProfile to have HotMic fetch the user profile info OR
+        // Call completion with a nil HMUserProfile to use the HotMic user profile info OR
         // Call completion with failure and an Error if an error occurs
         completion(.success(nil))
     }
