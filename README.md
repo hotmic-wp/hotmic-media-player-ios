@@ -554,7 +554,7 @@ func getUserProfile(for id: String, restriction: String?, isHost: Bool, isCohost
 When the user taps the follow/unfollow button, the following function is called allowing you to record the new following state. Provide an `Error` to the completion handler if one occurs.
 
 ```swift
-func setFollowingUser(id: String, following: Bool, completion: @escaping (Error?) -> Void) {
+func setFollowingUser(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, following: Bool, completion: @escaping (Error?) -> Void) {
     // Record the new state and call completion
 }
 ```
@@ -562,7 +562,7 @@ func setFollowingUser(id: String, following: Bool, completion: @escaping (Error?
 When the user profile is shown, the following function is called allowing you to specify whether the See Full Profile button should be shown.
 
 ```swift
-func shouldShowSeeFullProfileButton(for id: String) -> Bool {
+func shouldShowSeeFullProfileButton(for id: String, restriction: String?, isHost: Bool, isCohost: Bool) -> Bool {
     return true
 }
 ```
@@ -570,7 +570,7 @@ func shouldShowSeeFullProfileButton(for id: String) -> Bool {
 When the user taps the See Full Profile button, the following function is called allowing you to handle this action, for example by presenting a view controller.
 
 ```swift
-func seeFullProfileButtonTapped(for id: String, in viewController: UIViewController) {
+func seeFullProfileButtonTapped(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, in viewController: UIViewController) {
     // Show the full profile
 }
 ```

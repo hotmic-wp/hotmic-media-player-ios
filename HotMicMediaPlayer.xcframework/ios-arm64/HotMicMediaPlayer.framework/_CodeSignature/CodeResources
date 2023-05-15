@@ -58,27 +58,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		apahOd8hCkbT1mtTlQC+D/fKkJg=
+		3iSTPr3pr3HqofMAqbYwuhqB7YQ=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Q/CGu0gRtHkcveseLodx8CuS1eM=
+		XFaNh56HhmJ7EJzO6oCSusHGLfw=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		sgZ/AK6M8dPnJTE6LFKRXtBvheQ=
+		pVPD6ZnSZePKnob/YIhUzIbjbtI=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		a/HHy99xxg1P847HDUybwz1hq0w=
+		KmN+0mIprND/cOEymjXcumCFm1c=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		sgZ/AK6M8dPnJTE6LFKRXtBvheQ=
+		pVPD6ZnSZePKnob/YIhUzIbjbtI=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		LNE2O4sDbh05U0Zl7zGis8yFbho=
+		LiM5rlpdslq6uPeU49Jgc3Y2U5Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -294,35 +294,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fimIsT5Cj3w3dHnJFkO33wnbxZI20POoBlMF5+gkQSY=
+			43ebi2DfDITsQqhgpFVhuxg/o5FNjer2hjEKCNd9qSk=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nPrYETaTlFfUatlZDeP+7gVKbEZJorNjlJ9fO4g75Ig=
+			3pRXzCvPT2FNWMmFgI0Wy9gLoKSFPiJOyICibBQcY9Y=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8arG/gMqEOLz4z9PoyqQAXRv4HEE1/SYNw5TCi6EMY0=
+			Yrlql/ZLjwfonwCxApAaW0Dc8X0Ro6bZJt3+x9XKoHc=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nPrYETaTlFfUatlZDeP+7gVKbEZJorNjlJ9fO4g75Ig=
+			3pRXzCvPT2FNWMmFgI0Wy9gLoKSFPiJOyICibBQcY9Y=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LMghMMgqIUrz8b/frKKMn6vtgwCcG0eIcOboCi/cG44=
+			yb/BaotDoVL9p9yJ5GE7ulAU2HWejjIhDXj9v9kgGG8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

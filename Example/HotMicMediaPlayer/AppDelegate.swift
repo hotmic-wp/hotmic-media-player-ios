@@ -209,18 +209,18 @@ extension AppDelegate: HMMediaPlayerUserProfileDelegate {
         completion(.success(nil))
     }
     
-    func setFollowingUser(id: String, following: Bool, completion: @escaping (Error?) -> Void) {
+    func setFollowingUser(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, following: Bool, completion: @escaping (Error?) -> Void) {
         // Follow or unfollow this user
         // Call completion with nil or an Error
         completion(nil)
     }
     
-    func shouldShowSeeFullProfileButton(for id: String) -> Bool {
+    func shouldShowSeeFullProfileButton(for id: String, restriction: String?, isHost: Bool, isCohost: Bool) -> Bool {
         // Return true to show the button or false to hide it
         return true
     }
     
-    func seeFullProfileButtonTapped(for id: String, in viewController: UIViewController) {
+    func seeFullProfileButtonTapped(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, in viewController: UIViewController) {
         // Show the full profile
     }
     

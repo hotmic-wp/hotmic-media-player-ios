@@ -6510,7 +6510,7 @@
           {
             "kind": "Function",
             "name": "setFollowingUser",
-            "printedName": "setFollowingUser(id:following:completion:)",
+            "printedName": "setFollowingUser(for:restriction:isHost:isCohost:following:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6522,6 +6522,32 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -6557,8 +6583,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP012setFollowingF02id9following10completionySS_Sbys5Error_pSgctF",
-            "mangledName": "$s17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP012setFollowingF02id9following10completionySS_Sbys5Error_pSgctF",
+            "usr": "s:17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP012setFollowingF03for11restriction6isHost0M6Cohost9following10completionySS_SSSgS3bys5Error_pSgctF",
+            "mangledName": "$s17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP012setFollowingF03for11restriction6isHost0M6Cohost9following10completionySS_SSSgS3bys5Error_pSgctF",
             "moduleName": "HotMicMediaPlayer",
             "genericSig": "<τ_0_0 where τ_0_0 : HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate>",
             "sugared_genericSig": "<Self where Self : HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate>",
@@ -6572,7 +6598,7 @@
           {
             "kind": "Function",
             "name": "shouldShowSeeFullProfileButton",
-            "printedName": "shouldShowSeeFullProfileButton(for:)",
+            "printedName": "shouldShowSeeFullProfileButton(for:restriction:isHost:isCohost:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6585,11 +6611,37 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP017shouldShowSeeFullG6Button3forSbSS_tF",
-            "mangledName": "$s17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP017shouldShowSeeFullG6Button3forSbSS_tF",
+            "usr": "s:17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP017shouldShowSeeFullG6Button3for11restriction6isHost0P6CohostSbSS_SSSgS2btF",
+            "mangledName": "$s17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP017shouldShowSeeFullG6Button3for11restriction6isHost0P6CohostSbSS_SSSgS2btF",
             "moduleName": "HotMicMediaPlayer",
             "genericSig": "<τ_0_0 where τ_0_0 : HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate>",
             "sugared_genericSig": "<Self where Self : HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate>",
@@ -6603,7 +6655,7 @@
           {
             "kind": "Function",
             "name": "seeFullProfileButtonTapped",
-            "printedName": "seeFullProfileButtonTapped(for:in:)",
+            "printedName": "seeFullProfileButtonTapped(for:restriction:isHost:isCohost:in:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6618,14 +6670,40 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "UIViewController",
                 "printedName": "UIKit.UIViewController",
                 "usr": "c:objc(cs)UIViewController"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP07seeFullG12ButtonTapped3for2inySS_So16UIViewControllerCtF",
-            "mangledName": "$s17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP07seeFullG12ButtonTapped3for2inySS_So16UIViewControllerCtF",
+            "usr": "s:17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP07seeFullG12ButtonTapped3for11restriction6isHost0O6Cohost2inySS_SSSgS2bSo16UIViewControllerCtF",
+            "mangledName": "$s17HotMicMediaPlayer07HMMediaD19UserProfileDelegateP07seeFullG12ButtonTapped3for11restriction6isHost0O6Cohost2inySS_SSSgS2bSo16UIViewControllerCtF",
             "moduleName": "HotMicMediaPlayer",
             "genericSig": "<τ_0_0 where τ_0_0 : HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate>",
             "sugared_genericSig": "<Self where Self : HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate>",
@@ -12950,7 +13028,7 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 92852,
+      "offset": 92902,
       "length": 5,
       "value": "false"
     },
@@ -13447,42 +13525,42 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 16044,
+      "offset": 16966,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 16075,
+      "offset": 16997,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 16120,
+      "offset": 17042,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 16165,
+      "offset": 17087,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 16213,
+      "offset": 17135,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 17535,
+      "offset": 18457,
       "length": 5,
       "value": "false"
     },

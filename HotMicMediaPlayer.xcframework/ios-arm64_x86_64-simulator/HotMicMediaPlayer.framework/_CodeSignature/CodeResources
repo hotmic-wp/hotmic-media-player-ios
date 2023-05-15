@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		uCoLQbVwPhp+JdK2eOSKco/pFQA=
+		L4WI3Vdwaqy6B6PL0Lruvskdwps=
 		</data>
 		<key>Chat.storyboardc/ChatReactionsListViewController.nib</key>
 		<data>
@@ -58,47 +58,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XZ+fvt/QBAyF5Nib7aBpJJd0snc=
+		bYZA30f4Ij48IO1pt6tXpZS0jzU=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Q/CGu0gRtHkcveseLodx8CuS1eM=
+		XFaNh56HhmJ7EJzO6oCSusHGLfw=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		L1xT7kClzxTw5avVotjhtM69lmU=
+		whWYdy9xi0fpyyXMKBT5Yd05g3g=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8a9Hhvs6MJTxsv5Swbfcu/czInQ=
+		UmZvlgQht7ojcfApbUoXABTw6y0=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		L1xT7kClzxTw5avVotjhtM69lmU=
+		whWYdy9xi0fpyyXMKBT5Yd05g3g=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4eD9K9odvpXOpP4cVi2Kh/Bzugs=
+		ox0b/FeqpXx0mF5Zkbb4Zj2n48s=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Q/CGu0gRtHkcveseLodx8CuS1eM=
+		XFaNh56HhmJ7EJzO6oCSusHGLfw=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		QpzD7M0OWBP25B2sp/Bv+WbntVU=
+		uZwt2isAZ/JPiFx1D1lQmqubwKI=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Vs2Y/k+nFRA/MPf8qeSTq618e6I=
+		YkTjJnJv2gztMRx+JWv1CUEhPPY=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		QpzD7M0OWBP25B2sp/Bv+WbntVU=
+		uZwt2isAZ/JPiFx1D1lQmqubwKI=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LexCfo3Eokan6vBVUo3UEBAOqjU=
+		YgltxMyE8C1NMxmqU9MqBpPVNXA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -223,7 +223,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4TXKui/9+nykkU5fjgEl/2Ymr0VdVzWyRc6Q2JVXvjk=
+			n20z50SgbM8K/SZzMCVu9C6tZWXjsWJeMc0LQDrHt54=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/ChatReactionsListViewController.nib</key>
@@ -314,70 +314,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fimIsT5Cj3w3dHnJFkO33wnbxZI20POoBlMF5+gkQSY=
+			43ebi2DfDITsQqhgpFVhuxg/o5FNjer2hjEKCNd9qSk=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oAJrM5lUcgPV6Sbv89OQ/2eR/WUrxxdE96adTK7DU4s=
+			Yniv1tlzazQbFDupJOJX8Ejp9OG3DOD0QjgqfCg6Wew=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QltuP871vxeI1pIkMFzvtcZc88+3Yr260ISJ/OL9oq4=
+			+U0BF4OpdtX1o6K602cfoGh+8hNDHgmeq+UW45UdZww=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oAJrM5lUcgPV6Sbv89OQ/2eR/WUrxxdE96adTK7DU4s=
+			Yniv1tlzazQbFDupJOJX8Ejp9OG3DOD0QjgqfCg6Wew=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DC/bURbYcU10s86UvfoCEqPrxLqrMdFDhgRDnQ+u+xw=
+			tmuDE7V4peSd7iLKMbBTzG9X18P+BL2KgMWRQkaDmcA=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fimIsT5Cj3w3dHnJFkO33wnbxZI20POoBlMF5+gkQSY=
+			43ebi2DfDITsQqhgpFVhuxg/o5FNjer2hjEKCNd9qSk=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Yp7YP00W3wgiNZD4lWvwg+5rydwolUsYaT1gVC4U+k=
+			KHuOZQMzS5nCFyFln8Dm/GC0IcRepYIRZkrBas2J8T4=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IY4FED0DJI8t27lOwduyVpc4dM9CasEkKne01lFCZLE=
+			vT1VfQgRApkH7GxC+uJJ/BFL1OM1FanaxN+ae1cpz2Y=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Yp7YP00W3wgiNZD4lWvwg+5rydwolUsYaT1gVC4U+k=
+			KHuOZQMzS5nCFyFln8Dm/GC0IcRepYIRZkrBas2J8T4=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ox0hYDUNojI6lKgyeZ+vCtvdRseNmkzDTdtl330xfHM=
+			nMBqjRrYuNoocM/v7HyfEvNTc2CVnzIr//KWOzJAV0g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

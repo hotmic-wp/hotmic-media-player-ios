@@ -250,9 +250,9 @@ public protocol HMMediaPlayerShareDelegate : AnyObject {
 }
 public protocol HMMediaPlayerUserProfileDelegate : AnyObject {
   func getUserProfile(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMUserProfile?, Swift.Error>) -> Swift.Void)
-  func setFollowingUser(id: Swift.String, following: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
-  func shouldShowSeeFullProfileButton(for id: Swift.String) -> Swift.Bool
-  func seeFullProfileButtonTapped(for id: Swift.String, in viewController: UIKit.UIViewController)
+  func setFollowingUser(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, following: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
+  func shouldShowSeeFullProfileButton(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool) -> Swift.Bool
+  func seeFullProfileButtonTapped(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, in viewController: UIKit.UIViewController)
 }
 public protocol HMMediaPlayerInAppPurchaseDelegate : AnyObject {
   func getTipProducts(hostID: Swift.String, completion: @escaping (Swift.Result<[StoreKit.SKProduct], Swift.Error>) -> Swift.Void)
