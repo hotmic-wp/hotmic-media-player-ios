@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HotMicMediaPlayer'
-  s.version          = '5.0.2'
+  s.version          = '5.0.3'
   s.summary          = 'Integrate the HotMic player experience in your app.'
   s.description      = <<-DESC
 'HotMicMediaPlayer allows you to integrate the HotMic player experience into your app.'
@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'HotMicMediaPlayer.xcframework'
   s.swift_version = '5.7.2'
 
-  s.dependency 'PubNubSwift', '6.0.3'
+  s.dependency 'PubNubSwift', '6.0.5'
   s.dependency 'FittedSheets', '2.5.3'
   s.dependency 'Kingfisher', '7.6.2'
-  s.dependency 'BitmovinPlayer', '3.22.0'
+  s.dependency 'BitmovinPlayer', '3.36.0'
   s.dependency 'TrueTime', '5.0.3'
-  s.dependency 'OTXCFramework', '2.24.2'
+  s.dependency 'OTXCFramework', '2.25.1'
 end
