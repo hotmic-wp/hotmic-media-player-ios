@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -229,8 +229,9 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = HotMic;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -296,8 +297,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-HotMicMediaPlayer_Example/Pods-HotMicMediaPlayer_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Kronos/Kronos.framework",
 				"${BUILT_PRODUCTS_DIR}/PubNubSwift/PubNub.framework",
-				"${BUILT_PRODUCTS_DIR}/TrueTime/TrueTime.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BitmovinPlayer/BitmovinPlayer.framework/BitmovinPlayer",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/HotMicMediaPlayer/HotMicMediaPlayer.framework/HotMicMediaPlayer",
 			);
@@ -305,8 +306,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FittedSheets.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kronos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PubNub.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrueTime.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BitmovinPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HotMicMediaPlayer.framework",
 			);

@@ -43,9 +43,9 @@ HotMicMediaPlayer has the following dependencies:
 - BitmovinPlayer
 - FittedSheets
 - Kingfisher
+- Kronos
 - OTXCFramework
 - PubNubSwift
-- TrueTime
 
 ## Example
 

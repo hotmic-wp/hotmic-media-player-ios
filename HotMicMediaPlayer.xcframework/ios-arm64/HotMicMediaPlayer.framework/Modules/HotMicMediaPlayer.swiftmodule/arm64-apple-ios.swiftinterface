@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -10,19 +10,19 @@ import FittedSheets
 import Foundation
 @_exported import HotMicMediaPlayer
 import Kingfisher
+import Kronos
 import MediaPlayer
 import OpenTok
 import PubNub
 import SafariServices
 import StoreKit
 import Swift
-import TrueTime
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
 public protocol HMPlayerViewControllerDelegate : AnyObject {
-  func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, playerForAssetAt url: Foundation.URL) -> HotMicMediaPlayer.HMPlayer?
+  func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, playerForAssetAt url: Foundation.URL) -> (any HotMicMediaPlayer.HMPlayer)?
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class HMPlayerViewController : UIKit.UIViewController, UIKit.UIViewControllerTransitioningDelegate {
@@ -48,7 +48,7 @@ public protocol HMPlayerViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
   @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
   @_Concurrency.MainActor(unsafe) final public func restorePiPView(_ pipView: UIKit.UIView)
@@ -70,15 +70,15 @@ extension HotMicMediaPlayer.HMPlayerViewController : UIKit.UIPageViewControllerD
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
 }
 extension HotMicMediaPlayer.HMPlayerViewController : HotMicMediaPlayer.HMPlayerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func playerDidInvokePlay(_ player: HotMicMediaPlayer.HMPlayer)
-  @_Concurrency.MainActor(unsafe) final public func playerPlaying(_ player: HotMicMediaPlayer.HMPlayer)
-  @_Concurrency.MainActor(unsafe) final public func playerPaused(_ player: HotMicMediaPlayer.HMPlayer)
-  @_Concurrency.MainActor(unsafe) final public func playerBuffering(_ player: HotMicMediaPlayer.HMPlayer)
-  @_Concurrency.MainActor(unsafe) final public func playerDidFinishSeekByTimeShift(_ player: HotMicMediaPlayer.HMPlayer)
-  @_Concurrency.MainActor(unsafe) final public func playerDidRecoverFromStall(_ player: HotMicMediaPlayer.HMPlayer)
-  @_Concurrency.MainActor(unsafe) final public func player(_ player: HotMicMediaPlayer.HMPlayer, timeChanged time: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) final public func player(_ player: HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) final public func player(_ player: HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func playerDidInvokePlay(_ player: any HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerPlaying(_ player: any HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerPaused(_ player: any HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerBuffering(_ player: any HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerDidFinishSeekByTimeShift(_ player: any HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func playerDidRecoverFromStall(_ player: any HotMicMediaPlayer.HMPlayer)
+  @_Concurrency.MainActor(unsafe) final public func player(_ player: any HotMicMediaPlayer.HMPlayer, timeChanged time: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) final public func player(_ player: any HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) final public func player(_ player: any HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
 }
 extension HotMicMediaPlayer.HMPlayerViewController : OpenTok.OTSessionDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func sessionDidConnect(_ session: OpenTok.OTSession)
@@ -108,8 +108,8 @@ extension HotMicMediaPlayer.HMPlayerViewController : OpenTok.OTSubscriberKitAudi
     get
     set
   }
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension HotMicMediaPlayer.Lenient : Swift.Equatable where T : Swift.Equatable {
   public static func == (a: HotMicMediaPlayer.Lenient<T>, b: HotMicMediaPlayer.Lenient<T>) -> Swift.Bool
@@ -218,7 +218,7 @@ public protocol HMPlayer : AnyObject {
   var duration: Foundation.TimeInterval { get }
   var time: Foundation.TimeInterval { get }
   var playbackSpeed: Swift.Float { get }
-  func setDelegate(_ delegate: HotMicMediaPlayer.HMPlayerDelegate)
+  func setDelegate(_ delegate: any HotMicMediaPlayer.HMPlayerDelegate)
   func play()
   func pause()
   func mute()
@@ -235,31 +235,31 @@ public protocol HMPlayer : AnyObject {
   func exitFullscreen()
 }
 public protocol HMPlayerDelegate : AnyObject {
-  func playerDidInvokePlay(_ player: HotMicMediaPlayer.HMPlayer)
-  func playerPlaying(_ player: HotMicMediaPlayer.HMPlayer)
-  func playerPaused(_ player: HotMicMediaPlayer.HMPlayer)
-  func playerBuffering(_ player: HotMicMediaPlayer.HMPlayer)
-  func playerDidFinishSeekByTimeShift(_ player: HotMicMediaPlayer.HMPlayer)
-  func playerDidRecoverFromStall(_ player: HotMicMediaPlayer.HMPlayer)
-  func player(_ player: HotMicMediaPlayer.HMPlayer, timeChanged time: Foundation.TimeInterval)
-  func player(_ player: HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
-  func player(_ player: HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
+  func playerDidInvokePlay(_ player: any HotMicMediaPlayer.HMPlayer)
+  func playerPlaying(_ player: any HotMicMediaPlayer.HMPlayer)
+  func playerPaused(_ player: any HotMicMediaPlayer.HMPlayer)
+  func playerBuffering(_ player: any HotMicMediaPlayer.HMPlayer)
+  func playerDidFinishSeekByTimeShift(_ player: any HotMicMediaPlayer.HMPlayer)
+  func playerDidRecoverFromStall(_ player: any HotMicMediaPlayer.HMPlayer)
+  func player(_ player: any HotMicMediaPlayer.HMPlayer, timeChanged time: Foundation.TimeInterval)
+  func player(_ player: any HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
+  func player(_ player: any HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
 }
 public protocol HMMediaPlayerShareDelegate : AnyObject {
-  func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, Swift.Error>) -> Swift.Void)
+  func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, any Swift.Error>) -> Swift.Void)
 }
 public protocol HMMediaPlayerUserProfileDelegate : AnyObject {
-  func getUserProfile(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMUserProfile?, Swift.Error>) -> Swift.Void)
-  func setFollowingUser(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, following: Swift.Bool, completion: @escaping (Swift.Error?) -> Swift.Void)
+  func getUserProfile(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMUserProfile?, any Swift.Error>) -> Swift.Void)
+  func setFollowingUser(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, following: Swift.Bool, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
   func shouldShowSeeFullProfileButton(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool) -> Swift.Bool
   func seeFullProfileButtonTapped(for id: Swift.String, restriction: Swift.String?, isHost: Swift.Bool, isCohost: Swift.Bool, in viewController: UIKit.UIViewController)
 }
 public protocol HMMediaPlayerInAppPurchaseDelegate : AnyObject {
-  func getTipProducts(hostID: Swift.String, completion: @escaping (Swift.Result<[StoreKit.SKProduct], Swift.Error>) -> Swift.Void)
-  func getJoinStreamProduct(hostID: Swift.String, userID: Swift.String, completion: @escaping (Swift.Result<StoreKit.SKProduct?, Swift.Error>) -> Swift.Void)
-  func purchaseTip(product: StoreKit.SKProduct, userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, completion: @escaping ((error: Swift.Error?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
-  func purchaseJoinStream(product: StoreKit.SKProduct, userID: Swift.String, streamID: Swift.String, streamType: Swift.String, completion: @escaping ((error: Swift.Error?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
-  func retrySubmittingPurchaseInfo(productID: Swift.String, completion: @escaping ((error: Swift.Error?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
+  func getTipProducts(hostID: Swift.String, completion: @escaping (Swift.Result<[StoreKit.SKProduct], any Swift.Error>) -> Swift.Void)
+  func getJoinStreamProduct(hostID: Swift.String, userID: Swift.String, completion: @escaping (Swift.Result<StoreKit.SKProduct?, any Swift.Error>) -> Swift.Void)
+  func purchaseTip(product: StoreKit.SKProduct, userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, completion: @escaping ((error: (any Swift.Error)?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
+  func purchaseJoinStream(product: StoreKit.SKProduct, userID: Swift.String, streamID: Swift.String, streamType: Swift.String, completion: @escaping ((error: (any Swift.Error)?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
+  func retrySubmittingPurchaseInfo(productID: Swift.String, completion: @escaping ((error: (any Swift.Error)?, showError: Swift.Bool, canRetry: Swift.Bool)) -> Swift.Void)
 }
 public protocol HMMediaPlayerAuthenticationObserving : AnyObject {
   func authenticationStatusChangedToUnauthenticated()
@@ -270,19 +270,19 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   func eventOccurred(name: Swift.String, info: [Swift.String : Any])
 }
 @_hasMissingDesignatedInitializers public class HMMediaPlayer {
-  weak public static var appearanceDelegate: HotMicMediaPlayer.HMMediaPlayerAppearanceDelegate?
-  weak public static var shareDelegate: HotMicMediaPlayer.HMMediaPlayerShareDelegate?
-  weak public static var userProfileDelegate: HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate?
-  weak public static var inAppPurchaseDelegate: HotMicMediaPlayer.HMMediaPlayerInAppPurchaseDelegate?
-  weak public static var authenticationObserver: HotMicMediaPlayer.HMMediaPlayerAuthenticationObserving?
-  weak public static var analyticsObserver: HotMicMediaPlayer.HMMediaPlayerAnalyticsEventObserving?
+  weak public static var appearanceDelegate: (any HotMicMediaPlayer.HMMediaPlayerAppearanceDelegate)?
+  weak public static var shareDelegate: (any HotMicMediaPlayer.HMMediaPlayerShareDelegate)?
+  weak public static var userProfileDelegate: (any HotMicMediaPlayer.HMMediaPlayerUserProfileDelegate)?
+  weak public static var inAppPurchaseDelegate: (any HotMicMediaPlayer.HMMediaPlayerInAppPurchaseDelegate)?
+  weak public static var authenticationObserver: (any HotMicMediaPlayer.HMMediaPlayerAuthenticationObserving)?
+  weak public static var analyticsObserver: (any HotMicMediaPlayer.HMMediaPlayerAnalyticsEventObserving)?
   public static var debugKey: Swift.String
   public static func initialize(apiKey: Swift.String, accessToken: Swift.String)
-  public static func initializePlayerViewController(streamID: Swift.String, delegate: HotMicMediaPlayer.HMPlayerViewControllerDelegate?, supportsMinimizingToPiP: Swift.Bool = false) -> HotMicMediaPlayer.HMPlayerViewController
-  public static func getStreams(live: Swift.Bool, scheduled: Swift.Bool, vod: Swift.Bool, userID: Swift.String? = nil, limit: Swift.Int? = nil, skip: Swift.Int? = nil, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMStream], Swift.Error>) -> Swift.Void)
-  public static func getStream(id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMStream, Swift.Error>) -> Swift.Void)
-  public static func submitTipPurchase(userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: Swift.Error?)) -> Swift.Void)
-  public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: Swift.Error?)) -> Swift.Void)
+  public static func initializePlayerViewController(streamID: Swift.String, delegate: (any HotMicMediaPlayer.HMPlayerViewControllerDelegate)?, supportsMinimizingToPiP: Swift.Bool = false) -> HotMicMediaPlayer.HMPlayerViewController
+  public static func getStreams(live: Swift.Bool, scheduled: Swift.Bool, vod: Swift.Bool, userID: Swift.String? = nil, limit: Swift.Int? = nil, skip: Swift.Int? = nil, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMStream], any Swift.Error>) -> Swift.Void)
+  public static func getStream(id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMStream, any Swift.Error>) -> Swift.Void)
+  public static func submitTipPurchase(userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
+  public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
   @objc deinit
 }
 public struct HMStream : Swift.Decodable, Swift.Equatable {
@@ -345,10 +345,10 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
       _modify
     }
     public static func == (lhs: HotMicMediaPlayer.HMStream.User, rhs: HotMicMediaPlayer.HMStream.User) -> Swift.Bool
-    public init(from decoder: Swift.Decoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public static func == (lhs: HotMicMediaPlayer.HMStream, rhs: HotMicMediaPlayer.HMStream) -> Swift.Bool
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HMUserProfile {
   public let name: Swift.String?
