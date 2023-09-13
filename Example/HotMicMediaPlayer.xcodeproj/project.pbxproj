@@ -191,6 +191,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				029AAE2BE8342DD1ADD3B641 /* [CP] Embed Pods Frameworks */,
+				155288C284D677B44D7109CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +315,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HotMicMediaPlayer_Example/Pods-HotMicMediaPlayer_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		155288C284D677B44D7109CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HotMicMediaPlayer_Example/Pods-HotMicMediaPlayer_Example-resources.sh",
+				"${PODS_ROOT}/OTXCFramework/OpenTok.xcframework/ios-arm64/OpenTok.framework/selfie_segmentation.tflite",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/selfie_segmentation.tflite",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HotMicMediaPlayer_Example/Pods-HotMicMediaPlayer_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		384D18C1661B7E815BA974D2 /* [CP] Check Pods Manifest.lock */ = {

@@ -1,17 +1,17 @@
 PODS:
   - BitmovinPlayer (3.36.0)
   - FittedSheets (2.5.3)
-  - HotMicMediaPlayer (5.0.4):
+  - HotMicMediaPlayer (5.0.5):
     - BitmovinPlayer (= 3.36.0)
     - FittedSheets (= 2.5.3)
-    - Kingfisher (= 7.8.1)
+    - Kingfisher (= 7.9.1)
     - Kronos (= 4.2.2)
-    - OTXCFramework (= 2.25.1)
-    - PubNubSwift (= 6.0.5)
-  - Kingfisher (7.8.1)
+    - OTXCFramework (= 2.26.0)
+    - PubNubSwift (= 6.1.0)
+  - Kingfisher (7.9.1)
   - Kronos (4.2.2)
-  - OTXCFramework (2.25.1)
-  - PubNubSwift (6.0.5)
+  - OTXCFramework (2.26.0)
+  - PubNubSwift (6.1.0)
 
 DEPENDENCIES:
   - HotMicMediaPlayer (from `../`)
@@ -33,11 +33,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BitmovinPlayer: 9eb681e3e05db252244743c7973ab6a882d5eecd
   FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
-  HotMicMediaPlayer: a12b748b793d97943d1afbdb558a2bdd1cdc485c
-  Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
+  HotMicMediaPlayer: 62d297613efb8b67b671671cbd7bf14b0a12c6e7
+  Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Kronos: dfa27819541f9f1bf6834d5bfefa792f499001bb
-  OTXCFramework: adcbfab3a46dd9f84d918300702666b3888a997a
-  PubNubSwift: 64d778e88f4e5e9f5f186c63eef0776f950f7785
+  OTXCFramework: f538d67b53a82f00ba1d0b94a45f750b246268f7
+  PubNubSwift: 1d913cbbd57c3abab19f61ff40a16fe528395571
 
 PODFILE CHECKSUM: 3d37216af0fb9a021b68fcc5808c879bf42254e3
 
