@@ -1,8 +1,15 @@
 PODS:
-  - BitmovinPlayer (3.36.0)
+  - BitmovinAnalyticsCollector/BitmovinPlayer (3.1.2):
+    - BitmovinAnalyticsCollector/Core
+    - BitmovinPlayerCore (~> 3.41)
+  - BitmovinAnalyticsCollector/Core (3.1.2)
+  - BitmovinPlayer (3.44.2):
+    - BitmovinAnalyticsCollector/BitmovinPlayer (~> 3.0)
+    - BitmovinPlayerCore (= 3.44.2)
+  - BitmovinPlayerCore (3.44.2)
   - FittedSheets (2.5.3)
-  - HotMicMediaPlayer (5.0.5):
-    - BitmovinPlayer (= 3.36.0)
+  - HotMicMediaPlayer (5.0.7):
+    - BitmovinPlayer (= 3.44.2)
     - FittedSheets (= 2.5.3)
     - Kingfisher (= 7.9.1)
     - Kronos (= 4.2.2)
@@ -18,7 +25,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/bitmovin/cocoapod-specs.git:
+    - BitmovinAnalyticsCollector
     - BitmovinPlayer
+    - BitmovinPlayerCore
   trunk:
     - FittedSheets
     - Kingfisher
@@ -31,9 +40,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BitmovinPlayer: 9eb681e3e05db252244743c7973ab6a882d5eecd
+  BitmovinAnalyticsCollector: 11769c5503a08c8e3495f2e2bdca8f72db6b973f
+  BitmovinPlayer: e2809771a4f07cc51bb571889d005835b007c2b9
+  BitmovinPlayerCore: 1e216be104179368396c1d401f1a664a91ddc093
   FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
-  HotMicMediaPlayer: 62d297613efb8b67b671671cbd7bf14b0a12c6e7
+  HotMicMediaPlayer: 99174c86bb74eff735095c6d0d1254a450237cfc
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Kronos: dfa27819541f9f1bf6834d5bfefa792f499001bb
   OTXCFramework: f538d67b53a82f00ba1d0b94a45f750b246268f7
@@ -41,4 +52,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3d37216af0fb9a021b68fcc5808c879bf42254e3
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.14.2

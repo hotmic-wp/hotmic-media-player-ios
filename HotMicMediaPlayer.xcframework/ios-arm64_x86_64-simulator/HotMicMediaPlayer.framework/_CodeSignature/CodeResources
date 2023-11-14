@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		XtHzb7MMeYVgJU9qQNL2M/UEfG0=
+		J0j7RAw9bVOVqBMYMjDUou2ihx4=
 		</data>
 		<key>Chat.storyboardc/ChatReactionsListViewController.nib</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JQNhSUnYa1ejghZmPE/8thNBZG4=
+		/P83BX4hXs3z7RLG+t2H1eHPkDs=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dWBUhWaAz3jhV5AR2F18z9Ktnbw=
+		dpzuQDv6hI71fk/TASX0OACbP4g=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XcDcUg+rIyoaHa7o4kJbCGHJeiw=
+		hteX4SvuiYztZ2kW5t5ylbg033Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -227,7 +227,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gKPg6a9Onix2hjwZb/mBiQ9w/EZcZMA9XtGCpouMS/U=
+			j0kArfQkuTI7MHrTKQfA/FWX2MbaoU2jpBvah7YtUyk=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/ChatReactionsListViewController.nib</key>
@@ -346,7 +346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ynXNb3eZ4f4ODDgOUS/eroA/csAkpND3v/hx2iaQKhg=
+			5TpTTPEKWueHdjtyvseDB6m5gvRlJypGkyTNumVR0VI=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -381,7 +381,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1TjoiZkFsKjW55WGncwJ707wBsw1eW+m3PXZHVasc40=
+			G7BKdZ+cp43QGhCQF3V584GrZ0uzcasvBSe/lZLX6Hg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
