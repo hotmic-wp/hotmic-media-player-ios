@@ -1,31 +1,44 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HotMicMediaPlayer
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 import AudioToolbox
 import BitmovinPlayer
+import DeveloperToolsSupport
 import FittedSheets
 import Foundation
 @_exported import HotMicMediaPlayer
 import Kingfisher
 import Kronos
 import MediaPlayer
+import OSLog
 import OpenTok
 import PubNub
 import SafariServices
 import StoreKit
 import Swift
+import SwiftUI
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public protocol HMPlayerViewControllerDelegate : AnyObject {
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, playerForAssetAt url: Foundation.URL) -> (any HotMicMediaPlayer.HMPlayer)?
+  func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, viewControllerForContext context: HotMicMediaPlayer.HMPlayerViewController.CustomContentContext) -> UIKit.UIViewController?
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class HMPlayerViewController : UIKit.UIViewController, UIKit.UIViewControllerTransitioningDelegate {
+  public enum CustomContentContext {
+    case chat
+    public static func == (a: HotMicMediaPlayer.HMPlayerViewController.CustomContentContext, b: HotMicMediaPlayer.HMPlayerViewController.CustomContentContext) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   @_Concurrency.MainActor(unsafe) @objc override final public var prefersStatusBarHidden: Swift.Bool {
     @objc get
   }
@@ -285,7 +298,7 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
   @objc deinit
 }
-public struct HMStream : Swift.Decodable, Swift.Equatable {
+public struct HMStream : Swift.Decodable {
   public let id: Swift.String
   public var state: HotMicMediaPlayer.HMStream.StreamState
   public let type: HotMicMediaPlayer.HMStream.StreamType
@@ -331,7 +344,7 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
       get
     }
   }
-  public struct User : Swift.Decodable, Swift.Equatable {
+  public struct User : Swift.Decodable {
     public let id: Swift.String
     public let displayName: Swift.String?
     @HotMicMediaPlayer.Lenient public var profilePic: Foundation.URL? {
@@ -344,10 +357,8 @@ public struct HMStream : Swift.Decodable, Swift.Equatable {
       set
       _modify
     }
-    public static func == (lhs: HotMicMediaPlayer.HMStream.User, rhs: HotMicMediaPlayer.HMStream.User) -> Swift.Bool
     public init(from decoder: any Swift.Decoder) throws
   }
-  public static func == (lhs: HotMicMediaPlayer.HMStream, rhs: HotMicMediaPlayer.HMStream) -> Swift.Bool
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HMUserProfile {
@@ -367,6 +378,8 @@ public struct HMUserProfile {
   public var followedByMe: Swift.Bool?
   public init(name: Swift.String? = nil, displayName: Swift.String? = nil, profilePic: Foundation.URL? = nil, badge: Foundation.URL? = nil, bio: Swift.String? = nil, instagramHandle: Swift.String? = nil, tikTokHandle: Swift.String? = nil, twitchHandle: Swift.String? = nil, twitterHandle: Swift.String? = nil, youTubeHandle: Swift.String? = nil, followersCount: Swift.Int? = nil, followingCount: Swift.Int? = nil, followingMe: Swift.Bool? = nil, followedByMe: Swift.Bool? = nil)
 }
+extension HotMicMediaPlayer.HMPlayerViewController.CustomContentContext : Swift.Equatable {}
+extension HotMicMediaPlayer.HMPlayerViewController.CustomContentContext : Swift.Hashable {}
 extension HotMicMediaPlayer.HMTextStyle : Swift.Equatable {}
 extension HotMicMediaPlayer.HMTextStyle : Swift.Hashable {}
 extension HotMicMediaPlayer.HMColorStyle : Swift.Equatable {}

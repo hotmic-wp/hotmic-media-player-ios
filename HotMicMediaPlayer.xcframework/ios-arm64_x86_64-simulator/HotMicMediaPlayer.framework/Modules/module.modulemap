@@ -1,7 +1,7 @@
 framework module HotMicMediaPlayer {
   umbrella header "HotMicMediaPlayer.h"
-
   export *
+
   module * { export * }
 }
 

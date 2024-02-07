@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		J0j7RAw9bVOVqBMYMjDUou2ihx4=
+		hMzAUhDGE3KYIbrOZjcqHPX6PNI=
 		</data>
 		<key>Chat.storyboardc/ChatReactionsListViewController.nib</key>
 		<data>
-		tX9cfsOy20EZdum6vcpafkdNF1A=
+		YT8fJtTIScwmFMTJhEQ/ZeByj4U=
 		</data>
 		<key>Chat.storyboardc/Info.plist</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Chat.storyboardc/Kve-NP-uJf-view-xPU-3w-fsH.nib</key>
 		<data>
-		Rrcagq7H0tIPbJrtejHmQ5SImus=
+		DcXaTCxZF60mkhD6aC4fkxIyWwY=
 		</data>
 		<key>Chat.storyboardc/UIViewController-i7e-Y9-rGk.nib</key>
 		<data>
-		spnzUvzrGsTrISAVVOusLJgl+Tc=
+		SBvMRPzAtlvDaZ0D+G7VKyGm2rQ=
 		</data>
 		<key>Chat.storyboardc/i7e-Y9-rGk-view-pTb-B4-TjZ.nib</key>
 		<data>
-		EObatVZ2BP2deoBGELoTaMC4/dw=
+		RybPrhd28yuzIl8LkK+z1RTHTAc=
 		</data>
 		<key>GuestProfile.storyboardc/Info.plist</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>GuestProfile.storyboardc/UIViewController-oFu-zg-FAu.nib</key>
 		<data>
-		t1tMwggQ57vpaBlsHlhwfE+vQyg=
+		hCqXbxsYTwg9oYG2ZH2C04pRe0c=
 		</data>
 		<key>GuestProfile.storyboardc/oFu-zg-FAu-view-zlW-iB-b5W.nib</key>
 		<data>
-		Ouzr03mQHwWtK9vq0X24m9qkJUE=
+		RhRbBsSLDuEU4XxqpzXKu7PklWA=
 		</data>
 		<key>Headers/ACRCloudConfig.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/HotMicMediaPlayer-Swift.h</key>
 		<data>
-		qaTMn5+FenLBeXpA4xkDeVaO/k4=
+		FWSKUn4ni4EIK5/97b/eS05mbfI=
 		</data>
 		<key>Headers/HotMicMediaPlayer.h</key>
 		<data>
@@ -58,55 +58,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/P83BX4hXs3z7RLG+t2H1eHPkDs=
+		jVptGqWB5IIou73HvEpf33RgcFo=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		oTkem1oBCY2I2Jr1uemEk1UWW+o=
+		BoL6bE7xRUMbCKSoIxzrtEeCzL8=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FDkbItqXtsGz0jZQnBBW9UufQ3A=
+		g5IakB66hBdu7vAnv9s20ZK5nBE=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		YyAdE7AWkuj6Djroe7tKwOFAsas=
+		p7QG1Woo4TyVNvSfX/fmYrFr/RY=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FDkbItqXtsGz0jZQnBBW9UufQ3A=
+		g5IakB66hBdu7vAnv9s20ZK5nBE=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dpzuQDv6hI71fk/TASX0OACbP4g=
+		BDGjSzJkFJO7/uVJ7Nh+S/8Kzyg=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		oTkem1oBCY2I2Jr1uemEk1UWW+o=
+		BoL6bE7xRUMbCKSoIxzrtEeCzL8=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		MCtUTKkSTo5nLmbwRy77gm/TgwI=
+		9svxpCg55XCCMHPNS7tDyNMg6do=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2kiwOBNvCZ0ydr8CNOtFUQcfo10=
+		HlRQcCtwP1GzP4q5fVkSAIwyn1w=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		MCtUTKkSTo5nLmbwRy77gm/TgwI=
+		9svxpCg55XCCMHPNS7tDyNMg6do=
 		</data>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hteX4SvuiYztZ2kW5t5ylbg033Q=
+		ZA6zQSImelhD2k2HNIQv5TGUpBU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		emmbosPw5NL/UfkH1jOZPjNTFU0=
+		/CXbGzmGfPSqtjdoS6czJ1zbp5M=
 		</data>
 		<key>People.storyboardc/CIR-ud-QJC-view-HFB-JJ-Rjy.nib</key>
 		<data>
-		c9GM8wDwjcXQ/75CFp2PZRR0t7E=
+		9fKK3aviDKEmLamsLxquKh4XMgw=
 		</data>
 		<key>People.storyboardc/Info.plist</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>People.storyboardc/UIViewController-CIR-ud-QJC.nib</key>
 		<data>
-		bDN9D1IEny+XC3bbMtjPvbeKs5s=
+		GtN4D5grLh8JtvA4RPonCgsiusg=
 		</data>
 		<key>Player.storyboardc/Info.plist</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Player.storyboardc/ZtJ-r9-RLp-view-Ers-0p-CHZ.nib</key>
 		<data>
-		iszyErYFzCI4PKHqzfyV9aqfRCQ=
+		Zta8cptzqKvWz3d/dQd875eMFl0=
 		</data>
 		<key>Polls.storyboardc/Info.plist</key>
 		<data>
@@ -134,19 +134,19 @@
 		</data>
 		<key>Polls.storyboardc/NH0-Cq-JSa-view-5XQ-5p-DjX.nib</key>
 		<data>
-		f9QvPXFLySOqnANdtvMzatwKPS4=
+		EOu4ICn9+Rrg6A0K2z/Xdek+EO8=
 		</data>
 		<key>Polls.storyboardc/PollLeaderboardViewController.nib</key>
 		<data>
-		BqJnFVwUTjqYuB5Z1rMcAJEXTfU=
+		mBqtTzL5s/znQvfrxGjjQdgK+4s=
 		</data>
 		<key>Polls.storyboardc/PollViewController.nib</key>
 		<data>
-		PPBDPspG2G/DAVCS45NnKoe8mb4=
+		Vodkcxxkh22EZxdDewnxbvQ8mtM=
 		</data>
 		<key>Polls.storyboardc/PollWinnerViewController.nib</key>
 		<data>
-		bsXgKjMXZz+ePd/ZruIPSFu7icY=
+		hDpFGQA5wNKBmohXn0O5XY+j89U=
 		</data>
 		<key>Polls.storyboardc/UIPageViewController-vwV-qV-pDj.nib</key>
 		<data>
@@ -158,15 +158,15 @@
 		</data>
 		<key>Polls.storyboardc/aJr-57-0Tn-view-0HO-ii-4Et.nib</key>
 		<data>
-		KcG4zAEw4rouLNro4EgXaueW0Pc=
+		37F95PCyGUMRpuerBi3lqhIgeFQ=
 		</data>
 		<key>Polls.storyboardc/dh2-OP-R3Q-view-RHJ-ee-DJV.nib</key>
 		<data>
-		ChWlyPQ31wkeH/mDponuBXT/tAA=
+		l4ET1upaa8Z9Lo3P65fxqYvN0u8=
 		</data>
 		<key>Polls.storyboardc/jJz-hQ-Tmv-view-jOI-JS-MUP.nib</key>
 		<data>
-		dgHK+2e0B1rCPhUsp0okEaiS2eM=
+		eGfYH+7ISJXnWDZdZ8p43fHp2Ok=
 		</data>
 		<key>RequestJoin.storyboardc/Info.plist</key>
 		<data>
@@ -174,23 +174,23 @@
 		</data>
 		<key>RequestJoin.storyboardc/RequestJoinAudioViewController.nib</key>
 		<data>
-		IAsNkV10K4QQeS1jd29S7DdOnVA=
+		oAHYHXg6jflcnbYMrWRkbKdGHq0=
 		</data>
 		<key>RequestJoin.storyboardc/RequestJoinVideoViewController.nib</key>
 		<data>
-		pYfugCNcm986GYRVjF4KcneOZUA=
+		+LJE3MClgvUQT49YNnYGNq4V3nA=
 		</data>
 		<key>RequestJoin.storyboardc/Yra-I9-IV1-view-HeZ-X6-Iqx.nib</key>
 		<data>
-		5Sj/0fHC/lCR7j42vD76oC++vDY=
+		JKlbzt2i/MjMhsI0Qb6IGXX2scg=
 		</data>
 		<key>RequestJoin.storyboardc/jKa-vo-6d6-view-1D7-HO-Mwb.nib</key>
 		<data>
-		U8VDT1YUDcQNRJzcH2aCDbzwOuc=
+		rPCBr+gPVqU7WEbREGAZv+p82+M=
 		</data>
 		<key>Sync.storyboardc/DTS-Sw-nzy-view-gev-aV-aOl.nib</key>
 		<data>
-		CzkAP0ZtwnEsD1UdKiMnfZx/Skk=
+		rx66aRW8GTWbi8IhG4FILegMWXU=
 		</data>
 		<key>Sync.storyboardc/Info.plist</key>
 		<data>
@@ -198,7 +198,7 @@
 		</data>
 		<key>Sync.storyboardc/UIViewController-DTS-Sw-nzy.nib</key>
 		<data>
-		pgTJiEaME+EeEGzK8IlRXy2eQco=
+		ayuN6tQ/MgdzJBokYLtoF+x0qZ8=
 		</data>
 		<key>SyncSuccess.wav</key>
 		<data>
@@ -210,11 +210,11 @@
 		</data>
 		<key>Tip.storyboardc/KE6-6M-uIP-view-WUi-L3-iz0.nib</key>
 		<data>
-		x3fEYgrM5LT119NElcQM8w601Tc=
+		gitWiAWKyWD1sl8l/fF5sn41A00=
 		</data>
 		<key>Tip.storyboardc/UIViewController-KE6-6M-uIP.nib</key>
 		<data>
-		hH9uyUQlmKusLg9hD2uooKGPIGM=
+		efD7ugGvPy1DavbSL+LrRTPBdoc=
 		</data>
 		<key>selfie_segmentation.tflite</key>
 		<data>
@@ -227,14 +227,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j0kArfQkuTI7MHrTKQfA/FWX2MbaoU2jpBvah7YtUyk=
+			mTTvtlSquVeCYa4y/RwUHrbjVeGCb0fTSrMkqqi3vNM=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/ChatReactionsListViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GW0Vx+UrciOWvIou9vzpMDEORWkLNdCZnQD2sonf9ec=
+			qkHpBuSMKErQbRNwVqIR4MSZGTGK3wC8GpQKwqk45vo=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/Info.plist</key>
@@ -248,21 +248,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UQBjUcZ0CT1j1fHoLEXYNPGzom4lHvcnWTHP6vo8Ld4=
+			FbSuu5IpK/w/QhunBvqUDh3LxXkC9DtrHrOFRkqDzyU=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/UIViewController-i7e-Y9-rGk.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EgwUnDsGTToSPpeRpHOvJ+ooyB159RiVpso9ZVtwzU4=
+			EZDT0CzhDG+k8xs+2/mjjO1vPhx65AACVVRli3cuk04=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/i7e-Y9-rGk-view-pTb-B4-TjZ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rSdOonrGnAGSxpzH9tjA+riKq8K9fYd0fLrta9HpyIU=
+			9fTZzxLorXDG3tEglgyomc726R7dJaf0Gd723NtcLVk=
 			</data>
 		</dict>
 		<key>GuestProfile.storyboardc/Info.plist</key>
@@ -276,14 +276,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LkvXiS3uND/Lz04lKY0U16SCXz6+o2qLrQHkAWeHLGI=
+			pnLy0nOSidGa+HeYYoyjHreX2qny0iCwywSbhDcNIw8=
 			</data>
 		</dict>
 		<key>GuestProfile.storyboardc/oFu-zg-FAu-view-zlW-iB-b5W.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DKGHRkqyZ3fMON+e6mxCzJluWcnpOPKHR4Difk6InWk=
+			SZZ87HWw9mJ19DuocS4b2FHnKyes6x7vnkzGCblOYP4=
 			</data>
 		</dict>
 		<key>Headers/ACRCloudConfig.h</key>
@@ -304,7 +304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tGINS8BNBI/BhMJpoonva+o/n2IA4kvfh7Xb1eYOmGk=
+			zooPKJGXWXD5NjhNAt1jmEQzXo3MSe2M7TnXIO0j9wg=
 			</data>
 		</dict>
 		<key>Headers/HotMicMediaPlayer.h</key>
@@ -318,84 +318,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Cen7ZJmxBqrEGsgCBrvwSt6memLXJJnbWo5Sou+NbE=
+			Z1bjke42Q+6Z1WY942YvcTFh/aU9/gZGTs58/I/7ThQ=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2SuZGErSVe0xVdclMfrYkLG92jrFbR5O87o0I8UXuDY=
+			o0EBtCoDS19RZdUN6mnfI+0p+ACfRVhRDZ+zMlbsn7w=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p7xXB/ZIkPs8LUZpK0GWsJea4lMbqoQEhel+MgKp2DM=
+			GVmgA5PqCJzbNENoDPaJQvZwpdnmmqMrb1/ZKkEXgeY=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2SuZGErSVe0xVdclMfrYkLG92jrFbR5O87o0I8UXuDY=
+			o0EBtCoDS19RZdUN6mnfI+0p+ACfRVhRDZ+zMlbsn7w=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5TpTTPEKWueHdjtyvseDB6m5gvRlJypGkyTNumVR0VI=
+			xCrEeTLdWsRp1PuWJrgbcCdN5K5U25ZzVtL/YPLeJ68=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Cen7ZJmxBqrEGsgCBrvwSt6memLXJJnbWo5Sou+NbE=
+			Z1bjke42Q+6Z1WY942YvcTFh/aU9/gZGTs58/I/7ThQ=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s+G18PtJGbNa3MwiPVJNj1ly9QCB2xz3OCNs0FUT6fw=
+			efRx4+yJLXjNirgjOUyykXsYDTG9TDUv3IiBiraPGe8=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rme+n82/LUvnSnUYtF2ZZVX/sTaJG6rz6K97IAB2lo4=
+			0+FsyoA33jFHx/muXqcYQlAO5fmxIFtHJXrjD/iZBcI=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s+G18PtJGbNa3MwiPVJNj1ly9QCB2xz3OCNs0FUT6fw=
+			efRx4+yJLXjNirgjOUyykXsYDTG9TDUv3IiBiraPGe8=
 			</data>
 		</dict>
 		<key>Modules/HotMicMediaPlayer.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G7BKdZ+cp43QGhCQF3V584GrZ0uzcasvBSe/lZLX6Hg=
+			uFF95ssf46S5rAEmlLF2u4jf/Pa1zLzAs/c55XquBdE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			esU8EDabC7TYT3WEaXMpGDeP+AKI8VPjdBHnoGpRZnQ=
+			F41I4UOMe+tFpTDtJYYJdLRf3ryUjBwj73/ZuGirKFE=
 			</data>
 		</dict>
 		<key>People.storyboardc/CIR-ud-QJC-view-HFB-JJ-Rjy.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jg52zAy1X7lotMxtIpksCID191MKOx0gY60R3hj7Kfc=
+			//mO4cr0l/Dlyse9ZXMNUN/W6e5sneXhPxp5LHjKN5o=
 			</data>
 		</dict>
 		<key>People.storyboardc/Info.plist</key>
@@ -409,7 +409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GBQs8YBMwgGwSK5dG2gSgw/TF1zQ3URUTeABnHtRctI=
+			GMKfqyXzwgiF7HrXl2uRLawWGkmbllassIyitqad6HM=
 			</data>
 		</dict>
 		<key>Player.storyboardc/Info.plist</key>
@@ -430,7 +430,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AeIK+CmzarDvzn4xFLYrhDSBWCA9XGvjGwjM9yReMtI=
+			GivToyJVwq/TVBZ5LvFF2TOO3X3j9JNlSz19tWw2Q7Y=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/Info.plist</key>
@@ -444,28 +444,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rJF1mJ6CQvpckio4PUQYPJE78QS+U7bKQIyhw2v4HF8=
+			lerdEEr26l+LHQs1PyQVOXngnuRLmQuLr8c8RstvnwA=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/PollLeaderboardViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fgmil5NcLzfEFMTDP2fmMUICNhS3Jj2w1lRgzfucaOI=
+			URbupDbzJt0kF3FguaTdH0vMRAuGdk66UolW4P3i2Zw=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/PollViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gg3FgAjLN0Qh3EDIT6kSrsj8j47a1WQ2gCerpgCGxns=
+			5S6J8o727aWTz57YxU7xn5UvP4QJ4zh6AIfIuyztu0g=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/PollWinnerViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TM7RsqRRCwoS+2DdK+EHQzVdHQIhyPVpHXVYBuRT7q4=
+			+vqiIddtBZpTw0wb0kfgay1pISaO9ZBT+opu2acRdy0=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/UIPageViewController-vwV-qV-pDj.nib</key>
@@ -486,21 +486,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kFq7XimpQ8LHKCfFKZal0WpLSlBs4Rz/71lBhB4FnAQ=
+			MQh+hnLpYDMbPfAfKNW2arLIeUmAZJ+WbDvA+6Cg2Yk=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/dh2-OP-R3Q-view-RHJ-ee-DJV.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			titN1VYLAePCaKB6GWyQ0uN80lv2vaFzNSPD6s1TDmA=
+			Wm8JUTUCF2ieZHDO6scp6fJdVnUY/2nkjYRyIuGeVLA=
 			</data>
 		</dict>
 		<key>Polls.storyboardc/jJz-hQ-Tmv-view-jOI-JS-MUP.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Syf6SFxsLv0E2GkBu9qbW25DA7ec0jvSvOAAVWl7DTI=
+			1UuGP3X6hn6f4ZVZjAnO+SJPB088k6JWlcvv5JGjPtQ=
 			</data>
 		</dict>
 		<key>RequestJoin.storyboardc/Info.plist</key>
@@ -514,35 +514,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wGcdzOK1ia0WXmpxn2TINaaDZFf4hGZ0OQa4xqaW//w=
+			52YpqUWDmbZ8GOymDzdd/OLgLncwhbXDgylafVVEsC0=
 			</data>
 		</dict>
 		<key>RequestJoin.storyboardc/RequestJoinVideoViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v+ccBmHTIP8U1FtVrnw8PQOiJXdIoXZ38iQAM7UifiI=
+			oXZ0hUmLoKhNLz+AXh6gV5qbfFQA1PJjQh3VEidUsMY=
 			</data>
 		</dict>
 		<key>RequestJoin.storyboardc/Yra-I9-IV1-view-HeZ-X6-Iqx.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DVfDJUJJGH7Cjpuz3VetuXLvZppfaPeVTxb93jD6QjI=
+			+wviiI7iP1PC9pJVG+yWEKWpfBFr0wEPzuxlnHy1Wrw=
 			</data>
 		</dict>
 		<key>RequestJoin.storyboardc/jKa-vo-6d6-view-1D7-HO-Mwb.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FLSfEe6aSrIRdMbJQnY797Q4VmPRKUMujMRudRybF7s=
+			6luri7lC12hpJnCEO1rlzNxRwNPUMgF1g3qHFebT/Bk=
 			</data>
 		</dict>
 		<key>Sync.storyboardc/DTS-Sw-nzy-view-gev-aV-aOl.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WIVyUJT3HG7C6ir4On8jwTsHBAmS9GPrd1nuVaysqc0=
+			gjh0APO9MBIfnnWOD2JnVP7AgvRZWdzkyFvdUE3ew+0=
 			</data>
 		</dict>
 		<key>Sync.storyboardc/Info.plist</key>
@@ -556,7 +556,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AxI01VOPNg3pdpn1bembMHPcwkF93Wf3dtSYVO5HgPA=
+			qckmIBKFb8nOceDaV52Quc1f3t7Mm7TJXLOw+gkhOr0=
 			</data>
 		</dict>
 		<key>SyncSuccess.wav</key>
@@ -577,14 +577,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iqt/V6CpDTkTqTdw58q3iwcxkqJRUPKRBmj4kwtfSHM=
+			8mlJwIPEHOJ3m0LMU4cRyfmmvITw3GKMDnKpsNhOCs8=
 			</data>
 		</dict>
 		<key>Tip.storyboardc/UIViewController-KE6-6M-uIP.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ToYxi6LBZV+I05jEnz6pLF4JIkYESKO45C91Y5960P8=
+			hojm8erE7NqnikbRTFEj2R6adL4G6Zffpgv8UicbtYE=
 			</data>
 		</dict>
 		<key>selfie_segmentation.tflite</key>

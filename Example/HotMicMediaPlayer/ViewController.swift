@@ -189,15 +189,20 @@ extension ViewController: UICollectionViewDelegate {
 
 extension ViewController: HMPlayerViewControllerDelegate {
     
+    func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
+        // Return a custom player or nil to use the default
+        return nil
+    }
+    
+    func playerViewController(_ viewController: HMPlayerViewController, viewControllerForContext context: HMPlayerViewController.CustomContentContext) -> UIViewController? {
+        // Return a custom view controller or nil to use the default
+        return nil
+    }
+    
     func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {
         dismiss(animated: true, completion: nil)
         
         // If you set supportsMinimizingToPiP true, display the pipView in a Picture-in-Picture window if it's non-nil
-    }
-    
-    func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
-        // Return a custom player or nil to use the default
-        return nil
     }
     
 }

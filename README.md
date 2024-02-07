@@ -167,6 +167,22 @@ Setting the `modalPresentationStyle` to a value other than `fullScreen` is not a
 
 Implement the `HMPlayerViewControllerDelegate` protocol to support functionality of the player screen.
 
+Each time a player is needed, the following function is called allowing you to provide a custom player that implements the `HMPlayer` protocol. Return `nil` if you'd like to use the default player.
+
+```swift
+func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
+    return nil
+}
+```
+
+When the player screen will display content, the following function is called allowing you to provide a custom view controller to display in a given context. Return `nil` if you'd like to use the default view controller.
+
+```swift
+func playerViewController(_ viewController: HMPlayerViewController, viewControllerForContext context: HMPlayerViewController.CustomContentContext) -> UIViewController? {
+    return nil
+}
+```
+
 When the user is finished with the player experience, for example when they tap a button to close the screen, the following function is called allowing you to dismiss it. A PiP view may be provided which allows you to place it into a custom Picture-in-Picture window, such as one provided by the `PIPKit` library. If you’d like to support PiP, initialize a player view controller with `supportsMinimizingToPiP: true`, then store this view controller in a strongly held property to prevent it from deinitializing. When you wish to restore the player full-screen, provide the player view to move back into the player view controller then present it again. Be sure to set the view controller property to `nil` when the user wishes to close the player or PiP.
 
 ```swift
@@ -186,14 +202,6 @@ func playerViewController(_ viewController: HMPlayerViewController, didFinishWit
             playerViewController = nil
         }
     }
-}
-```
-
-Each time a player is needed, the following function is called allowing you to provide a custom player that implements the `HMPlayer` protocol. Return `nil` if you'd like to use the default player.
-
-```swift
-func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
-    return nil
 }
 ```
 
