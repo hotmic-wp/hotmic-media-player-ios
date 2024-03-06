@@ -333,6 +333,7 @@ SWIFT_CLASS("_TtC17HotMicMediaPlayer22HMPlayerViewController")
 @end
 
 
+
 @class UIScrollView;
 
 @interface HMPlayerViewController (SWIFT_EXTENSION(HotMicMediaPlayer)) <UIScrollViewDelegate>

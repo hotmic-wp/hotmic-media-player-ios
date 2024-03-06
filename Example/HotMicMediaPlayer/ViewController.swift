@@ -194,9 +194,9 @@ extension ViewController: HMPlayerViewControllerDelegate {
         return nil
     }
     
-    func playerViewController(_ viewController: HMPlayerViewController, viewControllerForContext context: HMPlayerViewController.CustomContentContext) -> UIViewController? {
-        // Return a custom view controller or nil to use the default
-        return nil
+    func playerViewControllerChatConfiguration(_ viewController: HMPlayerViewController) -> HMPlayerViewController.ChatConfiguration {
+        // Return a custom chat hander and view controller or nil to use the defaults
+        return .init(handler: nil, viewController: nil)
     }
     
     func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {

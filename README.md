@@ -13,6 +13,9 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 - Answer polls
 - Tip the host
 - Join the host with audio/video
+- Customize fonts, colors, and images
+- Provide your own video player implementation
+- Provide your own chat interface
 - Light and dark mode support
 - Accessibility support including Dynamic Type, VoiceOver, Switch Control, etc
   - Default system colors provide high contrast variants
@@ -175,11 +178,11 @@ func playerViewController(_ viewController: HMPlayerViewController, playerForAss
 }
 ```
 
-When the player screen will display content, the following function is called allowing you to provide a custom view controller to display in a given context. Return `nil` if you'd like to use the default view controller.
+When the player screen will display chat content, the following function is called allowing you to provide a custom chat handler and view controller to display. Provide `nil` if you'd like to use the default HotMic chat service and UI. Note the handler and view controller can be the same instance of your view controller if it conforms to `HMChatHandler`.
 
 ```swift
-func playerViewController(_ viewController: HMPlayerViewController, viewControllerForContext context: HMPlayerViewController.CustomContentContext) -> UIViewController? {
-    return nil
+func playerViewControllerChatConfiguration(_ viewController: HMPlayerViewController) -> HMPlayerViewController.ChatConfiguration {
+    return .init(handler: nil, viewController: nil)
 }
 ```
 
@@ -244,9 +247,204 @@ To remove the banner ad from the player screen, call `HMPlayerViewController`’
 }
 ```
 
+### Appearance Delegate
+
+To customize the appearance of the HotMic experience, you can implement the `HMMediaPlayerAppearanceDelegate` protocol.
+
+```swift
+HMMediaPlayer.appearanceDelegate = self
+```
+
+Each time a font will be used, the following function is called allowing you to return a custom font for the specified style. Return `nil` if you'd like to use the default font.
+
+```swift
+func customFont(for textStyle: HMTextStyle) -> UIFont? {
+    switch textStyle {
+    case .body:
+        let font = UIFont(name: "CustomFont", size: 16)!
+        return UIFontMetrics(forTextStyle: .body).scaledFont(for: font) // Support dynamic type
+    // ...
+    @unknown default: 
+        return nil
+    }
+}
+```
+
+Each time a color will be used, the following function is called allowing you to return a custom color for the specified style. Return `nil` if you'd like to use the default color.
+
+```swift
+func customColor(for colorStyle: HMColorStyle) -> UIColor? {
+    switch colorStyle {
+    case .primaryTint:
+        return UIColor(named: "AccentColor")
+    case .primaryBackground:
+        // Background colors support elevation variants
+        return UIColor { traitCollection in
+            if traitCollection.userInterfaceLevel == .elevated {
+                return UIColor(named: "PrimaryBackgroundColorElevated")
+            } else {
+                return UIColor(named: "PrimaryBackgroundColor")
+            }
+        }
+    // ...
+    @unknown default: 
+        return nil
+    }
+}
+```
+
+Each time a customizable image will be used, the following function is called allowing you to return a custom image for the specified type. Return `nil` if you'd like to use the default image.
+
+```swift
+func customImage(for imageType: HMImageType) -> UIImage? {
+    switch image {
+    case .joinButton: 
+        return UIImage(named: "join-button-image")
+    case .syncButton: 
+        return UIImage(named: "sync-button-image")
+    @unknown default: 
+        return nil
+    }
+}
+```
+
+### Share Delegate
+
+To support share functionality if the stream does not already have share text, you can implement the `HMMediaPlayerShareDelegate` protocol. If you do not implement this delegate, no text will be shared when the stream does not have share text.
+
+```swift
+HMMediaPlayer.shareDelegate = self
+```
+
+When the stream is loaded, the following function is called to get the share text for the stream if it does not already have share text. Provide a success result with a `String` or `nil` if there’s no text available to share. Provide a failure result with an `Error` if one occurred.
+
+```swift
+func getStreamShareText(streamID: String, completion: @escaping (Result<String?, Error>) -> Void) {
+    // Fetch the text and call completion
+}
+```
+
+### User Profile Delegate
+
+To support user profile functionality, you can implement the `HMMediaPlayerUserProfileDelegate` protocol. If you do not implement this delegate, profile info will be obtained by HotMic rather than your app, and buttons such as follow/unfollow will not be available.
+
+```swift
+HMMediaPlayer.userProfileDelegate = self
+```
+
+When a user's profile info is to be shown, the following function is called allowing you to provide that user's information. Provide a success result with an `HMUserProfile` containing information such as their name, profile pic, followers count, following count, if they're following the current user, and if they're followed by the current user. Provide `nil` for any values that are unavailable. For example, if `followingCount` is `nil` the number of people this user follows will not be shown, and if `followedByMe` is `nil` the follow/unfollow button will not be shown. Or provide a success result with `nil` if you would like the profile info to be provided by HotMic rather than your app. Provide a failure result with an `Error` if one occurred.
+
+```swift
+func getUserProfile(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
+    // Fetch the profile info and call completion
+}
+```
+ 
+When the user taps the follow/unfollow button, the following function is called allowing you to record the new following state. Provide an `Error` to the completion handler if one occurs.
+
+```swift
+func setFollowingUser(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, following: Bool, completion: @escaping (Error?) -> Void) {
+    // Record the new state and call completion
+}
+```
+
+When the user profile is shown, the following function is called allowing you to specify whether the See Full Profile button should be shown.
+
+```swift
+func shouldShowSeeFullProfileButton(for id: String, restriction: String?, isHost: Bool, isCohost: Bool) -> Bool {
+    return true
+}
+```
+
+When the user taps the See Full Profile button, the following function is called allowing you to handle this action, for example by presenting a view controller.
+
+```swift
+func seeFullProfileButtonTapped(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, in viewController: UIViewController) {
+    // Show the full profile
+}
+```
+
+### In App Purchase Delegate
+
+To support tipping hosts and joining their streams for a price, you can implement the `HMMediaPlayerInAppPurchaseDelegate` protocol and integrate it with your `StoreKit` in-app purchase code. If you do not implement this delegate, users cannot tip hosts, but can still join the host for free.
+
+```swift
+HMMediaPlayer.inAppPurchaseDelegate = self
+```
+
+When the user opens the tip sheet, the following function is called to get the `SKProduct`s available to purchase for a host ID. Your app should fetch the products that are applicable to this host from the App Store.
+
+```swift
+func getTipProducts(hostID: String, completion: @escaping (Result<[SKProduct], Error>) -> Void) {
+    // Fetch the products and call completion
+}
+```
+
+When the user wishes to purchase a tip, the following function is called. Your app should initiate the in-app purchase process. If the purchase is successful, your app should then submit the tip purchase information including the App Store receipt via `HMMediaPlayer`’s `submitTipPurchase()` function. HotMic will verify this purchase is legitimate and record the tip if validated. Be sure to provide an error if one occurs in this process, such as if the device cannot make payments, a purchase is already in progress, the transaction was canceled, the transaction failed, failed to get transaction info, no purchase info was found, failed to verify, or failed to process. The completion handler allows you to specify if you want this error’s `localizedDescription` to be shown to the user and if a button should be provided to retry submitting their purchase information if that request fails. We strongly recommend persisting the purchase information on the device and avoid marking the `SKPaymentTransaction` finished until the purchase has been successfully submitted, as this allows you to retry submitting the information when `StoreKit` informs you there is a not-yet-finished purchased transaction.
+
+```swift
+func purchaseTip(product: SKProduct, userID: String, hostID: String, streamID: String, message: String?, anonymous: Bool, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
+    // Purchase the product then call HMMediaPlayer.submitTipPurchase to record it
+    // Call completion with an error or nil
+}
+```
+
+When the user wishes to retry submitting their purchase information, the following function is called. Your app should look up the purchase information with the provided product identifier and submit it via `HMMediaPlayer`’s `submitTipPurchase()` function.
+
+```swift
+func retrySubmittingPurchaseInfo(productID: String, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
+    // Call HMMediaPlayer.submitTipPurchase to try recording it again
+    // Call completion with an error or nil
+}
+```
+
+To support join stream in-app purchases, very similar functions as those for tips are available and should be used in the same way.
+
+In the HotMic app, we found this to be difficult to implement ensuring edge cases are handled. If you reach out to us we would be happy to provide you with more information and example code from our in-app purchase manager that will allow you to implement this the same way we did.
+
+### Authentication Observing
+
+To be notified of authentication events as they occur, you can implement the `HMMediaPlayerAuthenticationObserving` protocol. 
+
+```swift
+HMMediaPlayer.authenticationObserver = self
+```
+
+When a request fails due to improper authentication, the following function is called. It’s recommended to dismiss the player and request re-authentication.
+
+```swift
+func authenticationStatusChangedToUnauthenticated() {
+    // Dismiss the player and re-authenticate
+}
+```
+
+When the user attempts to perform a restricted action, the following function is called allowing you to handle this event, for example by presenting a view controller. Return `true` if you handle it or `false` if you'd like HotMic to handle it by informing the user this action is restricted.
+
+```swift
+func userDidAttemptRestrictedAction(_ action: HMRestrictedAction, in viewController: UIViewController) -> Bool {
+    // Return true or false
+}
+```
+
+### Analytics Event Observing
+
+To be notified of analytics events as they occur, you can implement the `HMMediaPlayerAnalyticsEventObserving` protocol. [SDK Analytics Documentation](https://docs.hotmic.io/sdk-analytics)
+
+```swift
+HMMediaPlayer.analyticsObserver = self
+
+func eventStarted(name: String) {
+    // Start timing this event by name
+}
+ 
+func eventOccurred(name: String, info: [String: Any]) {
+    // Stop timing event by name and/or record the event
+}
+```
+
 ### Player
 
-The `HMPlayer` protocol defines variables and functions you must implement in order to provide a custom player. Your implementation must also store a reference to an `HMPlayerDelegate` and call its functions to inform the delegate when various events occur.
+The `HMPlayer` protocol defines variables and functions you implement if you'd like to provide a custom player. Your implementation must also store a reference to an `HMPlayerDelegate` and call its functions to inform the delegate when various events occur.
 
 Provide a view to display on-screen.
 
@@ -466,197 +664,253 @@ Inform the delegate the player encountered an error.
 delegate?.player(self, errorOccurredWithCode code: error.code, message: error.localizedDescription)
 ```
 
-### Appearance Delegate
+### Chat Handler
 
-To customize the appearance of the HotMic experience, you can implement the `HMMediaPlayerAppearanceDelegate` protocol.
+The `HMChatHandler` protocol defines functions you implement if you'd like to provide a custom view controller for chat while utilizing the HotMic chat service. Your implementation needs to store a reference to an `HMChatHandlerDelegate` and call its functions to get information and inform the delegate when various events occur.
+
+Store the delegate in a weak optional variable to call its functions in the future.
 
 ```swift
-HMMediaPlayer.appearanceDelegate = self
+func setDelegate(_ delegate: HMChatHandlerDelegate) { self.delegate = delegate }
 ```
 
-Each time a font will be used, the following function is called allowing you to return a custom font for the specified style. Return `nil` if you'd like to use the default font.
+Store the host ID and use it to indicate when a chat was sent by the host.
 
 ```swift
-func customFont(for textStyle: HMTextStyle) -> UIFont? {
-    switch textStyle {
-    case .body:
-        let font = UIFont(name: "CustomFont", size: 16)!
-        return UIFontMetrics(forTextStyle: .body).scaledFont(for: font) // Support dynamic type
-    //...
-    @unknown default: 
-        return nil
+func setHostID(_ id: String) { self.hostId = id }
+```
+
+Update the configuration of the people feature. Make it accessible in the interface if available. The number of people is provided, allowing you to display this in the interface, for example as a badge on the button.
+
+```swift
+func updatePeopleConfiguration(isAvailable: Bool, count: Int) {
+    peopleButton.isHidden = !isAvailable
+    peopleButton.badge = count
+}
+```
+
+Update the configuration of the polls feature. Make it accessible in the interface if available. The state of unanswered polls is provided, allowing you to display an indicator in the interface, for example as an "unread" badge on the button.
+
+```swift
+func updatePollsConfiguration(isAvailable: Bool, hasUnansweredPolls: Bool) {
+    pollsButton.isHidden = !isAvailable
+    pollsButton.unreadBadge.isHidden = !hasUnansweredPolls
+}
+```
+
+Update the configuration of the tipping feature. Make it accessible in the interface if available.
+
+```swift
+func updateTippingConfiguration(isAvailable: Bool) {
+    tippingButton.isHidden = !isAvailable
+}
+```
+
+Update the top insets of your interface to avoid underlapping other interface elements.
+
+```swift
+func updateTopContentInset(_ topInset: CGFloat) {
+    tableView.contentInset.top = topInset
+}
+```
+
+Make the chat input toolbar visible.
+
+```swift
+func displayChatInputToolbar()
+    becomeFirstResponder()
+}
+```
+
+Dismiss the chat input toolbar.
+
+```swift
+func dismissChatInputToolbar() {
+    resignFirstResponder()
+}
+```
+
+Dismiss the keyboard if it is visible.
+
+```swift
+func dismissChatInputToolbar() {
+    inputAccessoryView?.textField.resignFirstResponder()
+}
+```
+
+Handle the backlog of chats and tips to display them in your interface.
+
+```swift
+func handleBacklog(chats: [HMChat], tips: [HMTip]) {
+    // Update data source...
+    tableView.reloadData()
+}
+```
+
+Handle new chats, tips, and reactions to insert them into your interface. This function is called periodically to give you the opportunity to handle the pending items. Return true if handled or false if not. If not handled, the same items will be provided in the next invocation.
+
+```swift
+func handlePending(chats: [HMChat], tips: [HMTip], reactions: [HMChatReaction]) -> Bool {
+    if !chats.isEmpty || !tips.isEmpty {
+        // Update data source...
+        tableView.insertRows(at: newIndexPaths, with: .automatic)
     }
-}
-```
-
-Each time a color will be used, the following function is called allowing you to return a custom color for the specified style. Return `nil` if you'd like to use the default color.
-
-```swift
-func customColor(for colorStyle: HMColorStyle) -> UIColor? {
-    switch colorStyle {
-    case .primaryTint:
-        return UIColor(named: "AccentColor")
-    case .primaryBackground:
-        // Background colors support elevation variants
-        return UIColor { traitCollection in
-            if traitCollection.userInterfaceLevel == .elevated {
-                return UIColor(named: "PrimaryBackgroundColorElevated")
-            } else {
-                return UIColor(named: "PrimaryBackgroundColor")
-            }
-        }
-    //...
-    @unknown default: 
-        return nil
+    if !reactions.isEmpty {
+        // Update data source, update cell contents, update cell height...
     }
-}
-```
-
-Each time a customizable image will be used, the following function is called allowing you to return a custom image for the specified type. Return `nil` if you'd like to use the default image.
-
-```swift
-func customImage(for imageType: HMImageType) -> UIImage? {
-    switch image {
-    case .joinButton: 
-        return UIImage(named: "join-button-image")
-    case .syncButton: 
-        return UIImage(named: "sync-button-image")
-    @unknown default: 
-        return nil
-    }
-}
-```
-
-### Share Delegate
-
-To support share functionality if the stream does not already have share text, you can implement the `HMMediaPlayerShareDelegate` protocol. If you do not implement this delegate, no text will be shared when the stream does not have share text.
-
-```swift
-HMMediaPlayer.shareDelegate = self
-```
-
-When the stream is loaded, the following function is called to get the share text for the stream if it does not already have share text. Provide a success result with a `String` or `nil` if there’s no text available to share. Provide a failure result with an `Error` if one occurred.
-
-```swift
-func getStreamShareText(streamID: String, completion: @escaping (Result<String?, Error>) -> Void) {
-    // Fetch the text and call completion
-}
-```
-
-### User Profile Delegate
-
-To support user profile functionality, you can implement the `HMMediaPlayerUserProfileDelegate` protocol. If you do not implement this delegate, profile info will be obtained by HotMic rather than your app, and buttons such as follow/unfollow will not be available.
-
-```swift
-HMMediaPlayer.userProfileDelegate = self
-```
-
-When a user's profile info is to be shown, the following function is called allowing you to provide that user's information. Provide a success result with an `HMUserProfile` containing information such as their name, profile pic, followers count, following count, if they're following the current user, and if they're followed by the current user. Provide `nil` for any values that are unavailable. For example, if `followingCount` is `nil` the number of people this user follows will not be shown, and if `followedByMe` is `nil` the follow/unfollow button will not be shown. Or provide a success result with `nil` if you would like the profile info to be provided by HotMic rather than your app. Provide a failure result with an `Error` if one occurred.
-
-```swift
-func getUserProfile(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, completion: @escaping (Result<HMUserProfile?, Error>) -> Void) {
-    // Fetch the profile info and call completion
-}
-```
- 
-When the user taps the follow/unfollow button, the following function is called allowing you to record the new following state. Provide an `Error` to the completion handler if one occurs.
-
-```swift
-func setFollowingUser(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, following: Bool, completion: @escaping (Error?) -> Void) {
-    // Record the new state and call completion
-}
-```
-
-When the user profile is shown, the following function is called allowing you to specify whether the See Full Profile button should be shown.
-
-```swift
-func shouldShowSeeFullProfileButton(for id: String, restriction: String?, isHost: Bool, isCohost: Bool) -> Bool {
     return true
 }
 ```
 
-When the user taps the See Full Profile button, the following function is called allowing you to handle this action, for example by presenting a view controller.
+Remove a chat by ID.
 
 ```swift
-func seeFullProfileButtonTapped(for id: String, restriction: String?, isHost: Bool, isCohost: Bool, in viewController: UIViewController) {
-    // Show the full profile
+func handleDeletedChat(id: String) {
+    // Update data source...
+    tableView.deleteRows(at: indexPath], with: .automatic)
 }
 ```
 
-### In App Purchase Delegate
-
-To support tipping hosts and joining their streams for a price, you can implement the `HMMediaPlayerInAppPurchaseDelegate` protocol and integrate it with your `StoreKit` in-app purchase code. If you do not implement this delegate, users cannot tip hosts, but can still join the host for free.
+Remove a tip by ID.
 
 ```swift
-HMMediaPlayer.inAppPurchaseDelegate = self
-```
-
-When the user opens the tip sheet, the following function is called to get the `SKProduct`s available to purchase for a host ID. Your app should fetch the products that are applicable to this host from the App Store.
-
-```swift
-func getTipProducts(hostID: String, completion: @escaping (Result<[SKProduct], Error>) -> Void) {
-    // Fetch the products and call completion
+func handleDeletedTip(id: String) {
+    // Update data source...
+    tableView.deleteRows(at: indexPath], with: .automatic)
 }
 ```
 
-When the user wishes to purchase a tip, the following function is called. Your app should initiate the in-app purchase process. If the purchase is successful, your app should then submit the tip purchase information including the App Store receipt via `HMMediaPlayer`’s `submitTipPurchase()` function. HotMic will verify this purchase is legitimate and record the tip if validated. Be sure to provide an error if one occurs in this process, such as if the device cannot make payments, a purchase is already in progress, the transaction was canceled, the transaction failed, failed to get transaction info, no purchase info was found, failed to verify, or failed to process. The completion handler allows you to specify if you want this error’s `localizedDescription` to be shown to the user and if a button should be provided to retry submitting their purchase information if that request fails. We strongly recommend persisting the purchase information on the device and avoid marking the `SKPaymentTransaction` finished until the purchase has been successfully submitted, as this allows you to retry submitting the information when `StoreKit` informs you there is a not-yet-finished purchased transaction.
+Remove a reaction by chat ID, user ID, and type.
 
 ```swift
-func purchaseTip(product: SKProduct, userID: String, hostID: String, streamID: String, message: String?, anonymous: Bool, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
-    // Purchase the product then call HMMediaPlayer.submitTipPurchase to record it
-    // Call completion with an error or nil
+func handleDeletedReaction(chatID: String, userID: String, type: HMChatReactionType) {
+    // Update data source, update cell contents, update cell height...
 }
 ```
 
-When the user wishes to retry submitting their purchase information, the following function is called. Your app should look up the purchase information with the provided product identifier and submit it via `HMMediaPlayer`’s `submitTipPurchase()` function.
+### Chat Handler Delegate
+
+The `HMChatHandlerDelegate` protocol defines functions your `HMChatHandler` implementation calls to get information and inform HotMic when various events occur.
+
+Asks the delegate if the handler can display the chat input toolbar.
 
 ```swift
-func retrySubmittingPurchaseInfo(productID: String, completion: @escaping ((error: Error?, showError: Bool, canRetry: Bool)) -> Void) {
-    // Call HMMediaPlayer.submitTipPurchase to try recording it again
-    // Call completion with an error or nil
+override var canBecomeFirstResponder: Bool {
+    delegate?.chatHandlerCanDisplayChatInputToolbar(self) ?? false
 }
 ```
 
-To support join stream in-app purchases, very similar functions as those for tips are available and should be used in the same way.
-
-In the HotMic app, we found this to be difficult to implement ensuring edge cases are handled. If you reach out to us we would be happy to provide you with more information and example code from our in-app purchase manager that will allow you to implement this the same way we did.
-
-### Authentication Observing
-
-To be notified of authentication events as they occur, you can implement the `HMMediaPlayerAuthenticationObserving` protocol. 
+Asks the delegate if the currently authenticated user can moderate another user.
 
 ```swift
-HMMediaPlayer.authenticationObserver = self
-```
-
-When a request fails due to improper authentication, the following function is called. It’s recommended to dismiss the player and request re-authentication.
-
-```swift
-func authenticationStatusChangedToUnauthenticated() {
-    // Dismiss the player and re-authenticate
+if delegate?.chatHandler(self, canModerateUser: userID) == true {
+    // Display options to block user from chat/tip and delete chat/tip...
 }
 ```
 
-When the user attempts to perform a restricted action, the following function is called allowing you to handle this event, for example by presenting a view controller. Return `true` if you handle it or `false` if you'd like HotMic to handle it by informing the user this action is restricted.
+Asks the delegate if the currently authenticated user can make another user a moderator.
 
 ```swift
-func userDidAttemptRestrictedAction(_ action: HMRestrictedAction, in viewController: UIViewController) -> Bool {
-    // Return true or false
+if delegate?.chatHandler(self, canMakeUserModerator: userID) == true {
+    // Display option to make user moderator...
 }
 ```
 
-### Analytics Event Observing
-
-To be notified of analytics events as they occur, you can implement the `HMMediaPlayerAnalyticsEventObserving` protocol. [SDK Analytics Documentation](https://docs.hotmic.io/sdk-analytics)
+Inform the delegate the handler invoked send chat.
 
 ```swift
-HMMediaPlayer.analyticsObserver = self
+delegate?.chatHandler(self, didTapSendChat: text)
+```
 
-func eventStarted(name: String) {
-    // Start timing this event by name
-}
- 
-func eventOccurred(name: String, info: [String: Any]) {
-    // Stop timing event by name and/or record the event
+Inform the delegate the handler invoked add reaction.
+
+```swift
+delegate?.chatHandler(self, didTapAddReaction: reactionType, to: chat.id)
+```
+
+Inform the delegate the handler invoked remove reaction.
+
+```swift
+delegate?.chatHandler(self, didTapRemoveReaction: reactionType, from: chat.id)
+```
+
+Inform the delegate the handler invoked make user moderator.
+
+```swift
+delegate?.chatHandler(self, didTapMakeUserModerator: userID)
+```
+
+Inform the delegate the handler invoked report chat.
+
+```swift
+delegate?.chatHandler(self, didTapReportChat: chat)
+```
+
+Inform the delegate the handler invoked report tip.
+
+```swift
+delegate?.chatHandler(self, didTapReportTip: tip)
+```
+
+Inform the delegate the handler invoked block user from chat.
+
+```swift
+delegate?.chatHandler(self, didTapBlockUserFromChat: chat)
+```
+
+Inform the delegate the handler invoked block user from tip.
+
+```swift
+delegate?.chatHandler(self, didTapBlockUserFromTip: tip)
+```
+
+Inform the delegate the handler invoked delete chat.
+
+```swift
+delegate?.chatHandler(self, didTapDeleteChat: chat)
+```
+
+Inform the delegate the handler invoked delete tip.
+
+```swift
+delegate?.chatHandler(self, didTapDeleteTip: tip)
+```
+
+Inform the delegate the handler invoked view a user's profile.
+
+```swift
+delegate?.chatHandler(self, didTapViewUserProfile: userID)
+```
+
+Inform the delegate the handler invoked the people feature.
+
+```swift
+delegate?.chatHandlerDidTapShowPeople(self)
+```
+
+Inform the delegate the handler invoked the polls feature.
+
+```swift
+delegate?.chatHandlerDidTapShowPolls(self)
+```
+
+Inform the delegate the handler invoked the tipping feature.
+
+```swift
+delegate?.chatHandlerDidTapShowTipping(self)
+```
+
+### Get Chat Reactions
+
+You can fetch reaction details for a specific chat. Use this to create an interface that lists people who reacted and which reaction they chose if you provide a custom view controller for chat.
+
+```Swift
+HMMediaPlayer.getReactions(chatID: chat.id) { result in
+    switch result {
+    case .success(let reactions):
+        // Display the list of reactions
+    case .failure(let error):
+        // Handle error
+    }
 }
 ```

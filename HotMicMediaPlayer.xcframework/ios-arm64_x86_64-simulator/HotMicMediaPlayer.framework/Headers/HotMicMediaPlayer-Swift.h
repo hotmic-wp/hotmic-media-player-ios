@@ -333,6 +333,7 @@ SWIFT_CLASS("_TtC17HotMicMediaPlayer22HMPlayerViewController")
 @end
 
 
+
 @class UIScrollView;
 
 @interface HMPlayerViewController (SWIFT_EXTENSION(HotMicMediaPlayer)) <UIScrollViewDelegate>
@@ -742,6 +743,7 @@ SWIFT_CLASS("_TtC17HotMicMediaPlayer22HMPlayerViewController")
 @interface HMPlayerViewController (SWIFT_EXTENSION(HotMicMediaPlayer)) <OTSubscriberKitAudioLevelDelegate>
 - (void)subscriber:(OTSubscriberKit * _Nonnull)subscriber audioLevelUpdated:(float)audioLevel;
 @end
+
 
 
 @class UIScrollView;

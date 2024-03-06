@@ -27,17 +27,12 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol HMPlayerViewControllerDelegate : AnyObject {
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, playerForAssetAt url: Foundation.URL) -> (any HotMicMediaPlayer.HMPlayer)?
-  func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, viewControllerForContext context: HotMicMediaPlayer.HMPlayerViewController.CustomContentContext) -> UIKit.UIViewController?
+  func playerViewControllerChatConfiguration(_ viewController: HotMicMediaPlayer.HMPlayerViewController) -> HotMicMediaPlayer.HMPlayerViewController.ChatConfiguration
   func playerViewController(_ viewController: HotMicMediaPlayer.HMPlayerViewController, didFinishWith pipView: UIKit.UIView?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class HMPlayerViewController : UIKit.UIViewController, UIKit.UIViewControllerTransitioningDelegate {
-  public enum CustomContentContext {
-    case chat
-    public static func == (a: HotMicMediaPlayer.HMPlayerViewController.CustomContentContext, b: HotMicMediaPlayer.HMPlayerViewController.CustomContentContext) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
+  public struct ChatConfiguration {
+    public init(handler: (any HotMicMediaPlayer.HMChatHandler)?, viewController: UIKit.UIViewController?)
   }
   @_Concurrency.MainActor(unsafe) @objc override final public var prefersStatusBarHidden: Swift.Bool {
     @objc get
@@ -81,6 +76,25 @@ extension HotMicMediaPlayer.HMPlayerViewController : UIKit.UIPageViewControllerD
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
   @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}
+extension HotMicMediaPlayer.HMPlayerViewController : HotMicMediaPlayer.HMChatHandlerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func chatHandlerCanDisplayChatInputToolbar(_ chatHandler: any HotMicMediaPlayer.HMChatHandler) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, canModerateUser userID: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, canMakeUserModerator userID: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapSendChat text: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapAddReaction reactionType: HotMicMediaPlayer.HMChatReactionType, to chatID: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapRemoveReaction reactionType: HotMicMediaPlayer.HMChatReactionType, from chatID: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapMakeUserModerator id: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapReportChat chat: HotMicMediaPlayer.HMChat)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapReportTip tip: HotMicMediaPlayer.HMTip)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapBlockUserFromChat chat: HotMicMediaPlayer.HMChat)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapBlockUserFromTip tip: HotMicMediaPlayer.HMTip)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapDeleteChat chat: HotMicMediaPlayer.HMChat)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapDeleteTip tip: HotMicMediaPlayer.HMTip)
+  @_Concurrency.MainActor(unsafe) final public func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapViewUserProfile id: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func chatHandlerDidTapShowPeople(_ chatHandler: any HotMicMediaPlayer.HMChatHandler)
+  @_Concurrency.MainActor(unsafe) final public func chatHandlerDidTapShowPolls(_ chatHandler: any HotMicMediaPlayer.HMChatHandler)
+  @_Concurrency.MainActor(unsafe) final public func chatHandlerDidTapShowTipping(_ chatHandler: any HotMicMediaPlayer.HMChatHandler)
 }
 extension HotMicMediaPlayer.HMPlayerViewController : HotMicMediaPlayer.HMPlayerDelegate {
   @_Concurrency.MainActor(unsafe) final public func playerDidInvokePlay(_ player: any HotMicMediaPlayer.HMPlayer)
@@ -216,6 +230,18 @@ public enum HMPlayerLiveTimeShiftError {
     get
   }
 }
+public enum HMChatReactionType : Swift.String, Swift.Decodable {
+  case like
+  case fire
+  case laugh
+  case anger
+  case sadness
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public protocol HMMediaPlayerAppearanceDelegate : AnyObject {
   func customFont(for textStyle: HotMicMediaPlayer.HMTextStyle) -> UIKit.UIFont?
   func customColor(for colorStyle: HotMicMediaPlayer.HMColorStyle) -> UIKit.UIColor?
@@ -258,6 +284,41 @@ public protocol HMPlayerDelegate : AnyObject {
   func player(_ player: any HotMicMediaPlayer.HMPlayer, durationChanged duration: Foundation.TimeInterval)
   func player(_ player: any HotMicMediaPlayer.HMPlayer, errorOccurredWithCode code: Swift.String, message: Swift.String)
 }
+public protocol HMChatHandler : AnyObject {
+  func setDelegate(_ delegate: any HotMicMediaPlayer.HMChatHandlerDelegate)
+  func setHostID(_ id: Swift.String)
+  func updatePeopleConfiguration(isAvailable: Swift.Bool, count: Swift.Int)
+  func updatePollsConfiguration(isAvailable: Swift.Bool, hasUnansweredPolls: Swift.Bool)
+  func updateTippingConfiguration(isAvailable: Swift.Bool)
+  func updateTopContentInset(_ inset: CoreFoundation.CGFloat)
+  func displayChatInputToolbar()
+  func dismissChatInputToolbar()
+  func dismissChatInputKeyboard()
+  func handleBacklog(chats: [HotMicMediaPlayer.HMChat], tips: [HotMicMediaPlayer.HMTip])
+  func handlePending(chats: [HotMicMediaPlayer.HMChat], tips: [HotMicMediaPlayer.HMTip], reactions: [HotMicMediaPlayer.HMChatReaction]) -> Swift.Bool
+  func handleDeletedChat(id: Swift.String)
+  func handleDeletedTip(id: Swift.String)
+  func handleDeletedReaction(chatID: Swift.String, userID: Swift.String, type: HotMicMediaPlayer.HMChatReactionType)
+}
+public protocol HMChatHandlerDelegate : AnyObject {
+  func chatHandlerCanDisplayChatInputToolbar(_ chatHandler: any HotMicMediaPlayer.HMChatHandler) -> Swift.Bool
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, canModerateUser userID: Swift.String) -> Swift.Bool
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, canMakeUserModerator userID: Swift.String) -> Swift.Bool
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapSendChat text: Swift.String)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapAddReaction reactionType: HotMicMediaPlayer.HMChatReactionType, to chatID: Swift.String)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapRemoveReaction reactionType: HotMicMediaPlayer.HMChatReactionType, from chatID: Swift.String)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapMakeUserModerator id: Swift.String)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapReportChat chat: HotMicMediaPlayer.HMChat)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapReportTip tip: HotMicMediaPlayer.HMTip)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapBlockUserFromChat chat: HotMicMediaPlayer.HMChat)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapBlockUserFromTip tip: HotMicMediaPlayer.HMTip)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapDeleteChat chat: HotMicMediaPlayer.HMChat)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapDeleteTip tip: HotMicMediaPlayer.HMTip)
+  func chatHandler(_ chatHandler: any HotMicMediaPlayer.HMChatHandler, didTapViewUserProfile id: Swift.String)
+  func chatHandlerDidTapShowPeople(_ chatHandler: any HotMicMediaPlayer.HMChatHandler)
+  func chatHandlerDidTapShowPolls(_ chatHandler: any HotMicMediaPlayer.HMChatHandler)
+  func chatHandlerDidTapShowTipping(_ chatHandler: any HotMicMediaPlayer.HMChatHandler)
+}
 public protocol HMMediaPlayerShareDelegate : AnyObject {
   func getStreamShareText(streamID: Swift.String, completion: @escaping (Swift.Result<Swift.String?, any Swift.Error>) -> Swift.Void)
 }
@@ -294,6 +355,7 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   public static func initializePlayerViewController(streamID: Swift.String, delegate: (any HotMicMediaPlayer.HMPlayerViewControllerDelegate)?, supportsMinimizingToPiP: Swift.Bool = false) -> HotMicMediaPlayer.HMPlayerViewController
   public static func getStreams(live: Swift.Bool, scheduled: Swift.Bool, vod: Swift.Bool, userID: Swift.String? = nil, limit: Swift.Int? = nil, skip: Swift.Int? = nil, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMStream], any Swift.Error>) -> Swift.Void)
   public static func getStream(id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMStream, any Swift.Error>) -> Swift.Void)
+  public static func getReactions(chatID: Swift.String, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMChatReactionDetail], any Swift.Error>) -> Swift.Void)
   public static func submitTipPurchase(userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
   public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
   @objc deinit
@@ -378,8 +440,21 @@ public struct HMUserProfile {
   public var followedByMe: Swift.Bool?
   public init(name: Swift.String? = nil, displayName: Swift.String? = nil, profilePic: Foundation.URL? = nil, badge: Foundation.URL? = nil, bio: Swift.String? = nil, instagramHandle: Swift.String? = nil, tikTokHandle: Swift.String? = nil, twitchHandle: Swift.String? = nil, twitterHandle: Swift.String? = nil, youTubeHandle: Swift.String? = nil, followersCount: Swift.Int? = nil, followingCount: Swift.Int? = nil, followingMe: Swift.Bool? = nil, followedByMe: Swift.Bool? = nil)
 }
-extension HotMicMediaPlayer.HMPlayerViewController.CustomContentContext : Swift.Equatable {}
-extension HotMicMediaPlayer.HMPlayerViewController.CustomContentContext : Swift.Hashable {}
+public struct HMChat : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HMChatReaction : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HMChatReactionDetail : Swift.Decodable {
+  public struct User : Swift.Decodable {
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HMTip : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
 extension HotMicMediaPlayer.HMTextStyle : Swift.Equatable {}
 extension HotMicMediaPlayer.HMTextStyle : Swift.Hashable {}
 extension HotMicMediaPlayer.HMColorStyle : Swift.Equatable {}
@@ -390,6 +465,9 @@ extension HotMicMediaPlayer.HMRestrictedAction : Swift.Equatable {}
 extension HotMicMediaPlayer.HMRestrictedAction : Swift.Hashable {}
 extension HotMicMediaPlayer.HMPlayerLiveTimeShiftError : Swift.Equatable {}
 extension HotMicMediaPlayer.HMPlayerLiveTimeShiftError : Swift.Hashable {}
+extension HotMicMediaPlayer.HMChatReactionType : Swift.Equatable {}
+extension HotMicMediaPlayer.HMChatReactionType : Swift.Hashable {}
+extension HotMicMediaPlayer.HMChatReactionType : Swift.RawRepresentable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Equatable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.Hashable {}
 extension HotMicMediaPlayer.HMStream.StreamState : Swift.RawRepresentable {}
