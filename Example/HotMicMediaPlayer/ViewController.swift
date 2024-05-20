@@ -180,7 +180,7 @@ extension ViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         if let identifier = dataSource.itemIdentifier(for: indexPath) {
-            let playerViewController = HMMediaPlayer.initializePlayerViewController(streamID: identifier, delegate: self, supportsMinimizingToPiP: false)
+            let playerViewController = HMMediaPlayer.initializePlayerViewController(streamID: identifier, delegate: self, supportsMinimizingToPiP: false, prefersVideoControlsHidden: false)
             present(playerViewController, animated: true, completion: nil)
         }
     }
@@ -189,14 +189,19 @@ extension ViewController: UICollectionViewDelegate {
 
 extension ViewController: HMPlayerViewControllerDelegate {
     
-    func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
+    func playerViewController(_ viewController: HMPlayerViewController, playerForOrientation orientation: HMPlayerViewController.PlayerOrientation) -> HMPlayer? {
         // Return a custom player or nil to use the default
         return nil
     }
     
-    func playerViewControllerChatConfiguration(_ viewController: HMPlayerViewController) -> HMPlayerViewController.ChatConfiguration {
-        // Return a custom chat hander and view controller or nil to use the defaults
-        return .init(handler: nil, viewController: nil)
+    func playerViewController(_ viewController: HMPlayerViewController, viewControllerForContext context: HMPlayerViewController.CustomContentContext) -> UIViewController? {
+        // Return a view controller or nil to use the default
+        return nil
+    }
+    
+    func playerViewControllerChatHandler(_ viewController: HMPlayerViewController) -> HMChatHandler? {
+        // Return a custom chat hander or nil to use the default
+        return nil
     }
     
     func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {

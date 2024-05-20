@@ -15,7 +15,9 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 - Join the host with audio/video
 - Customize fonts, colors, and images
 - Provide your own video player implementation
-- Provide your own chat interface
+- Provide your own interface below the landscape video player
+- Build a chat interface that utilizes the HotMic service
+- Display banner ads below the landscape video player
 - Light and dark mode support
 - Accessibility support including Dynamic Type, VoiceOver, Switch Control, etc
   - Default system colors provide high contrast variants
@@ -160,8 +162,8 @@ HMMediaPlayer.getStream(id: id) { result in
 Initialize a `HMPlayerViewController` and present it.
 
 ```swift
-let playerViewController = HMMediaPlayer.initializePlayerViewController(streamID: streamID, delegate: self, supportsMinimizingToPiP: true)
-present(playerViewController, animated: true, completion: nil)
+let playerViewController = HMMediaPlayer.initializePlayerViewController(streamID: streamID, delegate: self, supportsMinimizingToPiP: true, prefersVideoControlsHidden: false)
+present(playerViewController, animated: true)
 ```
 
 Setting the `modalPresentationStyle` to a value other than `fullScreen` is not allowed.
@@ -173,16 +175,24 @@ Implement the `HMPlayerViewControllerDelegate` protocol to support functionality
 Each time a player is needed, the following function is called allowing you to provide a custom player that implements the `HMPlayer` protocol. Return `nil` if you'd like to use the default player.
 
 ```swift
-func playerViewController(_ viewController: HMPlayerViewController, playerForAssetAt url: URL) -> HMPlayer? {
+func playerViewController(_ viewController: HMPlayerViewController, playerForOrientation orientation: HMPlayerViewController.PlayerOrientation) -> HMPlayer? {
     return nil
 }
 ```
 
-When the player screen will display chat content, the following function is called allowing you to provide a custom chat handler and view controller to display. Provide `nil` if you'd like to use the default HotMic chat service and UI. Note the handler and view controller can be the same instance of your view controller if it conforms to `HMChatHandler`.
+When the player screen will display a view controller in a context that supports custom content, the following function is called allowing you to provide your own view controller to display. Return `nil` if you'd like to use the default view controller. Note the view controller can conform to `HMChatHandler` if you'd like it to handle chats from the HotMic service.
 
 ```swift
-func playerViewControllerChatConfiguration(_ viewController: HMPlayerViewController) -> HMPlayerViewController.ChatConfiguration {
-    return .init(handler: nil, viewController: nil)
+func playerViewController(_ viewController: HMPlayerViewController, viewControllerForContext context: HMPlayerViewController.CustomContentContext) -> UIViewController? {
+    return nil
+}
+```
+
+The following function is called allowing you to provide a custom chat handler if you'd like to utilize the HotMic chat service to power your own chat interface. Return `nil` if you'd like to use the default chat handler. Note this can be the same view controller instance created above if it implements `HMChatHandler`.
+
+```swift
+func playerViewControllerChatHandler(_ viewController: HMPlayerViewController) -> HMChatHandler? {
+    return nil
 }
 ```
 
@@ -190,7 +200,7 @@ When the user is finished with the player experience, for example when they tap 
 
 ```swift
 func playerViewController(_ viewController: HMPlayerViewController, didFinishWith pipView: UIView?) {
-    dismiss(animated: true, completion: nil)
+    dismiss(animated: true)
     
     if let pipView {
         let pipViewController = PIPViewController()
@@ -210,7 +220,19 @@ func playerViewController(_ viewController: HMPlayerViewController, didFinishWit
 
 ### Player View Controller Functions
 
-To support returning to the full-screen player experience from Picture-in-Picture, call `HMPlayerViewController`’s `restorePiPView(_:)` function and then present the player view controller full screen.
+To close the player view controller, call `close()`. To minimize to Picture-in-Picture, call `minimizeToPiPIfSupported()`. The delegate function `playerViewController(_:didFinishWith:)` will be invoked to handle these requests.
+
+```swift
+func closeTapped(_ sender: UIButton) {
+    playerViewController.close()
+}
+
+func minimizeTapped(_ sender: UIButton) {
+    playerViewController.minimizeToPiPIfSupported()
+}
+```
+
+To support returning to the full-screen player experience from Picture-in-Picture, call `restorePiPView(_:)` and then present the player view controller full screen.
  
  ```swift
 func pipViewControllerDidTapFullScreen(_ viewController: PIPViewController) {
@@ -220,14 +242,30 @@ func pipViewControllerDidTapFullScreen(_ viewController: PIPViewController) {
     
     PIPKit.dismiss(animated: true)
     
-    present(playerViewController, animated: true, completion: nil)
+    present(playerViewController, animated: true)
 }
 ```
 
-To show a banner ad in the player screen, call `HMPlayerViewController`’s `displayBannerAd(withView:duration:delay:)` function. Provide any `UIView` to display. The view fills the screen width and needs to have a known height such as an intrinsic content size or an Auto Layout constraint that defines a constant height or aspect ratio. If you do not specify a `duration` of time to display the ad, it will be displayed until you hide it. If you do not specify a `delay`, it will be displayed immediately. If you do not specify an `animationDuration`, a default value will be used. If you specify `animationDuration: 0`, it will not animate.
+To show the people, polls, or tip options interface, call `showPeopleIfAvailable()`, `showPollsIfAvailable()`, or `showTipOptionsIfAvailable()`.
+
+```swift
+func peopleTapped(_ sender: UIButton) {
+    (parent as? HMPlayerViewController)?.showPeopleIfAvailable()
+}
+
+func pollsTapped(_ sender: UIButton) {
+    (parent as? HMPlayerViewController)?.showPollsIfAvailable()
+}
+
+func tipsTapped(_ sender: UIButton) {
+    (parent as? HMPlayerViewController)?.showTipOptionsIfAvailable()
+}
+```
+
+To show a banner ad in the player screen below the landscape video, call `displayBannerAd(withView:duration:delay:)` function. Provide any `UIView` to display. The view fills the screen width and needs to have a known height such as an intrinsic content size or an Auto Layout constraint that defines a constant height or aspect ratio. If you do not specify a `duration` of time to display the ad, it will be displayed until you hide it. If you do not specify a `delay`, it will be displayed immediately. If you do not specify an `animationDuration`, a default value will be used. If you specify `animationDuration: 0`, it will not animate.
 
  ```swift
-func displayAd() {
+func showAdvertisement() {
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
     imageView.isUserInteractionEnabled = true
@@ -239,10 +277,10 @@ func displayAd() {
 }
 ```
 
-To remove the banner ad from the player screen, call `HMPlayerViewController`’s `hideBannerAd()` function. If you do not specify an `animationDuration`, a default value will be used. If you specify `animationDuration: 0`, it will not animate.
+To remove the banner ad, call `hideBannerAd()`. If you do not specify an `animationDuration`, a default value will be used. If you specify `animationDuration: 0`, it will not animate.
 
  ```swift
- func removeAd() {
+ func removeAdvertisement() {
     playerViewController.hideBannerAd()
 }
 ```
@@ -505,6 +543,12 @@ Store the delegate in a weak optional variable to call its functions in the futu
 func setDelegate(_ delegate: HMPlayerDelegate) { self.delegate = delegate }
 ```
 
+Load a source into the player.
+
+```swift
+func loadSource(url: URL) { player.load(url) }
+```
+
 Invoke play.
 
 ```swift
@@ -606,6 +650,47 @@ Prepare to exit fullscreen mode.
 func exitFullscreen() { playerView.exitFullscreen() }
 ```
 
+Display an image overtop the video.
+
+```swift
+func displayImageOverlay(url: URL) {
+    imageView.setImage(from: url)
+    imageView.isHidden = false
+}
+```
+    
+Remove the image overlay to reveal the video.
+
+```swift
+func removeImageOverlay() {
+    imageView.image = nil
+    imageView.isHidden = true
+}
+
+Display a countdown to the event start time.
+
+```swift
+func displayCountdown(date: Date?, imageOverlayURL: URL?) {
+    countdownLabel.text = date?.formatted()
+    countdownLabel.isHidden = false
+    
+    if let imageOverlayURL {
+        displayImageOverlay(url: imageOverlayURL)
+    }
+}
+```
+
+Remove the countdown.
+
+```swift
+func removeCountdown() {
+    countdownLabel.text = nil
+    countdownLabel.isHidden = true
+    
+    removeImageOverlay()
+}
+```
+
 ### Player Delegate
 
 The `HMPlayerDelegate` protocol defines functions your `HMPlayer` implementation calls to inform HotMic when various events occur.
@@ -666,7 +751,7 @@ delegate?.player(self, errorOccurredWithCode code: error.code, message: error.lo
 
 ### Chat Handler
 
-The `HMChatHandler` protocol defines functions you implement if you'd like to provide a custom view controller for chat while utilizing the HotMic chat service. Your implementation needs to store a reference to an `HMChatHandlerDelegate` and call its functions to get information and inform the delegate when various events occur.
+The `HMChatHandler` protocol defines functions you implement if you'd like to provide a custom chat user interface that utilizes the HotMic chat service. Your implementation needs to store a reference to an `HMChatHandlerDelegate` and call its functions to get information and inform the delegate when various events occur.
 
 Store the delegate in a weak optional variable to call its functions in the future.
 
@@ -689,12 +774,12 @@ func updatePeopleConfiguration(isAvailable: Bool, count: Int) {
 }
 ```
 
-Update the configuration of the polls feature. Make it accessible in the interface if available. The state of unanswered polls is provided, allowing you to display an indicator in the interface, for example as an "unread" badge on the button.
+Update the configuration of the polls feature. Make it accessible in the interface if available. The number of unanswered polls is provided, allowing you to display an indicator in the interface, for example a badge on the button.
 
 ```swift
-func updatePollsConfiguration(isAvailable: Bool, hasUnansweredPolls: Bool) {
+func updatePollsConfiguration(isAvailable: Bool, unansweredPollsCount: Int) {
     pollsButton.isHidden = !isAvailable
-    pollsButton.unreadBadge.isHidden = !hasUnansweredPolls
+    pollsButton.unreadBadge.count = unansweredPollsCount.formatted()
 }
 ```
 
@@ -702,7 +787,7 @@ Update the configuration of the tipping feature. Make it accessible in the inter
 
 ```swift
 func updateTippingConfiguration(isAvailable: Bool) {
-    tippingButton.isHidden = !isAvailable
+    tipsButton.isHidden = !isAvailable
 }
 ```
 
@@ -882,27 +967,9 @@ Inform the delegate the handler invoked view a user's profile.
 delegate?.chatHandler(self, didTapViewUserProfile: userID)
 ```
 
-Inform the delegate the handler invoked the people feature.
-
-```swift
-delegate?.chatHandlerDidTapShowPeople(self)
-```
-
-Inform the delegate the handler invoked the polls feature.
-
-```swift
-delegate?.chatHandlerDidTapShowPolls(self)
-```
-
-Inform the delegate the handler invoked the tipping feature.
-
-```swift
-delegate?.chatHandlerDidTapShowTipping(self)
-```
-
 ### Get Chat Reactions
 
-You can fetch reaction details for a specific chat. Use this to create an interface that lists people who reacted and which reaction they chose if you provide a custom view controller for chat.
+You can fetch reaction details for a specific chat. Use this to create an interface that lists people who reacted and which reaction they chose if you provide a custom chat handler.
 
 ```Swift
 HMMediaPlayer.getReactions(chatID: chat.id) { result in
