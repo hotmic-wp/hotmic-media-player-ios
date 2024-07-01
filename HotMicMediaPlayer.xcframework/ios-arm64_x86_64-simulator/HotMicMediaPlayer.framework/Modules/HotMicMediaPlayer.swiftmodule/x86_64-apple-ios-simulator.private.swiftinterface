@@ -459,18 +459,61 @@ public struct HMUserProfile {
   public init(name: Swift.String? = nil, displayName: Swift.String? = nil, profilePic: Foundation.URL? = nil, badge: Foundation.URL? = nil, bio: Swift.String? = nil, instagramHandle: Swift.String? = nil, tikTokHandle: Swift.String? = nil, twitchHandle: Swift.String? = nil, twitterHandle: Swift.String? = nil, youTubeHandle: Swift.String? = nil, followersCount: Swift.Int? = nil, followingCount: Swift.Int? = nil, followingMe: Swift.Bool? = nil, followedByMe: Swift.Bool? = nil)
 }
 public struct HMChat : Swift.Decodable {
+  public let id: Swift.String
+  public let streamId: Swift.String?
+  public let userId: Swift.String
+  public let deviceId: Swift.String?
+  @HotMicMediaPlayer.Lenient public var profilePic: Foundation.URL? {
+    get
+    set
+    _modify
+  }
+  @HotMicMediaPlayer.Lenient public var badge: Foundation.URL? {
+    get
+    set
+    _modify
+  }
+  public let userName: Swift.String
+  public let message: Swift.String
+  public let verified: Swift.Bool?
+  public let createdAt: Foundation.Date?
+  public var likeCount: Swift.Int?
+  public var fireCount: Swift.Int?
+  public var laughCount: Swift.Int?
+  public var angerCount: Swift.Int?
+  public var sadnessCount: Swift.Int?
+  public var userReactions: [HotMicMediaPlayer.HMChatReactionType]?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HMChatReaction : Swift.Decodable {
+  public let streamId: Swift.String
+  public let chatId: Swift.String
+  public let userId: Swift.String
+  public let deviceId: Swift.String
+  public let type: HotMicMediaPlayer.HMChatReactionType
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HMChatReactionDetail : Swift.Decodable {
+  public var type: HotMicMediaPlayer.HMChatReactionType
+  public var user: HotMicMediaPlayer.HMChatReactionDetail.User
   public struct User : Swift.Decodable {
+    public let id: Swift.String
+    public let displayName: Swift.String?
+    public let name: Swift.String?
+    public let profilePic: Foundation.URL?
     public init(from decoder: any Swift.Decoder) throws
   }
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HMTip : Swift.Decodable {
+  public let id: Swift.String
+  public let userId: Swift.String
+  public let deviceId: Swift.String?
+  public let price: Foundation.Decimal
+  public let priceLocaleId: Swift.String
+  public let userName: Swift.String?
+  public let message: Swift.String?
+  public let createdAt: Foundation.Date
   public init(from decoder: any Swift.Decoder) throws
 }
 extension HotMicMediaPlayer.HMPlayerViewController.PlayerOrientation : Swift.Equatable {}
