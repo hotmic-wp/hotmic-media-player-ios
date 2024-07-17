@@ -3,22 +3,22 @@ PODS:
     - BitmovinAnalyticsCollector/Core
     - BitmovinPlayerCore (~> 3.48)
   - BitmovinAnalyticsCollector/Core (3.7.0)
-  - BitmovinPlayer (3.63.0):
+  - BitmovinPlayer (3.66.1):
     - BitmovinAnalyticsCollector/BitmovinPlayer (~> 3.0)
-    - BitmovinPlayerCore (= 3.63.0)
-  - BitmovinPlayerCore (3.63.0)
+    - BitmovinPlayerCore (= 3.66.1)
+  - BitmovinPlayerCore (3.66.1)
   - FittedSheets (2.6.1)
-  - HotMicMediaPlayer (7.0.1):
-    - BitmovinPlayer (= 3.63.0)
+  - HotMicMediaPlayer (8.0.0):
+    - BitmovinPlayer (= 3.66.1)
     - FittedSheets (= 2.6.1)
-    - Kingfisher (= 7.11.0)
+    - Kingfisher (= 7.12.0)
     - Kronos (= 4.3.0)
-    - OTXCFramework (= 2.27.3)
-    - PubNubSwift (= 7.2.1)
-  - Kingfisher (7.11.0)
+    - OTXCFramework (= 2.28.0)
+    - PubNubSwift (= 7.3.1)
+  - Kingfisher (7.12.0)
   - Kronos (4.3.0)
-  - OTXCFramework (2.27.3)
-  - PubNubSwift (7.2.1)
+  - OTXCFramework (2.28.0)
+  - PubNubSwift (7.3.1)
 
 DEPENDENCIES:
   - HotMicMediaPlayer (from `../`)
@@ -41,14 +41,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BitmovinAnalyticsCollector: bbd82c0b8e11aefacd8e53b6e40c62f2cba6f3f5
-  BitmovinPlayer: f697e7c11554ee45e7f42f824359a4e9ebc81e0e
-  BitmovinPlayerCore: f50c383ea03927fadbdf85b585916461975192e3
+  BitmovinPlayer: 0d5990c196eff314b7081c49ed481e9d465d7281
+  BitmovinPlayerCore: f6f8b8655bece7c8e9daccc49cc55642212d9c2f
   FittedSheets: 37e35f105c531f3845075f1788dd8517a35315c4
-  HotMicMediaPlayer: dc80ec6e1797c058fadd2689a3529439d51cbbc7
-  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
+  HotMicMediaPlayer: 70eee732145ff107749120c7a8b7a22d87d3364e
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
   Kronos: a1a15fb5bb0f7a79591bfcdd5d1863a922c5c03e
-  OTXCFramework: fd1f5c402e4e58c25b0550238e46fe215a4e7dfd
-  PubNubSwift: d03550e1c8533886b5d5c4f7caa08119aa5dbf46
+  OTXCFramework: 44948b4d1120ba4c2cf92fa0ec3fa3edcee9d80e
+  PubNubSwift: 9db89fbc1e29712bf3089bbceabb9593e121eeb7
 
 PODFILE CHECKSUM: 3d37216af0fb9a021b68fcc5808c879bf42254e3
 

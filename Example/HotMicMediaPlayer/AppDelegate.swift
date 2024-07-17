@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HMMediaPlayer.inAppPurchaseDelegate = self
         HMMediaPlayer.authenticationObserver = self
         HMMediaPlayer.analyticsObserver = self
+        HMMediaPlayer.pollObserver = nil // Use the provided poll implementation
+        HMMediaPlayer.participantObserver = nil // Use the provided people implementation
         
         LCManager.shared.print("Listening for analytics events…")
         

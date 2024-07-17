@@ -17,6 +17,8 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 - Provide your own video player implementation
 - Provide your own interface below the landscape video player
 - Build a chat interface that utilizes the HotMic service
+- Observe polls data to drive your own polls interface
+- Observe participant data to drive your own people interface
 - Display banner ads below the landscape video player
 - Light and dark mode support
 - Accessibility support including Dynamic Type, VoiceOver, Switch Control, etc
@@ -32,8 +34,7 @@ Use this framework to get streams, create a `HMPlayerViewController` for a speci
 
 - iOS 14+
 - Swift app
-- App supports portrait and landscape orientations
-- App uses view controller based status bar appearance
+- View controller based status bar appearance
 
 ## App Privacy
 When integrating HotMicMediaPlayer into your app, you must disclose the data it and its dependencies collect on the App Store:
@@ -477,6 +478,77 @@ func eventStarted(name: String) {
  
 func eventOccurred(name: String, info: [String: Any]) {
     // Stop timing event by name and/or record the event
+}
+```
+
+### Poll Observing
+
+To be notified of poll events as they occur, you can implement the `HMMediaPlayerPollObserving` protocol. Doing so will suppress the provided poll interface, allowing you to build your own interface.
+
+```swift
+HMMediaPlayer.pollObserver = self
+```
+
+When polls are fetched initially, the following function is called.
+
+```swift
+func pollsFetched(_ polls: [HMPoll]) {
+    // Persist the polls
+}
+```
+
+When a poll is created, the following function is called.
+
+```swift
+func pollCreated(_ poll: HMPoll) {
+    // Insert the poll
+}
+```
+
+When a poll is updated, the following function is called.
+
+```swift
+func pollUpdated(_ poll: HMPoll) {
+    // Update the poll
+}
+```
+
+When a poll is deleted, the following function is called.
+
+```swift
+func pollDeleted(_ poll: HMPoll) {
+    // Delete the poll
+}
+```
+
+### Submit Poll Response
+
+To respond to a poll from your custom poll interface, call the following function.
+
+```Swift
+HMMediaPlayer.submitPollResponse(pollID: poll.id, optionID: optionID) { result in
+    switch result {
+    case .success(let success):
+        // Check if success
+    case .failure(let error):
+        // Handle error
+    }
+}
+```
+
+### Participant Observing
+
+To be notified when the participants changes, you can implement the `HMMediaPlayerParticipantObserving` protocol. Doing so will suppress the provided people interface, allowing you to build your own interface.
+
+```swift
+HMMediaPlayer.participantObserver = self
+```
+
+Each time the participants are changed, the following function is called.
+
+```swift
+func updateParticipants(host: HMParticipant, cohosts: [HMParticipant], guests: [HMParticipant], waiting: [HMParticipant], room: [HMParticipant]) {
+    // Update the participants
 }
 ```
 

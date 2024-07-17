@@ -361,6 +361,15 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   func eventStarted(name: Swift.String)
   func eventOccurred(name: Swift.String, info: [Swift.String : Any])
 }
+public protocol HMMediaPlayerPollObserving : AnyObject {
+  func pollsFetched(_ polls: [HotMicMediaPlayer.HMPoll])
+  func pollCreated(_ poll: HotMicMediaPlayer.HMPoll)
+  func pollUpdated(_ poll: HotMicMediaPlayer.HMPoll)
+  func pollDeleted(_ poll: HotMicMediaPlayer.HMPoll)
+}
+public protocol HMMediaPlayerParticipantObserving : AnyObject {
+  func updateParticipants(host: HotMicMediaPlayer.HMParticipant, cohosts: [HotMicMediaPlayer.HMParticipant], guests: [HotMicMediaPlayer.HMParticipant], waiting: [HotMicMediaPlayer.HMParticipant], room: [HotMicMediaPlayer.HMParticipant])
+}
 @_hasMissingDesignatedInitializers public class HMMediaPlayer {
   weak public static var appearanceDelegate: (any HotMicMediaPlayer.HMMediaPlayerAppearanceDelegate)?
   weak public static var shareDelegate: (any HotMicMediaPlayer.HMMediaPlayerShareDelegate)?
@@ -368,12 +377,15 @@ public protocol HMMediaPlayerAnalyticsEventObserving : AnyObject {
   weak public static var inAppPurchaseDelegate: (any HotMicMediaPlayer.HMMediaPlayerInAppPurchaseDelegate)?
   weak public static var authenticationObserver: (any HotMicMediaPlayer.HMMediaPlayerAuthenticationObserving)?
   weak public static var analyticsObserver: (any HotMicMediaPlayer.HMMediaPlayerAnalyticsEventObserving)?
+  weak public static var pollObserver: (any HotMicMediaPlayer.HMMediaPlayerPollObserving)?
+  weak public static var participantObserver: (any HotMicMediaPlayer.HMMediaPlayerParticipantObserving)?
   public static var debugKey: Swift.String
   public static func initialize(apiKey: Swift.String, accessToken: Swift.String)
   public static func initializePlayerViewController(streamID: Swift.String, delegate: (any HotMicMediaPlayer.HMPlayerViewControllerDelegate)?, supportsMinimizingToPiP: Swift.Bool = false, prefersVideoControlsHidden: Swift.Bool = false) -> HotMicMediaPlayer.HMPlayerViewController
   public static func getStreams(live: Swift.Bool, scheduled: Swift.Bool, vod: Swift.Bool, userID: Swift.String? = nil, limit: Swift.Int? = nil, skip: Swift.Int? = nil, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMStream], any Swift.Error>) -> Swift.Void)
   public static func getStream(id: Swift.String, completion: @escaping (Swift.Result<HotMicMediaPlayer.HMStream, any Swift.Error>) -> Swift.Void)
   public static func getReactions(chatID: Swift.String, completion: @escaping (Swift.Result<[HotMicMediaPlayer.HMChatReactionDetail], any Swift.Error>) -> Swift.Void)
+  public static func submitPollResponse(pollID: Swift.String, optionID: Swift.String, completion: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   public static func submitTipPurchase(userID: Swift.String, hostID: Swift.String, streamID: Swift.String, message: Swift.String?, anonymous: Swift.Bool, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
   public static func submitJoinStreamPurchase(userID: Swift.String, streamID: Swift.String, productID: Swift.String, transactionID: Swift.String, transactionDate: Foundation.TimeInterval, price: Foundation.Decimal, localeID: Swift.String, currencyCode: Swift.String?, regionCode: Swift.String?, receipt: Swift.String, completion: @escaping ((requestSuccess: Swift.Bool, validated: Swift.Bool, retry: Swift.Bool, error: (any Swift.Error)?)) -> Swift.Void)
   @objc deinit
@@ -389,7 +401,6 @@ public struct HMStream : Swift.Decodable {
   }
   public let title: Swift.String
   public let description: Swift.String?
-  public let tags: [Swift.String]?
   public let channel: Swift.String?
   public let user: HotMicMediaPlayer.HMStream.User
   public let canParticipate: Swift.Bool?
@@ -514,6 +525,50 @@ public struct HMTip : Swift.Decodable {
   public let userName: Swift.String?
   public let message: Swift.String?
   public let createdAt: Foundation.Date
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HMPoll : Swift.Decodable {
+  public let id: Swift.String
+  public let createdAt: Foundation.Date
+  @HotMicMediaPlayer.Lenient public var logo: Foundation.URL? {
+    get
+    set
+    _modify
+  }
+  @HotMicMediaPlayer.Lenient public var sponsorURL: Foundation.URL? {
+    get
+    set
+    _modify
+  }
+  public let question: Swift.String?
+  public let closed: Swift.Bool?
+  public let correctAnswers: [Swift.String]?
+  public var myAnswer: Swift.String?
+  public let options: [HotMicMediaPlayer.HMPoll.Option]
+  public let responses: Swift.Int?
+  public struct Option : Swift.Decodable {
+    public let id: Swift.String
+    public let answer: Swift.String
+    public let points: Swift.Int?
+    public let profilePics: [Swift.String]?
+    public let responses: Swift.Int?
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HMParticipant : Swift.Decodable {
+  public let id: Swift.String
+  public var name: Swift.String?
+  @HotMicMediaPlayer.Lenient public var profilePic: Foundation.URL? {
+    get
+    set
+    _modify
+  }
+  @HotMicMediaPlayer.Lenient public var badge: Foundation.URL? {
+    get
+    set
+    _modify
+  }
   public init(from decoder: any Swift.Decoder) throws
 }
 extension HotMicMediaPlayer.HMPlayerViewController.PlayerOrientation : Swift.Equatable {}
