@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "HotMicMediaPlayer",
+    "printedName": "HotMicMediaPlayer",
     "children": [
       {
         "kind": "Import",
@@ -149,8 +149,8 @@
       },
       {
         "kind": "Import",
-        "name": "PubNub",
-        "printedName": "PubNub",
+        "name": "PubNubSDK",
+        "printedName": "PubNubSDK",
         "declKind": "Import",
         "moduleName": "HotMicMediaPlayer"
       },
@@ -342,6 +342,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -536,6 +552,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -700,6 +730,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -735,6 +779,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -787,6 +832,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -839,6 +885,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -891,6 +938,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -943,6 +991,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -995,6 +1044,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1046,6 +1096,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl",
@@ -1073,6 +1124,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1105,6 +1157,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1137,6 +1190,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1175,6 +1229,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1215,6 +1270,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1237,6 +1293,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC5closeyyF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -1260,6 +1317,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC24minimizeToPiPIfSupportedyyF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -1289,6 +1347,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC14restorePiPViewyySo6UIViewCF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -1312,6 +1371,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC21showPeopleIfAvailableyyF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -1335,6 +1395,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC20showPollsIfAvailableyyF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -1358,6 +1419,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC25showTipOptionsIfAvailableyyF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -1417,6 +1479,7 @@
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
               "Final",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment"
@@ -1447,6 +1510,7 @@
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
               "Final",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment"
@@ -1503,6 +1567,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override"
             ],
@@ -1544,6 +1609,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Required"
             ],
@@ -1581,6 +1647,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1619,6 +1686,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1650,6 +1718,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1696,6 +1765,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1742,6 +1812,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1799,6 +1870,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1828,6 +1900,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC37chatHandlerCanDisplayChatInputToolbarySbAA06HMChatI0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -1864,6 +1937,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_15canModerateUserSbAA06HMChatI0_p_SStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -1900,6 +1974,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_20canMakeUserModeratorSbAA06HMChatI0_p_SStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -1935,6 +2010,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_14didTapSendChatyAA06HMChatI0_p_SStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -1976,6 +2052,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_17didTapAddReaction2toyAA06HMChatI0_p_AA0oM4TypeOSStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2017,6 +2094,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_20didTapRemoveReaction4fromyAA06HMChatI0_p_AA0oM4TypeOSStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2052,6 +2130,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_23didTapMakeUserModeratoryAA06HMChatI0_p_SStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2087,6 +2166,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_16didTapReportChatyAA06HMChatI0_p_AA0N0VtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2122,6 +2202,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_15didTapReportTipyAA06HMChatI0_p_AA5HMTipVtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2157,6 +2238,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_23didTapBlockUserFromChatyAA06HMChatI0_p_AA0P0VtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2192,6 +2274,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_22didTapBlockUserFromTipyAA06HMChatI0_p_AA5HMTipVtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2227,6 +2310,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_16didTapDeleteChatyAA06HMChatI0_p_AA0N0VtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2262,6 +2346,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_15didTapDeleteTipyAA06HMChatI0_p_AA5HMTipVtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2297,6 +2382,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC11chatHandler_06didTapF11UserProfileyAA06HMChatI0_p_SStF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2326,6 +2412,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC19playerDidInvokePlayyyAA0E0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2355,6 +2442,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC13playerPlayingyyAA0E0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2384,6 +2472,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC12playerPausedyyAA0E0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2413,6 +2502,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC15playerBufferingyyAA0E0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2442,6 +2532,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC30playerDidFinishSeekByTimeShiftyyAA0E0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2471,6 +2562,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC25playerDidRecoverFromStallyyAA0E0_pF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2506,6 +2598,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC6player_11timeChangedyAA0E0_p_SdtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2541,6 +2634,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC6player_15durationChangedyAA0E0_p_SdtF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2582,6 +2676,7 @@
             "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC6player_21errorOccurredWithCode7messageyAA0E0_p_S2StF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl"
@@ -2614,6 +2709,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2645,6 +2741,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2682,6 +2779,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2719,6 +2817,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2756,6 +2855,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2793,6 +2893,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2830,6 +2931,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2867,6 +2969,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2898,6 +3001,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2929,6 +3033,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2966,6 +3071,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3003,6 +3109,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3040,6 +3147,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3077,6 +3185,7 @@
             "declAttributes": [
               "Final",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -3089,6 +3198,7 @@
         "mangledName": "$s17HotMicMediaPlayer22HMPlayerViewControllerC",
         "moduleName": "HotMicMediaPlayer",
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "Final",
           "AccessControl",
@@ -3102,6 +3212,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3233,8 +3357,8 @@
       },
       {
         "kind": "Import",
-        "name": "PubNub",
-        "printedName": "PubNub",
+        "name": "PubNubSDK",
+        "printedName": "PubNubSDK",
         "declKind": "Import",
         "moduleName": "HotMicMediaPlayer"
       },
@@ -3710,6 +3834,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -3898,8 +4036,8 @@
       },
       {
         "kind": "Import",
-        "name": "PubNub",
-        "printedName": "PubNub",
+        "name": "PubNubSDK",
+        "printedName": "PubNubSDK",
         "declKind": "Import",
         "moduleName": "HotMicMediaPlayer"
       },
@@ -4519,6 +4657,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5388,6 +5540,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -5593,6 +5759,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5907,6 +6087,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -6106,6 +6300,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -6397,6 +6605,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -6572,6 +6794,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -7530,6 +7768,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -7841,6 +8095,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -8343,6 +8613,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -8873,6 +9159,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -8960,6 +9262,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9280,6 +9598,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9724,6 +10058,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9802,6 +10152,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9898,6 +10264,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -10043,6 +10425,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -10146,6 +10544,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -11939,7 +12353,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -13517,6 +13947,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -13721,6 +14165,20 @@
             ],
             "enumRawTypeName": "String",
             "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
               {
                 "kind": "Conformance",
                 "name": "Equatable",
@@ -14128,6 +14586,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Decodable",
                 "printedName": "Decodable",
                 "usr": "s:Se",
@@ -14171,6 +14643,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -15313,6 +15799,22 @@
         "moduleName": "HotMicMediaPlayer",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -16675,6 +17177,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -16942,6 +17458,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -17392,6 +17922,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Decodable",
                 "printedName": "Decodable",
                 "usr": "s:Se",
@@ -17434,6 +17978,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -17883,6 +18441,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -18957,6 +19529,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Decodable",
                 "printedName": "Decodable",
                 "usr": "s:Se",
@@ -18999,6 +19585,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -19420,6 +20020,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -19652,6 +20266,27 @@
             ],
             "usr": "s:s30KeyedDecodingContainerProtocolP",
             "mangledName": "$ss30KeyedDecodingContainerProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -19733,6 +20368,27 @@
             ],
             "usr": "s:s30KeyedEncodingContainerProtocolP",
             "mangledName": "$ss30KeyedEncodingContainerProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       }
@@ -19814,6 +20470,13 @@
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Tip\/TipViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1243,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Tip\/TipViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1705,
       "length": 5,
       "value": "false"
     },
@@ -19916,13 +20579,6 @@
       "value": "\"HMMPUnfollowedUser\""
     },
     {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ReactionButton.swift",
-      "kind": "StringLiteral",
-      "offset": 168,
-      "length": 14,
-      "value": "\"HotMicMediaPlayer.ReactionButton\""
-    },
-    {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Views\/BadgedButton.swift",
       "kind": "BooleanLiteral",
       "offset": 206,
@@ -19932,275 +20588,317 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2943,
+      "offset": 2946,
       "length": 19,
       "value": "\"Host Screen Share\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3000,
-      "length": 21,
-      "value": "\"Host Uploaded Video\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 2943,
-      "length": 19,
-      "value": "\"Host Screen Share\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 3000,
+      "offset": 3003,
       "length": 21,
       "value": "\"Host Uploaded Video\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3274,
+      "offset": 3277,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3401,
+      "offset": 3404,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3444,
+      "offset": 3447,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8923,
+      "offset": 8926,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9329,
+      "offset": 9332,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9366,
+      "offset": 9369,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9410,
+      "offset": 9413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9444,
+      "offset": 9447,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9500,
+      "offset": 9503,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9560,
+      "offset": 9563,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9607,
+      "offset": 9610,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9668,
+      "offset": 9671,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9730,
+      "offset": 9733,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 9932,
+      "offset": 9935,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9972,
+      "offset": 9975,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10045,
+      "offset": 10048,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10114,
+      "offset": 10117,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10181,
+      "offset": 10184,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 10842,
+      "offset": 10845,
       "length": 12,
       "value": "\"H:m:ss.SSS\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 11751,
+      "offset": 11754,
       "length": 26,
       "value": "\"chat.stream.\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 11776,
+      "offset": 11779,
       "length": 235,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12053,
+      "offset": 12056,
       "length": 33,
       "value": "\"chat_manage.stream.\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12085,
+      "offset": 12088,
       "length": 91,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12213,
+      "offset": 12216,
       "length": 42,
       "value": "\"prize_\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12251,
+      "offset": 12254,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12254,
+      "offset": 12257,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12333,
+      "offset": 12336,
       "length": 49,
       "value": "\"user_changed_\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12378,
+      "offset": 12381,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12381,
+      "offset": 12384,
       "length": 34,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29751,
+      "offset": 12662,
+      "length": 3,
+      "value": "740"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 29754,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 29788,
+      "offset": 29791,
       "length": 5,
       "value": "0.333"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 31371,
+      "offset": 31374,
       "length": 5,
       "value": "0.333"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 107207,
+      "offset": 107210,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 118420,
+      "offset": 118423,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 118450,
+      "offset": 118453,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 134719,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 134722,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 134736,
+      "length": 2,
+      "value": "42"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 134739,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 134752,
+      "length": 2,
+      "value": "45"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 134755,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 134769,
+      "length": 3,
+      "value": "0.7"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollAnswerView.swift",
@@ -20215,13 +20913,6 @@
       "offset": 1059,
       "length": 2,
       "value": "12"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollAnswerView.swift",
-      "kind": "StringLiteral",
-      "offset": 295,
-      "length": 14,
-      "value": "\"HotMicMediaPlayer.PollAnswerView\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatTableViewCell.swift",
@@ -20254,14 +20945,14 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/PubNubManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 511,
+      "offset": 514,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/PubNubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 6312,
+      "offset": 6315,
       "length": 5,
       "value": "false"
     },
@@ -20280,6 +20971,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1112,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1041,
@@ -20290,6 +20988,13 @@
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1065,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2156,
       "length": 5,
       "value": "false"
     },
@@ -20364,39 +21069,11 @@
       "value": "\"Host ID\""
     },
     {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 811,
-      "length": 10,
-      "value": "\"tv_ahead\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 846,
-      "length": 11,
-      "value": "\"tv_behind\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 888,
-      "length": 17,
-      "value": "\"recording_error\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 929,
-      "length": 10,
-      "value": "\"no_match\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 964,
-      "length": 11,
-      "value": "\"timed_out\""
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/RequestJoin\/RequestJoinAudioViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2417,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
@@ -20511,6 +21188,48 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3115,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3191,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3257,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3333,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3362,
+      "length": 7,
+      "value": "\"https\""
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3562,
+      "length": 20,
+      "value": "\"\/acrcloud_local_db\""
+    },
+    {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatInputAccessoryView.swift",
       "kind": "BooleanLiteral",
       "offset": 969,
@@ -20560,9 +21279,23 @@
       "value": "16"
     },
     {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollLeaderboardViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 629,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatReactionsListViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1105,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatReactionsListViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1450,
       "length": 5,
       "value": "false"
     },
@@ -20574,11 +21307,11 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ReactionCountButton.swift",
-      "kind": "StringLiteral",
-      "offset": 162,
-      "length": 19,
-      "value": "\"HotMicMediaPlayer.ReactionCountButton\""
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollWinnerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 830,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/People\/PeopleCollectionViewCell.swift",
@@ -20604,44 +21337,51 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 389,
+      "offset": 392,
       "length": 10,
       "value": "\"ChatCell\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 429,
+      "offset": 432,
       "length": 9,
       "value": "\"TipCell\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 473,
+      "offset": 476,
       "length": 14,
       "value": "\"ReactionCell\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1663,
+      "offset": 1666,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1707,
+      "offset": 1710,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1743,
+      "offset": 1746,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2098,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
@@ -20721,32 +21461,11 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 898,
-      "length": 11,
-      "value": "\"SCHEDULED\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 930,
-      "length": 6,
-      "value": "\"LIVE\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 956,
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/GuestProfile\/GuestUserProfileViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2464,
       "length": 5,
-      "value": "\"VOD\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 983,
-      "length": 7,
-      "value": "\"ENDED\""
+      "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -20793,20 +21512,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 1075,
-      "length": 11,
-      "value": "\"broadcast\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1112,
-      "length": 12,
-      "value": "\"audio_room\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 1403,
       "length": 5,
       "value": "\"_id\""
@@ -20824,69 +21529,6 @@
       "offset": 1485,
       "length": 13,
       "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1403,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1440,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1485,
-      "length": 13,
-      "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1602,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1781,
-      "length": 17,
-      "value": "\"can_participate\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1893,
-      "length": 16,
-      "value": "\"scheduled_date\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1934,
-      "length": 11,
-      "value": "\"live_date\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1979,
-      "length": 20,
-      "value": "\"featured_attendees\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 2024,
-      "length": 11,
-      "value": "\"video_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -21017,90 +21659,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 4283,
-      "length": 11,
-      "value": "\"stream_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4317,
-      "length": 9,
-      "value": "\"user_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4351,
-      "length": 11,
-      "value": "\"device_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4389,
-      "length": 13,
-      "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4446,
-      "length": 11,
-      "value": "\"user_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4526,
-      "length": 12,
-      "value": "\"created_at\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4564,
-      "length": 12,
-      "value": "\"like_count\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4602,
-      "length": 12,
-      "value": "\"fire_count\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4641,
-      "length": 13,
-      "value": "\"laugh_count\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4681,
-      "length": 13,
-      "value": "\"anger_count\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4723,
-      "length": 15,
-      "value": "\"sadness_count\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 4768,
-      "length": 16,
-      "value": "\"user_reactions\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 5070,
       "length": 11,
       "value": "\"stream_id\""
@@ -21125,55 +21683,6 @@
       "offset": 5170,
       "length": 11,
       "value": "\"device_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5070,
-      "length": 11,
-      "value": "\"stream_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5104,
-      "length": 9,
-      "value": "\"chat_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5136,
-      "length": 9,
-      "value": "\"user_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5170,
-      "length": 11,
-      "value": "\"device_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5579,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5616,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 5683,
-      "length": 13,
-      "value": "\"profile_pic\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -21234,55 +21743,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 6085,
-      "length": 9,
-      "value": "\"user_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 6119,
-      "length": 11,
-      "value": "\"device_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 6179,
-      "length": 17,
-      "value": "\"price_locale_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 6221,
-      "length": 11,
-      "value": "\"user_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 6279,
-      "length": 12,
-      "value": "\"created_at\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7016,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7101,
-      "length": 14,
-      "value": "\"profile_pics\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 7016,
       "length": 5,
       "value": "\"_id\""
@@ -21332,48 +21792,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 7223,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7254,
-      "length": 12,
-      "value": "\"created_at\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7311,
-      "length": 13,
-      "value": "\"sponsor_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7397,
-      "length": 17,
-      "value": "\"correct_answers\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7439,
-      "length": 11,
-      "value": "\"my_answer\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 7819,
-      "length": 13,
-      "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 7819,
       "length": 13,
       "value": "\"profile_pic\""
@@ -21384,97 +21802,6 @@
       "offset": 8400,
       "length": 8,
       "value": "\"app_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 8400,
-      "length": 8,
-      "value": "\"app_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9083,
-      "length": 11,
-      "value": "\"chat_rate\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9138,
-      "length": 23,
-      "value": "\"presence_refresh_rate\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9196,
-      "length": 18,
-      "value": "\"feed_count_limit\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9248,
-      "length": 17,
-      "value": "\"auto_show_share\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9303,
-      "length": 19,
-      "value": "\"start_screen_chat\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9367,
-      "length": 9,
-      "value": "\"acr_key\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9411,
-      "length": 12,
-      "value": "\"acr_secret\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9456,
-      "length": 10,
-      "value": "\"acr_host\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9498,
-      "length": 8,
-      "value": "\"bm_key\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9545,
-      "length": 12,
-      "value": "\"pn_sub_key\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9594,
-      "length": 12,
-      "value": "\"pn_pub_key\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9637,
-      "length": 8,
-      "value": "\"ot_key\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -21619,90 +21946,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 10360,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10465,
-      "length": 9,
-      "value": "\"is_live\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10503,
-      "length": 11,
-      "value": "\"live_date\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10619,
-      "length": 12,
-      "value": "\"image_16x9\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10713,
-      "length": 13,
-      "value": "\"sync_target\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10759,
-      "length": 16,
-      "value": "\"ll_sync_adjust\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10812,
-      "length": 20,
-      "value": "\"sync_server_offset\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10862,
-      "length": 9,
-      "value": "\"private\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 12504,
-      "length": 11,
-      "value": "\"SCHEDULED\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 12540,
-      "length": 6,
-      "value": "\"LIVE\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 12570,
-      "length": 5,
-      "value": "\"VOD\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 12601,
-      "length": 7,
-      "value": "\"ENDED\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 12504,
       "length": 11,
       "value": "\"SCHEDULED\""
@@ -21745,41 +21988,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12702,
-      "length": 11,
-      "value": "\"broadcast\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 12743,
-      "length": 12,
-      "value": "\"audio_room\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 13169,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 13210,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 13259,
-      "length": 13,
-      "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 13169,
       "length": 5,
       "value": "\"_id\""
@@ -21818,90 +22026,6 @@
       "offset": 13717,
       "length": 13,
       "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 13627,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 13668,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 13717,
-      "length": 13,
-      "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14506,
-      "length": 15,
-      "value": "\"request_title\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14560,
-      "length": 17,
-      "value": "\"request_message\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14620,
-      "length": 22,
-      "value": "\"request_button_title\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14679,
-      "length": 15,
-      "value": "\"waiting_title\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14733,
-      "length": 17,
-      "value": "\"waiting_message\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14788,
-      "length": 16,
-      "value": "\"approved_title\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14844,
-      "length": 18,
-      "value": "\"approved_message\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14906,
-      "length": 23,
-      "value": "\"approved_button_title\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 14963,
-      "length": 12,
-      "value": "\"guest_skus\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -22004,216 +22128,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15984,
-      "length": 15,
-      "value": "\"image_overlay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16037,
-      "length": 16,
-      "value": "\"uploaded_image\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16154,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16209,
-      "length": 9,
-      "value": "\"hls_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16245,
-      "length": 9,
-      "value": "\"vod_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16283,
-      "length": 11,
-      "value": "\"mixed_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16376,
-      "length": 19,
-      "value": "\"video_orientation\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16455,
-      "length": 15,
-      "value": "\"end_thumbnail\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16570,
-      "length": 12,
-      "value": "\"can_access\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16617,
-      "length": 17,
-      "value": "\"can_participate\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16665,
-      "length": 13,
-      "value": "\"video_cameo\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16710,
-      "length": 14,
-      "value": "\"tips_enabled\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16760,
-      "length": 19,
-      "value": "\"suggest_guest_tip\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16845,
-      "length": 16,
-      "value": "\"guest_requests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16896,
-      "length": 17,
-      "value": "\"approved_guests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16944,
-      "length": 13,
-      "value": "\"live_guests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 16994,
-      "length": 10,
-      "value": "\"join_cta\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17141,
-      "length": 16,
-      "value": "\"scheduled_date\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17186,
-      "length": 11,
-      "value": "\"live_date\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17228,
-      "length": 13,
-      "value": "\"sync_adjust\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17276,
-      "length": 18,
-      "value": "\"sync_retry_delay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17335,
-      "length": 25,
-      "value": "\"sync_failed_retry_delay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17391,
-      "length": 13,
-      "value": "\"audio_level\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17436,
-      "length": 14,
-      "value": "\"sync_enabled\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17478,
-      "length": 10,
-      "value": "\"can_sync\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17521,
-      "length": 15,
-      "value": "\"fixed_latency\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17589,
-      "length": 11,
-      "value": "\"tip_title\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17635,
-      "length": 17,
-      "value": "\"tip_description\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17682,
-      "length": 12,
-      "value": "\"share_text\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17725,
-      "length": 13,
-      "value": "\"tickets_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 16154,
       "length": 5,
       "value": "\"_id\""
@@ -22487,83 +22401,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 18609,
-      "length": 9,
-      "value": "\"hls_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 18645,
-      "length": 9,
-      "value": "\"vod_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 18768,
-      "length": 16,
-      "value": "\"guest_requests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 18819,
-      "length": 17,
-      "value": "\"approved_guests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 18867,
-      "length": 13,
-      "value": "\"live_guests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 18917,
-      "length": 10,
-      "value": "\"join_cta\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 18984,
-      "length": 13,
-      "value": "\"sync_adjust\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19028,
-      "length": 13,
-      "value": "\"audio_level\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19069,
-      "length": 10,
-      "value": "\"can_sync\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19112,
-      "length": 15,
-      "value": "\"server_offset\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19202,
-      "length": 11,
-      "value": "\"end_video\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 19563,
       "length": 16,
       "value": "\"guest_requests\""
@@ -22574,41 +22411,6 @@
       "offset": 19614,
       "length": 17,
       "value": "\"approved_guests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19563,
-      "length": 16,
-      "value": "\"guest_requests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19614,
-      "length": 17,
-      "value": "\"approved_guests\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 19971,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 20007,
-      "length": 13,
-      "value": "\"campaign_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 20125,
-      "length": 13,
-      "value": "\"sponsor_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -22648,51 +22450,9 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 20395,
-      "length": 14,
-      "value": "\"prize_banner\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 20442,
-      "length": 11,
-      "value": "\"prize_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 20804,
       "length": 13,
       "value": "\"sponsor_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 20804,
-      "length": 13,
-      "value": "\"sponsor_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 21204,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 21245,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 21294,
-      "length": 13,
-      "value": "\"profile_pic\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -22886,167 +22646,6 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23386,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23445,
-      "length": 14,
-      "value": "\"display_name\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23490,
-      "length": 13,
-      "value": "\"profile_pic\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23536,
-      "length": 15,
-      "value": "\"profile_badge\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23708,
-      "length": 19,
-      "value": "\"user_restrictions\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23756,
-      "length": 11,
-      "value": "\"in_stream\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23824,
-      "length": 12,
-      "value": "\"tip_levels\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23872,
-      "length": 18,
-      "value": "\"instagram_handle\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23923,
-      "length": 15,
-      "value": "\"tiktok_handle\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 23971,
-      "length": 15,
-      "value": "\"twitch_handle\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24020,
-      "length": 16,
-      "value": "\"twitter_handle\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24070,
-      "length": 16,
-      "value": "\"youtube_handle\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24173,
-      "length": 16,
-      "value": "\"followed_by_me\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24221,
-      "length": 14,
-      "value": "\"following_me\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24271,
-      "length": 18,
-      "value": "\"from_broadcaster\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24340,
-      "length": 10,
-      "value": "\"new_user\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24431,
-      "length": 12,
-      "value": "\"block_join\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24482,
-      "length": 21,
-      "value": "\"welcome_broadcaster\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24540,
-      "length": 20,
-      "value": "\"show_follow_screen\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24598,
-      "length": 21,
-      "value": "\"show_profile_screen\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 24656,
-      "length": 20,
-      "value": "\"show_rating_prompt\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 25033,
-      "length": 14,
-      "value": "\"remove_badge\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 25156,
-      "length": 12,
-      "value": "\"block_join\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
       "offset": 25033,
       "length": 14,
       "value": "\"remove_badge\""
@@ -23064,20 +22663,6 @@
       "offset": 25626,
       "length": 12,
       "value": "\"session_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 25626,
-      "length": 12,
-      "value": "\"session_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 25816,
-      "length": 11,
-      "value": "\"share_msg\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -23113,41 +22698,6 @@
       "offset": 26265,
       "length": 17,
       "value": "\"impression_urls\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26123,
-      "length": 5,
-      "value": "\"_id\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26179,
-      "length": 11,
-      "value": "\"image_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26219,
-      "length": 11,
-      "value": "\"click_url\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26265,
-      "length": 17,
-      "value": "\"impression_urls\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 27255,
-      "length": 15,
-      "value": "\"thumbnail_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
@@ -23167,6 +22717,13 @@
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 816,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1678,
       "length": 5,
       "value": "false"
     },
@@ -23283,18 +22840,18 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/RequestJoin\/RequestJoinVideoViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3066,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/MuteToggleButton.swift",
       "kind": "BooleanLiteral",
       "offset": 208,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/MuteToggleButton.swift",
-      "kind": "StringLiteral",
-      "offset": 160,
-      "length": 16,
-      "value": "\"HotMicMediaPlayer.MuteToggleButton\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/LogManager.swift",

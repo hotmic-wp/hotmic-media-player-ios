@@ -232,7 +232,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = HotMic;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -299,7 +299,7 @@
 				"${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Kronos/Kronos.framework",
-				"${BUILT_PRODUCTS_DIR}/PubNubSwift/PubNub.framework",
+				"${BUILT_PRODUCTS_DIR}/PubNubSwift/PubNubSDK.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BitmovinAnalyticsCollector/BitmovinPlayer/BitmovinCollector.framework/BitmovinCollector",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BitmovinAnalyticsCollector/Core/CoreCollector.framework/CoreCollector",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BitmovinPlayer/BitmovinPlayer.framework/BitmovinPlayer",
@@ -312,7 +312,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FittedSheets.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kronos.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PubNub.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PubNubSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BitmovinCollector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreCollector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BitmovinPlayer.framework",
