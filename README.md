@@ -56,6 +56,13 @@ HotMicMediaPlayer has the following dependencies:
 
 To try out the example app, run the [CocoaPods](https://cocoapods.org) command `pod try HotMicMediaPlayer`. Alternatively, download or clone the repo and run `pod install` from the Example directory, then `open HotMicMediaPlayer.xcworkspace`. The example app loads a list of streams and selecting one will open the media player experience.
 
+You will then want to tap the settings wheel:
+<img width="348" height="541" alt="image" src="https://github.com/user-attachments/assets/91bb5b9e-9c9a-4e56-a1e8-58fb0876a3b5" />
+
+and update the api key and token with your api key and a jwt token:
+<img width="356" height="183" alt="image" src="https://github.com/user-attachments/assets/9b5caf3b-8556-4030-8066-cb70189dc733" />
+
+
 ## Installation
 
 HotMicMediaPlayer is available through [CocoaPods](https://cocoapods.org). To install
@@ -105,6 +112,35 @@ accessToken = jwt.sign({identity: {
                display_name: user.display_name,
                profile_pic: user.profile_pic,
               }}, apiSecret, { expiresIn: '1d'}),
+```
+
+#### EXAMPLE JWT Generation
+Here is some sample code that you can use to generate a jwt token via javascript:
+```
+const jwt = require('jsonwebtoken');
+
+const payload = {
+  identity: {
+    user_id: "12345-asdfgh",
+    display_name: "testuser",
+    profile_pic: "https://ui-avatars.com/api/?name=BleacherBobo&background=0DCAD6&color=fff",
+    badge: "https://hotmic-content.s3.us-west-1.amazonaws.com/badges/10_badge.png?c251fece-c08f-48a0-931e-70cfe8ea7ed4"
+  },
+  iat: Math.floor(Date.now() / 1000),
+  exp: Math.floor(Date.now() / 1000) + (2 * 365 * 24 * 60 * 60) // 2 years from now
+};
+
+const secret = '213456789';
+
+const token = jwt.sign(payload, secret, {
+  algorithm: 'HS256',
+  header: {
+    alg: 'HS256',
+    typ: 'JWT'
+  }
+});
+
+console.log(token);
 ```
 
 ### In-App Purchases
