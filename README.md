@@ -51,7 +51,6 @@ HotMicMediaPlayer has the following dependencies:
 - Kingfisher
 - Kronos
 - OTXCFramework
-- PubNubSwift
 
 ## Example
 
