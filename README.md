@@ -54,7 +54,7 @@ HotMicMediaPlayer has the following dependencies:
 
 ## Example
 
-To try out the example app, run the [CocoaPods](https://cocoapods.org) command `pod try HotMicMediaPlayer`. Alternatively, download or clone the repo and run `pod install` from the Example directory. The example app loads a list of streams and selecting one will open the media player experience.
+To try out the example app, run the [CocoaPods](https://cocoapods.org) command `pod try HotMicMediaPlayer`. Alternatively, download or clone the repo and run `pod install` from the Example directory, then `open HotMicMediaPlayer.xcworkspace`. The example app loads a list of streams and selecting one will open the media player experience.
 
 ## Installation
 
