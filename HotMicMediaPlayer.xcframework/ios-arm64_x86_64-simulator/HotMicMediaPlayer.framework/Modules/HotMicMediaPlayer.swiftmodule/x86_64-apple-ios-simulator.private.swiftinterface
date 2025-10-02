@@ -218,7 +218,6 @@ public enum HMColorStyle {
 }
 public enum HMImageType {
   case joinButton
-  case syncButton
   public static func == (a: HotMicMediaPlayer.HMImageType, b: HotMicMediaPlayer.HMImageType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {

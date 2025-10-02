@@ -36,16 +36,6 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HotMicMediaPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "StoreKit",
         "printedName": "StoreKit",
         "declKind": "Import",
@@ -3350,23 +3340,6 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HotMicMediaPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "FittedSheets",
-        "printedName": "FittedSheets",
-        "declKind": "Import",
-        "moduleName": "HotMicMediaPlayer"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3425,30 +3398,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HotMicMediaPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "HotMicMediaPlayer"
-      },
-      {
-        "kind": "Import",
-        "name": "Kronos",
-        "printedName": "Kronos",
-        "declKind": "Import",
-        "moduleName": "HotMicMediaPlayer"
       },
       {
         "kind": "Import",
@@ -5584,46 +5533,6 @@
             "declKind": "EnumElement",
             "usr": "s:17HotMicMediaPlayer11HMImageTypeO10joinButtonyA2CmF",
             "mangledName": "$s17HotMicMediaPlayer11HMImageTypeO10joinButtonyA2CmF",
-            "moduleName": "HotMicMediaPlayer",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "syncButton",
-            "printedName": "syncButton",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(HotMicMediaPlayer.HMImageType.Type) -> HotMicMediaPlayer.HMImageType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HMImageType",
-                    "printedName": "HotMicMediaPlayer.HMImageType",
-                    "usr": "s:17HotMicMediaPlayer11HMImageTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "HotMicMediaPlayer.HMImageType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HMImageType",
-                        "printedName": "HotMicMediaPlayer.HMImageType",
-                        "usr": "s:17HotMicMediaPlayer11HMImageTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:17HotMicMediaPlayer11HMImageTypeO10syncButtonyA2CmF",
-            "mangledName": "$s17HotMicMediaPlayer11HMImageTypeO10syncButtonyA2CmF",
             "moduleName": "HotMicMediaPlayer",
             "declAttributes": [
               "RawDocComment"
@@ -20490,41 +20399,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncButton.swift",
-      "kind": "StringLiteral",
-      "offset": 751,
-      "length": 22,
-      "value": "\"sync-button-progress\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncButton.swift",
-      "kind": "StringLiteral",
-      "offset": 925,
-      "length": 21,
-      "value": "\"sync-button-success\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncButton.swift",
-      "kind": "StringLiteral",
-      "offset": 1052,
-      "length": 21,
-      "value": "\"sync-button-warning\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncButton.swift",
-      "kind": "StringLiteral",
-      "offset": 1177,
-      "length": 19,
-      "value": "\"sync-button-error\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncButton.swift",
-      "kind": "StringLiteral",
-      "offset": 1401,
-      "length": 19,
-      "value": "\"sync-button-image\""
-    },
-    {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Views\/CallToActionButton.swift",
       "kind": "BooleanLiteral",
       "offset": 584,
@@ -20604,35 +20478,14 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 10146,
-      "length": 22,
-      "value": "\"HMMPSyncStateChanged\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Extensions.swift",
-      "kind": "StringLiteral",
-      "offset": 10225,
-      "length": 25,
-      "value": "\"HMMPSyncProgressChanged\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Extensions.swift",
-      "kind": "StringLiteral",
-      "offset": 10305,
-      "length": 23,
-      "value": "\"HMMPManualSyncUpdated\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Extensions.swift",
-      "kind": "StringLiteral",
-      "offset": 10383,
+      "offset": 10142,
       "length": 18,
       "value": "\"HMMPFollowedUser\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 10453,
+      "offset": 10212,
       "length": 20,
       "value": "\"HMMPUnfollowedUser\""
     },
@@ -20681,224 +20534,203 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8769,
+      "offset": 8542,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9220,
+      "offset": 8954,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9257,
+      "offset": 8991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9301,
+      "offset": 9035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9335,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9391,
+      "offset": 9092,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9451,
+      "offset": 9152,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9498,
+      "offset": 9199,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9559,
+      "offset": 9260,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9621,
+      "offset": 9303,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9664,
+      "offset": 9348,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9709,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 9911,
-      "length": 3,
-      "value": "0.0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9951,
+      "offset": 9550,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10024,
+      "offset": 9623,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10093,
+      "offset": 9692,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10160,
+      "offset": 9759,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 10880,
+      "offset": 10426,
       "length": 12,
       "value": "\"H:m:ss.SSS\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 11487,
+      "offset": 11033,
       "length": 3,
       "value": "740"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 28047,
+      "offset": 27033,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 28084,
+      "offset": 27070,
       "length": 5,
       "value": "0.333"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 29667,
+      "offset": 28653,
       "length": 5,
       "value": "0.333"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 83112,
+      "offset": 77279,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 94325,
+      "offset": 86378,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 94355,
+      "offset": 86408,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 124376,
+      "offset": 110130,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 124379,
+      "offset": 110133,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 124393,
+      "offset": 110147,
       "length": 2,
       "value": "42"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 124396,
+      "offset": 110150,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 124409,
+      "offset": 110163,
       "length": 2,
       "value": "45"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 124412,
+      "offset": 110166,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/HMPlayerViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 124426,
+      "offset": 110180,
       "length": 3,
       "value": "0.7"
     },
@@ -20962,27 +20794,6 @@
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/Polls\/PollsViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1112,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1041,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1065,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Sync\/SyncViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2156,
       "length": 5,
       "value": "false"
     },
@@ -21062,160 +20873,6 @@
       "offset": 2417,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 785,
-      "length": 10,
-      "value": "\"tv_ahead\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 820,
-      "length": 11,
-      "value": "\"tv_behind\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 862,
-      "length": 17,
-      "value": "\"recording_error\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 903,
-      "length": 10,
-      "value": "\"no_match\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 938,
-      "length": 11,
-      "value": "\"timed_out\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 1064,
-      "length": 4,
-      "value": "12.0"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1094,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1123,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1163,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1203,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 1235,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1278,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 1488,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 1572,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 1603,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1641,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3089,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3165,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3231,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3307,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3336,
-      "length": 7,
-      "value": "\"https\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/SyncManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3536,
-      "length": 20,
-      "value": "\"\/acrcloud_local_db\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Player\/Chat\/ChatInputAccessoryView.swift",
@@ -21325,14 +20982,14 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Networking.swift",
       "kind": "BooleanLiteral",
-      "offset": 28716,
+      "offset": 27866,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/Networking.swift",
       "kind": "BooleanLiteral",
-      "offset": 30472,
+      "offset": 29622,
       "length": 5,
       "value": "false"
     },
@@ -21388,49 +21045,49 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 27070,
+      "offset": 26995,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 27101,
+      "offset": 27026,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 27146,
+      "offset": 27071,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 27191,
+      "offset": 27116,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 27239,
+      "offset": 27164,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 28665,
+      "offset": 28590,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/HotMicMediaPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 28715,
+      "offset": 28640,
       "length": 5,
       "value": "false"
     },
@@ -21808,1050 +21465,924 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9131,
+      "offset": 9031,
       "length": 11,
       "value": "\"chat_rate\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9185,
+      "offset": 9085,
       "length": 22,
       "value": "\"presence_update_rate\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9251,
+      "offset": 9151,
       "length": 23,
       "value": "\"presence_refresh_rate\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9313,
+      "offset": 9213,
       "length": 18,
       "value": "\"stream_poll_rate\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9373,
+      "offset": 9273,
       "length": 21,
       "value": "\"stream_poll_timeout\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9429,
+      "offset": 9329,
       "length": 18,
       "value": "\"feed_count_limit\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9481,
+      "offset": 9381,
       "length": 17,
       "value": "\"auto_show_share\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9536,
+      "offset": 9436,
       "length": 19,
       "value": "\"start_screen_chat\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9600,
-      "length": 9,
-      "value": "\"acr_key\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9644,
-      "length": 12,
-      "value": "\"acr_secret\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9689,
-      "length": 10,
-      "value": "\"acr_host\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 9731,
+      "offset": 9500,
       "length": 8,
       "value": "\"bm_key\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 9770,
+      "offset": 9539,
       "length": 8,
       "value": "\"ot_key\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 10493,
+      "offset": 10148,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 10598,
+      "offset": 10253,
       "length": 9,
       "value": "\"is_live\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 10636,
+      "offset": 10291,
       "length": 11,
       "value": "\"live_date\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 10752,
+      "offset": 10407,
       "length": 12,
       "value": "\"image_16x9\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 10846,
-      "length": 13,
-      "value": "\"sync_target\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10892,
-      "length": 16,
-      "value": "\"ll_sync_adjust\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10945,
-      "length": 20,
-      "value": "\"sync_server_offset\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 10995,
+      "offset": 10500,
       "length": 9,
       "value": "\"private\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12637,
+      "offset": 11940,
       "length": 11,
       "value": "\"SCHEDULED\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12673,
+      "offset": 11976,
       "length": 6,
       "value": "\"LIVE\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12703,
+      "offset": 12006,
       "length": 5,
       "value": "\"VOD\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12734,
+      "offset": 12037,
       "length": 7,
       "value": "\"ENDED\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12835,
+      "offset": 12138,
       "length": 11,
       "value": "\"broadcast\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 12876,
+      "offset": 12179,
       "length": 12,
       "value": "\"audio_room\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 13313,
+      "offset": 12616,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 13354,
+      "offset": 12657,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 13403,
+      "offset": 12706,
       "length": 13,
       "value": "\"profile_pic\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 13782,
+      "offset": 13085,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 13823,
+      "offset": 13126,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 13872,
+      "offset": 13175,
       "length": 13,
       "value": "\"profile_pic\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 14683,
+      "offset": 13986,
       "length": 15,
       "value": "\"request_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 14737,
+      "offset": 14040,
       "length": 17,
       "value": "\"request_message\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 14797,
+      "offset": 14100,
       "length": 22,
       "value": "\"request_button_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 14856,
+      "offset": 14159,
       "length": 15,
       "value": "\"waiting_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 14910,
+      "offset": 14213,
       "length": 17,
       "value": "\"waiting_message\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 14965,
+      "offset": 14268,
       "length": 16,
       "value": "\"approved_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15021,
+      "offset": 14324,
       "length": 18,
       "value": "\"approved_message\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15083,
+      "offset": 14386,
       "length": 23,
       "value": "\"approved_button_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15140,
+      "offset": 14443,
       "length": 12,
       "value": "\"guest_skus\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15548,
+      "offset": 14851,
       "length": 24,
       "value": "\"hosts_little_media_big\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15646,
+      "offset": 14949,
       "length": 24,
       "value": "\"hosts_big_media_little\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 15742,
+      "offset": 15045,
       "length": 22,
       "value": "\"hosts_thin_media_big\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16183,
+      "offset": 15486,
       "length": 15,
       "value": "\"image_overlay\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16236,
+      "offset": 15539,
       "length": 16,
       "value": "\"uploaded_image\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16353,
+      "offset": 15656,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16408,
+      "offset": 15711,
       "length": 9,
       "value": "\"hls_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16444,
+      "offset": 15747,
       "length": 9,
       "value": "\"vod_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16482,
+      "offset": 15785,
       "length": 11,
       "value": "\"mixed_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16575,
+      "offset": 15878,
       "length": 19,
       "value": "\"video_orientation\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16654,
+      "offset": 15957,
       "length": 15,
       "value": "\"end_thumbnail\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16769,
+      "offset": 16072,
       "length": 12,
       "value": "\"can_access\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16816,
+      "offset": 16119,
       "length": 17,
       "value": "\"can_participate\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16864,
+      "offset": 16167,
       "length": 13,
       "value": "\"video_cameo\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16909,
+      "offset": 16212,
       "length": 14,
       "value": "\"tips_enabled\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 16959,
+      "offset": 16262,
       "length": 19,
       "value": "\"suggest_guest_tip\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17044,
+      "offset": 16347,
       "length": 16,
       "value": "\"guest_requests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17095,
+      "offset": 16398,
       "length": 17,
       "value": "\"approved_guests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17143,
+      "offset": 16446,
       "length": 13,
       "value": "\"live_guests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17193,
+      "offset": 16496,
       "length": 10,
       "value": "\"join_cta\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17340,
+      "offset": 16643,
       "length": 16,
       "value": "\"scheduled_date\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17385,
+      "offset": 16688,
       "length": 11,
       "value": "\"live_date\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17427,
-      "length": 13,
-      "value": "\"sync_adjust\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17475,
-      "length": 18,
-      "value": "\"sync_retry_delay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17534,
-      "length": 25,
-      "value": "\"sync_failed_retry_delay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17590,
+      "offset": 16730,
       "length": 13,
       "value": "\"audio_level\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17635,
-      "length": 14,
-      "value": "\"sync_enabled\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17677,
-      "length": 10,
-      "value": "\"can_sync\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17720,
-      "length": 15,
-      "value": "\"fixed_latency\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 17788,
+      "offset": 16796,
       "length": 11,
       "value": "\"tip_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17834,
+      "offset": 16842,
       "length": 17,
       "value": "\"tip_description\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17881,
+      "offset": 16889,
       "length": 12,
       "value": "\"share_text\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 17924,
+      "offset": 16932,
       "length": 13,
       "value": "\"tickets_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 18312,
+      "offset": 17320,
       "length": 16,
       "value": "\"guest_requests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 18363,
+      "offset": 17371,
       "length": 17,
       "value": "\"approved_guests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 18731,
+      "offset": 17739,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 18767,
+      "offset": 17775,
       "length": 13,
       "value": "\"campaign_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 18885,
+      "offset": 17893,
       "length": 13,
       "value": "\"sponsor_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 19166,
+      "offset": 18174,
       "length": 14,
       "value": "\"prize_banner\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 19213,
+      "offset": 18221,
       "length": 11,
       "value": "\"prize_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 19575,
+      "offset": 18583,
       "length": 13,
       "value": "\"sponsor_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 19975,
+      "offset": 18983,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 20016,
+      "offset": 19024,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 20065,
+      "offset": 19073,
       "length": 13,
       "value": "\"profile_pic\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 21600,
+      "offset": 20608,
       "length": 7,
       "value": "\"admin\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 21661,
+      "offset": 20669,
       "length": 13,
       "value": "\"broadcaster\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 21938,
+      "offset": 20946,
       "length": 21,
       "value": "\"view_and_polls_only\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22157,
+      "offset": 21165,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22216,
+      "offset": 21224,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22261,
+      "offset": 21269,
       "length": 13,
       "value": "\"profile_pic\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22307,
+      "offset": 21315,
       "length": 15,
       "value": "\"profile_badge\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22479,
+      "offset": 21487,
       "length": 19,
       "value": "\"user_restrictions\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22527,
+      "offset": 21535,
       "length": 11,
       "value": "\"in_stream\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22595,
+      "offset": 21603,
       "length": 12,
       "value": "\"tip_levels\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22643,
+      "offset": 21651,
       "length": 18,
       "value": "\"instagram_handle\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22694,
+      "offset": 21702,
       "length": 15,
       "value": "\"tiktok_handle\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22742,
+      "offset": 21750,
       "length": 15,
       "value": "\"twitch_handle\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22791,
+      "offset": 21799,
       "length": 16,
       "value": "\"twitter_handle\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22841,
+      "offset": 21849,
       "length": 16,
       "value": "\"youtube_handle\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22944,
+      "offset": 21952,
       "length": 16,
       "value": "\"followed_by_me\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 22992,
+      "offset": 22000,
       "length": 14,
       "value": "\"following_me\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23042,
+      "offset": 22050,
       "length": 18,
       "value": "\"from_broadcaster\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23111,
+      "offset": 22119,
       "length": 10,
       "value": "\"new_user\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23202,
+      "offset": 22210,
       "length": 12,
       "value": "\"block_join\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23253,
+      "offset": 22261,
       "length": 21,
       "value": "\"welcome_broadcaster\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23311,
+      "offset": 22319,
       "length": 20,
       "value": "\"show_follow_screen\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23369,
+      "offset": 22377,
       "length": 21,
       "value": "\"show_profile_screen\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 23427,
+      "offset": 22435,
       "length": 20,
       "value": "\"show_rating_prompt\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25521,
+      "offset": 24303,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25584,
+      "offset": 24366,
       "length": 9,
       "value": "\"hls_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25624,
+      "offset": 24406,
       "length": 9,
       "value": "\"vod_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25666,
+      "offset": 24448,
       "length": 11,
       "value": "\"mixed_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25771,
+      "offset": 24553,
       "length": 19,
       "value": "\"video_orientation\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25858,
+      "offset": 24640,
       "length": 15,
       "value": "\"end_thumbnail\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 25989,
+      "offset": 24771,
       "length": 12,
       "value": "\"can_access\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26040,
+      "offset": 24822,
       "length": 17,
       "value": "\"can_participate\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26092,
+      "offset": 24874,
       "length": 13,
       "value": "\"video_cameo\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26141,
+      "offset": 24923,
       "length": 14,
       "value": "\"tips_enabled\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26195,
+      "offset": 24977,
       "length": 19,
       "value": "\"suggest_guest_tip\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26288,
+      "offset": 25070,
       "length": 16,
       "value": "\"guest_requests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26343,
+      "offset": 25125,
       "length": 17,
       "value": "\"approved_guests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26395,
+      "offset": 25177,
       "length": 13,
       "value": "\"live_guests\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26449,
+      "offset": 25231,
       "length": 10,
       "value": "\"join_cta\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26616,
+      "offset": 25398,
       "length": 16,
       "value": "\"scheduled_date\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26665,
+      "offset": 25447,
       "length": 11,
       "value": "\"live_date\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26711,
-      "length": 13,
-      "value": "\"sync_adjust\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26763,
-      "length": 18,
-      "value": "\"sync_retry_delay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26826,
-      "length": 25,
-      "value": "\"sync_failed_retry_delay\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26886,
+      "offset": 25493,
       "length": 13,
       "value": "\"audio_level\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 26935,
-      "length": 14,
-      "value": "\"sync_enabled\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 26981,
-      "length": 10,
-      "value": "\"can_sync\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 27028,
-      "length": 15,
-      "value": "\"fixed_latency\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
-      "kind": "StringLiteral",
-      "offset": 27104,
+      "offset": 25567,
       "length": 11,
       "value": "\"tip_title\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27154,
+      "offset": 25617,
       "length": 17,
       "value": "\"tip_description\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27205,
+      "offset": 25668,
       "length": 12,
       "value": "\"share_text\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27252,
+      "offset": 25715,
       "length": 13,
       "value": "\"tickets_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27327,
+      "offset": 25790,
       "length": 11,
       "value": "\"end_video\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27825,
+      "offset": 26288,
       "length": 15,
       "value": "\"deleted_chats\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27879,
+      "offset": 26342,
       "length": 17,
       "value": "\"chats_reactions\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 27937,
+      "offset": 26400,
       "length": 19,
       "value": "\"deleted_reactions\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 28018,
+      "offset": 26481,
       "length": 14,
       "value": "\"deleted_tips\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 28495,
+      "offset": 26958,
       "length": 12,
       "value": "\"session_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 28685,
+      "offset": 27148,
       "length": 11,
       "value": "\"share_msg\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 28992,
+      "offset": 27455,
       "length": 5,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 29048,
+      "offset": 27511,
       "length": 11,
       "value": "\"image_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 29088,
+      "offset": 27551,
       "length": 11,
       "value": "\"click_url\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 29134,
+      "offset": 27597,
       "length": 17,
       "value": "\"impression_urls\""
     },
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/DataModel.swift",
       "kind": "StringLiteral",
-      "offset": 30124,
+      "offset": 27863,
       "length": 15,
       "value": "\"thumbnail_url\""
     },
@@ -22879,35 +22410,7 @@
     {
       "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/HMPlayerManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 688,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/HMPlayerManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1150,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/HMPlayerManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 1198,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/HMPlayerManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1240,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Dropbox\/Developer\/HQ\/HotMic\/hotmic-ios\/HotMicMediaPlayer\/HotMicMediaPlayer\/Helpers\/HMPlayerManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1282,
+      "offset": 781,
       "length": 5,
       "value": "false"
     },
@@ -23306,161 +22809,49 @@
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6436,
-      "length": 6,
-      "value": "\"sync\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 6572,
-      "length": 13,
-      "value": "\"sync-back-1\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 6719,
-      "length": 15,
-      "value": "\"sync-back-100\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 6886,
-      "length": 24,
-      "value": "\"sync-button-background\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 7079,
-      "length": 33,
-      "value": "\"sync-button-background-disabled\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 7254,
-      "length": 19,
-      "value": "\"sync-button-error\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 7425,
-      "length": 24,
-      "value": "\"sync-button-foreground\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 7618,
-      "length": 33,
-      "value": "\"sync-button-foreground-disabled\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 7788,
-      "length": 19,
-      "value": "\"sync-button-image\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 7955,
-      "length": 22,
-      "value": "\"sync-button-progress\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 8123,
-      "length": 21,
-      "value": "\"sync-button-success\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 8290,
-      "length": 21,
-      "value": "\"sync-button-warning\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 8440,
-      "length": 12,
-      "value": "\"sync-error\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 8588,
-      "length": 16,
-      "value": "\"sync-forward-1\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 8744,
-      "length": 18,
-      "value": "\"sync-forward-100\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 8895,
-      "length": 14,
-      "value": "\"sync-success\""
-    },
-    {
-      "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 9025,
+      "offset": 6434,
       "length": 5,
       "value": "\"tip\""
     },
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9157,
+      "offset": 6566,
       "length": 11,
       "value": "\"tip-large\""
     },
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9297,
+      "offset": 6706,
       "length": 12,
       "value": "\"tip-medium\""
     },
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9436,
+      "offset": 6845,
       "length": 11,
       "value": "\"tip-small\""
     },
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9583,
+      "offset": 6992,
       "length": 16,
       "value": "\"toggle-mic-off\""
     },
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9733,
+      "offset": 7142,
       "length": 15,
       "value": "\"toggle-mic-on\""
     },
     {
       "filePath": "\/Users\/Jordan\/Library\/Developer\/Xcode\/DerivedData\/HotMicMediaPlayer-ewzppsaryeurtxgjbthzvxqofnxg\/Build\/Intermediates.noindex\/ArchiveIntermediates\/HotMicMediaPlayer\/IntermediateBuildFilesPath\/HotMicMediaPlayer.build\/Release-iphonesimulator\/HotMicMediaPlayer.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9874,
+      "offset": 7283,
       "length": 10,
       "value": "\"verified\""
     }

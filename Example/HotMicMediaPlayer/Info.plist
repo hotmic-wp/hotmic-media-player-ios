@@ -25,7 +25,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This is required to join the room with video.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>This is required to join the room with audio and sync the stream with a TV.</string>
+	<string>This is required to join the room with audio.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

@@ -45,7 +45,6 @@ When integrating HotMicMediaPlayer into your app, you must disclose the data it 
 - Other diagnostics data - used for app functionality, linked to the user’s identity
 
 HotMicMediaPlayer has the following dependencies:
-- ACRCloudSDK
 - BitmovinPlayer
 - FittedSheets
 - Kingfisher
@@ -95,7 +94,7 @@ end
 
 Add the following keys to your target’s Info tab:
 - `NSCameraUsageDescription` - this is required to join the room with video
-- `NSMicrophoneUsageDescription` - this is required to join the room with audio and sync the stream with a TV
+- `NSMicrophoneUsageDescription` - this is required to join the room with audio
 
 ### Capabilities
 
@@ -374,8 +373,6 @@ func customImage(for imageType: HMImageType) -> UIImage? {
     switch image {
     case .joinButton: 
         return UIImage(named: "join-button-image")
-    case .syncButton: 
-        return UIImage(named: "sync-button-image")
     @unknown default: 
         return nil
     }
